@@ -1,0 +1,706 @@
+{
+    "level":"info",
+    "message":"Express server listening on port 3000",
+    "timestamp":"2015-10-07T22:49:11.527Z"
+}
+{
+    "level":"error",
+    "message":"Connection error: failed to connect to [undefined:27017]",
+    "timestamp":"2015-10-07T22:49:13.768Z"}
+{"level":"info","message":"Express server listening on port 3000","timestamp":"2015-10-07T22:49:54.111Z"}
+{"level":"error","message":"Connection error: failed to connect to [undefined:27017]","timestamp":"2015-10-07T22:49:56.325Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-07T22:51:28.287Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-07T22:51:28.363Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-07T22:54:01.198Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-07T22:55:11.319Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-07T22:55:11.338Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-08T20:35:14.191Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-08T20:35:14.208Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T21:21:14.752Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T21:21:14.784Z"}
+{"level":"info","message":"d:\\__MyProjects\\__AngularArchiStart\\back_end\\public\\","timestamp":"2015-10-13T21:39:06.953Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T21:39:06.962Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T21:39:06.980Z"}
+{"level":"info","message":"d:\\__MyProjects\\__AngularArchiStart\\back_end\\public\\","timestamp":"2015-10-13T21:39:30.311Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T21:39:30.317Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T21:39:30.326Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T21:40:31.240Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T21:40:31.248Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:14:40.713Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:14:40.721Z"}
+{"0":"req 2 - [object Object]","level":"info","message":"","timestamp":"2015-10-13T22:16:49.272Z"}
+{"level":"error","message":"POST 500 user validation failed","timestamp":"2015-10-13T22:16:49.277Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:17:01.052Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:17:01.068Z"}
+{"0":"req 2 - igor","level":"info","message":"","timestamp":"2015-10-13T22:17:10.260Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : \"igor\" }","timestamp":"2015-10-13T22:17:10.368Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:25:33.812Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:25:33.830Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:26:53.235Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:26:53.253Z"}
+{"level":"info","message":"someone trying to login","timestamp":"2015-10-13T22:27:02.826Z"}
+{"level":"info","message":"user: false","timestamp":"2015-10-13T22:27:02.827Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:27:58.231Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:27:58.246Z"}
+{"level":"info","message":"someone trying to login","timestamp":"2015-10-13T22:28:05.492Z"}
+{"level":"info","message":"user: false","timestamp":"2015-10-13T22:28:05.492Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:28:22.156Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:28:22.171Z"}
+{"level":"info","message":"someone trying to login","timestamp":"2015-10-13T22:28:36.557Z"}
+{"level":"info","message":"user: false","timestamp":"2015-10-13T22:28:36.557Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:29:01.747Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:29:01.766Z"}
+{"level":"info","message":"someone trying to login","timestamp":"2015-10-13T22:29:10.482Z"}
+{"level":"info","message":"user: false","timestamp":"2015-10-13T22:29:10.483Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-13T22:33:54.756Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-13T22:33:54.773Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-14T22:29:47.083Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-14T22:29:47.133Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T18:16:14.056Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T18:16:14.366Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T18:39:33.862Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T18:39:33.878Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:17:35.820Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:17:35.839Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:25:17.191Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:25:17.201Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:26:06.431Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:26:06.441Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:37:02.066Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:37:02.076Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:37:38.742Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:37:38.763Z"}
+{"level":"error","message":"POST 500 Cannot read property 'id' of undefined","timestamp":"2015-10-17T19:37:43.917Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:40:20.900Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:40:20.911Z"}
+{"level":"error","message":"POST 500 Cannot read property 'id' of undefined","timestamp":"2015-10-17T19:41:59.773Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T19:42:28.353Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T19:42:28.365Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T20:19:30.519Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T20:19:30.537Z"}
+{"level":"error","message":"POST 500 Cannot read property 'id' of undefined","timestamp":"2015-10-17T20:19:31.300Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T20:22:02.327Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T20:22:02.344Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T20:23:40.133Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T20:23:40.165Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:24:40.863Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:24:40.881Z"}
+{"level":"error","message":"POST 500 User is not defined","timestamp":"2015-10-17T21:24:56.532Z"}
+{"level":"error","message":"POST 500 User is not defined","timestamp":"2015-10-17T21:26:17.589Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:29:22.450Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:29:22.468Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:30:18.436Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:30:18.451Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:31:03.735Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:31:03.753Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:32:28.673Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:32:28.689Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T21:36:43.562Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T21:36:43.579Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:05:51.032Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:05:51.049Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:08:55.454Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:08:55.488Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:09:05.804Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:09:05.820Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:12:42.211Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:12:42.229Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:13:32.246Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:13:32.263Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:13:59.775Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:13:59.996Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:14:04.630Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:14:09.593Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:14:10.714Z"}
+{"level":"error","message":"GET 500 genuuid is not defined","timestamp":"2015-10-17T22:14:10.897Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:15:43.418Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:15:43.439Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:17:48.283Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:17:48.300Z"}
+{"level":"error","message":"POST 500 Cannot read property 'name' of undefined","timestamp":"2015-10-17T22:17:48.447Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:18:14.969Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:18:14.990Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:24:24.238Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:24:24.265Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:51:29.505Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:51:29.532Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:53:41.195Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:53:41.224Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:53:49.369Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:53:49.395Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:56:04.985Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:56:05.006Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T22:56:11.823Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T22:56:11.847Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T23:28:26.317Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T23:28:26.334Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T23:30:57.297Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T23:30:57.314Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T23:32:02.669Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T23:32:02.699Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-17T23:32:56.692Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-17T23:32:56.708Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-18T00:44:57.289Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-18T00:44:57.305Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-18T01:07:57.389Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-18T01:07:57.405Z"}
+{"level":"error","message":"GET 500 Project is not defined","timestamp":"2015-10-18T01:08:05.168Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-18T01:08:33.711Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-18T01:08:33.725Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T20:09:47.221Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T20:09:47.236Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:07:17.563Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:07:17.580Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:11:58.820Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:11:58.845Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:12:56.559Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:12:56.581Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:33:35.894Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:33:35.919Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:35:20.857Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:35:20.878Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T21:37:02.603Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T21:37:02.631Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-20T22:10:38.809Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-20T22:10:38.826Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-21T21:30:01.477Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-21T21:30:01.493Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-21T21:57:57.484Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-21T21:57:57.510Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-21T22:03:06.169Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-21T22:03:06.186Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-21T22:07:20.769Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-21T22:07:20.788Z"}
+{"level":"error","message":"Internal error(400): Project validation failed","timestamp":"2015-10-21T22:07:34.494Z"}
+{"level":"error","message":"Internal error(400): Project validation failed","timestamp":"2015-10-21T22:08:14.387Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-21T22:09:21.606Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-21T22:09:21.623Z"}
+{"level":"info","message":"New Project created with id: 56280d1af0514aa430c198c7","timestamp":"2015-10-21T22:09:30.899Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T18:53:00.040Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T18:53:00.057Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : null }","timestamp":"2015-10-22T21:49:57.615Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T21:52:21.437Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T21:52:21.453Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2015-10-22T21:52:41.849Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T21:55:13.992Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T21:55:14.016Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2015-10-22T21:55:30.968Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T21:56:04.026Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T21:56:04.045Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T21:56:16.744Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T21:56:16.772Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2015-10-22T21:56:27.473Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:02:16.280Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:02:16.309Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:04:31.313Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:04:31.329Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2015-10-22T22:07:26.968Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:08:31.514Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:08:31.530Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2015-10-22T22:08:51.299Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:09:09.923Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:09:09.954Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : null }","timestamp":"2015-10-22T22:09:22.581Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:09:35.223Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:09:35.246Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : null }","timestamp":"2015-10-22T22:09:47.870Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:10:33.271Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:10:33.289Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : null }","timestamp":"2015-10-22T22:10:46.987Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-22T22:12:00.204Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-22T22:12:00.225Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: archiviser.users.$username_1 dup key: { : null }","timestamp":"2015-10-22T22:12:09.856Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-23T20:38:33.170Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-23T20:38:33.186Z"}
+{"level":"error","message":"GET 500 User validation failed","timestamp":"2015-10-23T20:39:10.896Z"}
+{"level":"info","message":"New Project created with id: 562c03061f1cd6bc1bed79b1","timestamp":"2015-10-24T22:15:34.202Z"}
+{"level":"info","message":"New Project created with id: 562c031b1f1cd6bc1bed79b2","timestamp":"2015-10-24T22:15:55.298Z"}
+{"level":"info","message":"New Project created with id: 562c03581f1cd6bc1bed79b3","timestamp":"2015-10-24T22:16:56.831Z"}
+{"level":"info","message":"New Project created with id: 562c038f1f1cd6bc1bed79b4","timestamp":"2015-10-24T22:17:51.320Z"}
+{"level":"info","message":"New Project created with id: 562c039d1f1cd6bc1bed79b5","timestamp":"2015-10-24T22:18:05.342Z"}
+{"level":"info","message":"New Project created with id: 562c04801f1cd6bc1bed79b6","timestamp":"2015-10-24T22:21:52.031Z"}
+{"level":"info","message":"New Project created with id: 562c04981f1cd6bc1bed79b7","timestamp":"2015-10-24T22:22:16.618Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-24T22:26:52.634Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-24T22:26:52.663Z"}
+{"level":"info","message":"New Project created with id: 562c05c3f058faf8238614f3","timestamp":"2015-10-24T22:27:15.891Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-24T22:28:43.799Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-24T22:28:43.833Z"}
+{"level":"info","message":"New Project created with id: 562c062ed4b49630103e51c5","timestamp":"2015-10-24T22:29:02.109Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-24T22:29:39.156Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-24T22:29:39.173Z"}
+{"level":"info","message":"New Project created with id: 562c065c0347218c196f4dc0","timestamp":"2015-10-24T22:29:48.614Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-24T22:30:47.139Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-24T22:30:47.161Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T13:18:06.329Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T13:18:06.371Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T14:52:00.400Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T14:52:00.442Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:01:09.328Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:01:09.344Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:02:10.035Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:02:10.051Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:35:08.694Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:35:08.722Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:43:00.353Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:43:00.368Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:48:19.857Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:48:19.883Z"}
+{"level":"error","message":"POST 400 ENOENT, open 'd:\\__MyProjects\\__AngularArchiStart\\back_end\\bin\\upload\\-AJ1fkdeyPJSTbiRg-ipze6g.png'","timestamp":"2015-10-25T15:48:38.134Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:49:17.795Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:49:17.816Z"}
+{"level":"error","message":"POST 500 path is not defined","timestamp":"2015-10-25T15:49:32.283Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:50:50.373Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:50:50.396Z"}
+{"level":"error","message":"POST 500 cfg is not defined","timestamp":"2015-10-25T15:52:32.461Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T15:57:15.857Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T15:57:15.879Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T17:23:25.208Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T17:23:25.225Z"}
+{"level":"error","message":"POST 400 ENOENT, open 'd:\\__MyProjects\\__AngularArchiStart\\back_end\\temp_upload\\eQNzEO4cS2015-F4gqEZfjOE.png'","timestamp":"2015-10-25T17:23:38.383Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-25T17:25:34.960Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-25T17:25:34.980Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T19:50:00.563Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T19:50:00.589Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T19:53:03.612Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T19:53:03.639Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T21:29:25.789Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T21:29:25.894Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T21:29:58.098Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T21:29:58.122Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T21:32:56.309Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T21:32:56.324Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-26T21:35:32.655Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-26T21:35:32.670Z"}
+{"level":"info","message":"Project with id: 562ab21088c4085407efac25 updated","timestamp":"2015-10-26T21:35:46.560Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-27T21:30:46.382Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-27T21:30:46.418Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:35:37.121Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:35:37.140Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:53:50.940Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:53:50.964Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:55:12.760Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:55:12.779Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:56:33.918Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:56:33.944Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:57:33.736Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:57:33.752Z"}
+{"level":"info","message":"New Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T18:57:58.586Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T18:58:59.809Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T18:58:59.836Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T18:59:15.493Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:00:11.259Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:00:11.282Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:00:18.177Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:00:31.080Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:00:31.112Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:01:09.154Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:03:50.353Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:03:50.376Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:03:57.217Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:05:31.646Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:13:28.207Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:13:58.515Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:15:53.723Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:16:12.490Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:16:12.520Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:16:26.203Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:16:45.295Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:17:03.401Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:17:26.723Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:17:44.763Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:18:00.500Z"}
+{"level":"error","message":"Internal error(400): Task validation failed","timestamp":"2015-10-28T19:18:35.136Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:19:59.459Z"}
+{"level":"error","message":"Internal error(400): Task validation failed","timestamp":"2015-10-28T19:20:01.122Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:21:38.466Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:21:38.490Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:21:53.202Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-28T19:27:01.497Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-28T19:27:01.520Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T19:27:16.691Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T21:16:30.890Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T22:03:58.886Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T22:04:26.742Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T22:05:43.185Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-28T22:34:24.956Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T18:50:38.752Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T18:50:38.849Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T18:59:00.590Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:41:40.733Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:42:24.449Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:48:31.015Z"}
+{"level":"error","message":"POST 500 Cannot read property 'originalFilename' of undefined","timestamp":"2015-10-29T19:48:43.727Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:49:51.210Z"}
+{"level":"error","message":"POST 500 Cannot read property 'originalFilename' of undefined","timestamp":"2015-10-29T19:49:56.849Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:50:37.120Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:50:55.966Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T19:52:07.864Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T19:52:07.883Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:52:21.233Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T19:53:03.780Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T19:53:03.795Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T19:53:10.833Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T19:53:50.119Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T19:53:50.136Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2863","timestamp":"2015-10-29T19:53:58.986Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:01:51.801Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:01:51.821Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:02:02.485Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:02:43.609Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:02:43.627Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:03:06.180Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:09:00.757Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:09:00.793Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:09:22.782Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:10:07.879Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:10:07.895Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:10:22.752Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:11:00.034Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:11:00.049Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:11:14.883Z"}
+{"level":"info","message":"Project with id: 5631180294a736f81b4c2862 updated","timestamp":"2015-10-29T20:11:21.130Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:12:15.663Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:12:15.682Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2863","timestamp":"2015-10-29T20:12:25.635Z"}
+{"level":"info","message":"Project with id: 5631180294a736f81b4c2863 updated","timestamp":"2015-10-29T20:12:35.855Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:14:59.967Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:14:59.986Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:15:10.019Z"}
+{"level":"info","message":"Project with id: 5631180294a736f81b4c2862 updated","timestamp":"2015-10-29T20:15:16.403Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:15:54.017Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:15:54.032Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:16:08.568Z"}
+{"level":"info","message":"Project with id: 5631180294a736f81b4c2862 updated","timestamp":"2015-10-29T20:16:18.353Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:17:05.632Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:17:05.649Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:17:14.545Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:17:35.889Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:17:35.906Z"}
+{"level":"info","message":"Getted Project created with id: 5631180294a736f81b4c2862","timestamp":"2015-10-29T20:17:43.906Z"}
+{"level":"info","message":"Project with id: 5631180294a736f81b4c2862 updated","timestamp":"2015-10-29T20:17:49.869Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:20:07.626Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:20:07.652Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf1","timestamp":"2015-10-29T20:20:15.770Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-10-29T20:20:49.265Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-10-29T20:20:49.280Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf1","timestamp":"2015-10-29T20:20:57.472Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf1 updated","timestamp":"2015-10-29T20:21:03.532Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf1","timestamp":"2015-10-29T20:21:36.112Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf1","timestamp":"2015-10-29T21:52:39.480Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T21:57:13.119Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T21:58:16.901Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T21:58:32.083Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T21:58:39.150Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T21:59:22.570Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:00:28.215Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:00:50.360Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T22:01:04.459Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:01:19.818Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T22:01:25.734Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T22:01:31.201Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:02:53.505Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:03:01.802Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:03:33.978Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:19:59.041Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:20:24.198Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:21:08.589Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:21:36.840Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:22:05.975Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:22:33.584Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:09.502Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:20.963Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:29.348Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:36.278Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:44.817Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:23:54.043Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:24:52.917Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:25:12.542Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:26:18.555Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:26:34.535Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:27:23.800Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:27:43.406Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:30:24.493Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:30:58.118Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T22:31:16.662Z"}
+{"level":"info","message":"Project with id: 56327f5fc20dd1cc140d7bf2 updated","timestamp":"2015-10-29T22:31:22.961Z"}
+{"level":"info","message":"Getted Project created with id: 56327f5fc20dd1cc140d7bf2","timestamp":"2015-10-29T22:31:31.149Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-07T18:29:15.539Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-07T18:29:16.392Z"}
+{"level":"info","message":"New Project created with id: 5640ee8b47cdc8582a14b7e4","timestamp":"2015-11-09T19:05:48.023Z"}
+{"level":"info","message":"Getted Project created with id: 5640ee8b47cdc8582a14b7e4","timestamp":"2015-11-09T19:05:48.127Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-16T18:58:09.296Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-16T18:58:09.357Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-16T18:59:39.913Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-16T18:59:39.931Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-22T17:07:02.456Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-11-22T17:07:02.488Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-24T11:56:19.362Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-11-24T11:56:19.386Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-24T15:32:06.881Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-11-24T15:32:06.902Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-25T08:56:14.335Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-25T08:56:14.367Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-25T08:59:01.260Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-11-25T08:59:01.284Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-25T08:59:51.443Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-25T08:59:51.486Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T15:24:54.376Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T15:24:54.410Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T15:25:37.501Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T15:25:37.537Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T15:26:47.629Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T15:26:47.663Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T15:27:43.346Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T15:27:43.381Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T15:29:37.072Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T15:29:37.105Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T16:34:59.211Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T16:34:59.245Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-26T16:39:50.635Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-26T16:39:50.671Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:12:47.298Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:12:47.335Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:14:19.889Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:14:19.934Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:15:33.102Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:15:33.136Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:16:11.879Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:16:11.898Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:16:15.111Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:16:15.152Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:18:53.432Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:18:53.467Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:20:18.186Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:20:18.219Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:32:37.540Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:32:37.574Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:33:55.434Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:33:55.469Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:35:32.249Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:35:32.305Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:38:32.640Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:38:32.681Z"}
+{"level":"error","message":"POST 500 result is not defined","timestamp":"2015-11-27T05:38:50.837Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:40:15.479Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:40:15.546Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:41:01.831Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:41:01.868Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:41:49.671Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:41:49.708Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:45:02.006Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:45:02.037Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:45:50.090Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:45:50.126Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T05:47:25.477Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T05:47:25.566Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T08:45:48.649Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T08:45:48.689Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T15:39:21.970Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-11-27T15:39:21.994Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-27T15:39:36.518Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-27T15:39:36.581Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T17:56:34.899Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T17:56:34.931Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T17:59:48.556Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T17:59:48.631Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T18:01:31.962Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T18:01:32.040Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T18:03:34.084Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T18:03:34.137Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T18:05:16.835Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T18:05:16.899Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T18:05:37.737Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T18:05:37.870Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T18:06:48.797Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T18:06:48.835Z"}
+{"level":"info","message":"New Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:23:00.826Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:23:00.934Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:25:43.899Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:26:48.672Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:27:03.136Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:27:11.932Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:27:22.548Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:27:48.001Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:28:03.247Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:30:47.998Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:31:06.505Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:32:04.593Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:32:31.025Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:32:46.169Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:33:08.096Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:33:35.702Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:35:06.813Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:37:31.406Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:38:32.118Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:39:35.004Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:47:41.828Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:48:12.570Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:48:32.261Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:48:42.655Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:49:13.679Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:51:23.188Z"}
+{"level":"error","message":"Internal error(400): Task validation failed","timestamp":"2015-11-28T18:51:32.542Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:51:42.078Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:52:08.429Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:54:13.380Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:56:18.889Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:57:06.851Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:57:23.019Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:57:31.429Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:58:03.574Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:58:20.527Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:58:29.332Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:58:37.126Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T18:59:10.508Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T19:41:43.809Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T19:41:43.857Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:01:56.798Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:08:14.175Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:14:19.013Z"}
+{"level":"info","message":"Project with id: 5659f1045e7269950a865878 updated","timestamp":"2015-11-28T20:17:27.893Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:20:44.230Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:20:44.276Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:20:52.432Z"}
+{"level":"info","message":"Project with id: 5659f1045e7269950a865878 updated","timestamp":"2015-11-28T20:21:47.540Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:22:17.937Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:22:17.983Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:22:25.359Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:30:26.274Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:33:44.602Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:33:44.643Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:33:55.256Z"}
+{"level":"info","message":"Project with id: 5659f1045e7269950a865878 updated","timestamp":"2015-11-28T20:34:06.135Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:34:18.684Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:35:39.177Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:36:06.865Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:36:26.670Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:36:53.307Z"}
+{"level":"info","message":"Project with id: 5659f1045e7269950a865878 updated","timestamp":"2015-11-28T20:37:16.139Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:39:26.098Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:39:35.539Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:39:35.579Z"}
+{"level":"info","message":"Getted Project created with id: 5659f1045e7269950a865878","timestamp":"2015-11-28T20:39:46.304Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:42:00.610Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:42:00.643Z"}
+{"level":"info","message":"Getted Project created with id: 565a11926e68b74a0b4ee017","timestamp":"2015-11-28T20:43:38.873Z"}
+{"level":"info","message":"Project with id: 565a11926e68b74a0b4ee017 updated","timestamp":"2015-11-28T20:43:53.752Z"}
+{"level":"info","message":"Getted Project created with id: 565a11926e68b74a0b4ee017","timestamp":"2015-11-28T20:44:23.267Z"}
+{"level":"info","message":"Project with id: 565a11926e68b74a0b4ee017 updated","timestamp":"2015-11-28T20:44:44.863Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:47:38.393Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:47:38.440Z"}
+{"level":"info","message":"Getted Project created with id: 565a12e4155dd6500bac6988","timestamp":"2015-11-28T20:48:56.836Z"}
+{"level":"info","message":"Getted Project created with id: 565a12e4155dd6500bac6988","timestamp":"2015-11-28T20:49:09.218Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:50:22.976Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:50:23.020Z"}
+{"level":"info","message":"Getted Project created with id: 565a12e4155dd6500bac6988","timestamp":"2015-11-28T20:50:41.780Z"}
+{"level":"info","message":"Getted Project created with id: 565a12e4155dd6500bac6988","timestamp":"2015-11-28T20:50:50.496Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:53:01.781Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:53:01.820Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:56:46.281Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:56:46.325Z"}
+{"level":"info","message":"Getted Project created with id: 565a150a397e735e0b22222d","timestamp":"2015-11-28T20:56:59.900Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T20:58:28.833Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T20:58:28.873Z"}
+{"level":"info","message":"Getted Project created with id: 565a150a397e735e0b22222d","timestamp":"2015-11-28T20:58:38.620Z"}
+{"level":"info","message":"Getted Project created with id: 565a150a397e735e0b22222d","timestamp":"2015-11-28T20:58:42.022Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T20:58:48.557Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T20:59:06.668Z"}
+{"level":"info","message":"Getted Project created with id: 565a150a397e735e0b22222d","timestamp":"2015-11-28T20:59:15.138Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:00:29.566Z"}
+{"level":"info","message":"Getted Project created with id: 565a150a397e735e0b22222d","timestamp":"2015-11-28T21:00:44.817Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:02:35.537Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:02:36.855Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:02:37.302Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:02:37.635Z"}
+{"level":"info","message":"Project with id: 565a150a397e735e0b22222d updated","timestamp":"2015-11-28T21:02:37.920Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T21:16:07.611Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T21:16:07.643Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T21:18:18.357Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T21:18:18.394Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T21:19:14.170Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T21:19:14.214Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T21:26:25.294Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-28T22:05:16.558Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-28T22:05:16.595Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:14:49.242Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:17:08.574Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:21:56.400Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:22:33.744Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:23:12.957Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-28T22:24:24.815Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T06:10:51.324Z"}
+{"level":"info","message":"Project with id: 565a1a4b1670e87a0bb2af17 updated","timestamp":"2015-11-29T06:11:30.622Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T06:12:44.095Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:01:36.359Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:01:44.543Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:01:59.337Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:03:39.226Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:03:44.649Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:06:28.162Z"}
+{"level":"info","message":"Getted Project created with id: 565a1a4b1670e87a0bb2af17","timestamp":"2015-11-29T14:09:48.574Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T09:04:34.096Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T09:04:34.141Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T11:57:11.885Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T11:57:11.918Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T11:58:12.079Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T11:58:12.127Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T11:59:05.082Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T11:59:05.112Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T12:01:00.450Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T12:01:00.501Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:12:34.103Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:12:34.133Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:21:13.305Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:21:13.360Z"}
+{"level":"error","message":"POST 500 EN is not defined","timestamp":"2015-11-30T15:21:22.788Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:21:42.752Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:21:42.802Z"}
+{"level":"error","message":"POST 500 Cannot read property 'options_EN' of undefined","timestamp":"2015-11-30T15:21:44.603Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:22:24.996Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:22:25.058Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:23:12.801Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:23:12.844Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T15:24:09.263Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T15:24:09.305Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T16:14:45.070Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T16:14:45.102Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T18:57:22.549Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T18:57:22.579Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T19:08:49.207Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T19:08:49.239Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T19:10:59.061Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T19:10:59.107Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T19:21:14.539Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T19:21:14.592Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T19:53:15.598Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T19:53:15.646Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T19:58:45.233Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T19:58:45.277Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:01:46.013Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:01:46.050Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:02:44.181Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:02:44.235Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:09:23.324Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:09:23.379Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:10:04.866Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:10:04.898Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:13:58.512Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:13:58.582Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:16:07.372Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:16:07.417Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:28:58.279Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:28:58.325Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-11-30T20:31:56.765Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-11-30T20:31:56.833Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-01T06:03:24.666Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-12-01T06:03:24.696Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-01T06:09:36.895Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-12-01T06:09:36.940Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-01T06:15:19.340Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-12-01T06:15:19.391Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-01T06:19:39.708Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-12-01T06:19:39.752Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-06T09:10:00.742Z"}
+{"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-12-06T09:10:00.767Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-06T09:10:27.861Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2015-12-06T09:10:27.901Z"}

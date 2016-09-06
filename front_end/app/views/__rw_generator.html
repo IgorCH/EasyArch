@@ -1,0 +1,437 @@
+<div id="page-heading">
+  <ol class="breadcrumb">
+    <li><a href="#/">Studio Designer</a></li>
+    <li>Report Writer</li>
+    <li class="active">Generator</li>
+  </ol>
+  <h1>Reports</h1>
+</div>
+
+<div ng-controller="RWGeneratorController" class="container-fluid">
+
+  <!--div>
+
+    <button
+      ng-if="currentStep != steps.new && currentStep != steps.selectFile && currentStep != steps.display && !reportConfig.Id"
+      class="btn btn-default" ng-click="onPrev()">
+      Prev
+    </button>
+
+    <button ng-if="currentStep == steps.selectColumns"
+            class="btn btn-default" ng-click="onSelectColumnsNext()">
+      Next
+    </button>
+
+    <button ng-if="currentStep == steps.selectFilters"
+            class="btn btn-default" ng-click="onSaveNewReport()">
+      Save New Report
+    </button>
+
+    <button ng-if="currentStep == steps.selectFilters"
+            class="btn btn-default" ng-show="reportConfig.id"
+            ng-click="onSaveExistingReport()">
+      Save Existing Report
+    </button>
+
+    <button ng-if="currentStep == steps.display"
+            class="btn btn-default" ng-click="onDisplayPDF()">
+      Display PDF
+    </button>
+
+    <button ng-if="currentStep == steps.display"
+            class="btn btn-default" ng-click="onDisplaySaveFilter()">
+      Save Filter
+    </button>
+
+    <button ng-if="currentStep != steps.new"
+            class="btn btn-default" ng-click="onCancel()">
+      Cancel
+    </button>
+
+  </div-->
+  <div ng-if="currentStep == steps.new">
+    <div class="container-fluid">
+
+      <button class="btn btn-primary mb10" ng-click="onNewReport()">
+        New Report
+      </button>
+
+      <accordion>
+        <accordion-group ng-repeat="report in data.reportTypes"
+                         heading="{{report.Name}}"
+                         is-open="report.isExpanded">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="tasklist">
+                <ul class="panel-tasks">
+                  <li ng-repeat="item in report.Reports">
+
+                    <div class="task-container">
+                      <span class="label label-primary"></span>
+                      <span class="task-description">{{item.Name}}</span>
+                    </div>
+                    <div class="options todooptions">
+                      <div class="btn-group">
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="onGeneratePDF(item)"><i
+                          class="glyphicon glyphicon-book"></i></button>
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="onEmailBtn(item)"><i
+                          class="glyphicon glyphicon-comment"></i></button>
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="onExportBtn(item)"><i
+                          class="glyphicon glyphicon-export"></i></button>
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="onEditBtn(item)"><i
+                          class="glyphicon glyphicon-edit"></i></button>
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="onGenerateBtn(item)"><i
+                          class="glyphicon glyphicon-list"></i></button>
+                        <button data-nodrag class="btn btn-default btn-xs" ng-click="remove(item)"><i
+                          class="glyphicon glyphicon-remove"></i></button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </accordion-group>
+      </accordion>
+
+    </div>
+  </div>
+
+  <div ng-if="currentStep == steps.selectFile">
+    <div class="container-fluid">
+
+      <panel heading="Column" panel-class="panel-info">
+
+        <panel-controls>
+          <button class="btn btn-primary btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onSelectColumnsNext()">Next</button>
+          <button class="btn btn-danger btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onCancel()">Cancel</button>
+        </panel-controls>
+
+        <table class="table table-bordered table-condensed">
+          <tr style="font-weight: bold">
+            <th colspan="2" style="padding-left: 40px;">Generate Report For:</th>
+          </tr>
+          <tr ng-repeat="object in data.reportTypes">
+            <td style="width: 200px;">
+              <button class="btn btn-primary" ng-click="onAddBtn(object.Id)">
+                Select
+              </button>
+            </td>
+            <td>
+              {{object.Name}}
+            </td>
+          </tr>
+        </table>
+      </panel>
+    </div>
+  </div>
+
+  <div class="rw_stepPage" ng-if="currentStep == steps.selectColumns">
+
+    <div class="container-fluid">
+
+      <panel heading="Column" panel-class="panel-info">
+
+        <panel-controls>
+          <button class="btn btn-primary btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onSelectColumnsNext()">Next</button>
+          <button class="btn btn-danger btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onCancel()">Cancel</button>
+        </panel-controls>
+
+        <alert data-type="info">
+          <p>Select Columns And Headers</p>
+        </alert>
+
+        <div class="row">
+          <div class="col-lg-3">
+
+            <div ui-tree="options">
+              <ol ui-tree-nodes ng-model="data.columns" >
+                <li ng-repeat="column in data.columns" ui-tree-node>
+                  <div ui-tree-handle>
+                    <a class="btn handletools expand" data-nodrag ng-click="column.collapsed = !column.collapsed">
+                      <span class="fa fa-fw" ng-class="{'fa-plus-square-o': !column.collapsed, 'fa-minus-square-o': column.collapsed}" ng-show="data.columns.length"></span>
+                    </a>
+                    {{column.Name}}
+                  </div>
+
+                  <ol ui-tree-nodes="options" ng-model="column.Fields" ng-class="{hidden: !column.collapsed}">
+                    <li ng-repeat="field in column.Fields"
+                        ng-if="!onColumnFieldUsed(field)">
+                      <div ui-tree-handle data-nodrag ng-click="onAddColumnField(field)">
+                        {{field.Name}}
+                      </div>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+          <div class="col-lg-9">
+
+            <table class="table table-bordered table-condensed">
+              <tr style="font-weight: bold">
+                <td width="65%">Header</td>
+                <td width="25%">Position</td>
+                <td width="10%">Remove</td>
+              </tr>
+              <tr ng-repeat="header in reportConfig.Config.headers">
+                <td>{{header.Name}}</td>
+                <td>
+                  <select ng-model="header.HeaderPosition"
+                          class="form-control"
+                          ng-options="pos for pos in displayPoses"></select>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger" ng-click="onDeleteHeader(header)">Remove</button>
+                </td>
+              </tr>
+            </table>
+
+            <!--div style="text-align:center;margin:10px;">
+              <span class="npl_arrowDown"></span>
+              <span class="npl_arrowUp"></span>
+              <span>Drag Fields Up and Down to change the order</span>
+            </div-->
+
+            <table class="table table-bordered table-condensed"
+                   ng-sortable="reportConfig.Config.columns">
+              <tr style="font-weight: bold">
+                <td width="70%">Column</td>
+                <td width="10%">Group By</td>
+                <td width="10%">Total</td>
+                <td width="10%">Remove</td>
+              </tr>
+              <tr ng-repeat="column in reportConfig.Config.columns" data-column="{{column}}">
+                <td ng-class="{warn: column.warn, fco: fcoFields.indexOf(column.Field) > -1 && reportConfig.Config.firstComponentOnly}">
+                  {{column.Name}}
+                </td>
+                <td>
+                  <div class="checkbox block" ng-if="column.FieldType == 'i' || column.FieldType == 'f'"
+                       ng-if="column.CanGroup" ng-click="inspectColumns()">
+                    <label class="checkbox-inline">
+                      <input icheck type="checkbox"
+                             ng-disabled="fcoFields.indexOf(column.Field) > -1 && reportConfig.Config.firstComponentOnly"
+                             ng-model="column.GroupBy">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="checkbox block" ng-if="column.FieldType == 'i' || column.FieldType == 'f'">
+                    <label class="checkbox-inline">
+                      <input icheck type="checkbox" ng-model="column.Total">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <button ng-if="!(fcoFields.indexOf(column.Field) > -1 && reportConfig.Config.firstComponentOnly)"
+                          class="btn btn-sm btn-danger"
+                          ng-click="onDeleteColumnField(column)">Remove</button>
+                </td>
+              </tr>
+            </table>
+
+
+
+
+
+            <!--div style="text-align: center;margin:10px;">
+              <span class="npl_arrowDown"></span>
+              <span class="npl_arrowUp"></span>
+              <span>Drag Fields Up and Down to change the order</span>
+            </div-->
+
+
+
+
+          </div>
+        </div>
+      </panel>
+    </div>
+  </div>
+
+  <div class="rw_stepPage" ng-if="currentStep == steps.selectFilters">
+
+    <div class="container-fluid">
+
+      <panel heading="Column" panel-class="panel-info">
+
+        <panel-controls>
+          <button class="btn btn-primary btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onSaveNewReport()">Save</button>
+          <button class="btn btn-danger btn-sm mr10" style="margin-top: -5px;"
+                  ng-click="onCancel()">Cancel</button>
+        </panel-controls>
+
+        <alert data-type="info" ng-if="false">
+          <p>Select Columns And Headers</p>
+        </alert>
+
+        <div class="row">
+          <div class="col-lg-3">
+
+            <div ui-tree="options">
+              <ol ui-tree-nodes ng-model="data.columns" >
+                <li ng-repeat="filter in data.filters" ui-tree-node>
+                  <div ui-tree-handle>
+                    <a class="btn handletools expand" data-nodrag
+                       ng-click="filter.collapsed = !filter.collapsed">
+                      <span class="fa fa-fw" ng-class="{'fa-plus-square-o': filter.collapsed, 'fa-minus-square-o': !filter.collapsed}" ng-show="data.filters.length"></span>
+                    </a>
+                    {{filter.Name}}
+                  </div>
+
+                  <ol ui-tree-nodes="options" ng-model="filter.Fields"
+                      ng-class="{hidden: filter.collapsed}">
+                    <li ng-repeat="field in filter.Fields"
+                        ng-if="!isFilterFieldUsed(field) && field.CanFilter">
+                      <div ui-tree-handle data-nodrag ng-click="onAddFilterField(field)">
+                        {{field.Name}}
+                      </div>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+          <div class="col-lg-9">
+
+            <table class="table table-bordered table-condensed">
+              <tr style="font-weight: bold">
+                <td width="50%">Field</td>
+                <td width="20%">Operator</td>
+                <td width="20%">Default Value</td>
+                <td width="10%">Remove</td>
+              </tr>
+              <tr ng-repeat="filter in reportConfig.Config.filters">
+                <td>
+                  {{filter.Name}}
+                </td>
+                <td>
+                  <select ng-if="filter.FieldType == 'b' || filter.PicklistId || filter.Lookup"
+                          class="form-control"
+                          ng-options="ops.id as ops.name for ops in equalOps"
+                          ng-model="filter.compareMethod"></select>
+
+                  <select ng-if="!(filter.FieldType == 'b' || filter.PicklistId || filter.Lookup)"
+                          class="form-control"s
+                          style="padding: 0px 10px;width: 50px;"
+                          ng-options="ops.id as ops.name for ops in compareOps"
+                          ng-model="filter.compareMethod"></select>
+                </td>
+                <td>
+
+                  <md-input-container ng-if="filter.FieldType == 'b'">
+                    <md-select ng-model="filter.defaultValue">
+                      <md-option ng-value="item.Value"
+                                 ng-repeat="item in boolOps">{{item.Name}}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+
+                  <input ng-if="filter.FieldType == 'u'" ng-model="filter.defaultValue"/>
+                  <input ng-if="filter.FieldType == 'f'" ng-model="filter.defaultValue"/>
+                  <input ng-if="filter.FieldType == 's'" ng-model="filter.defaultValue"/>
+
+                  <input ng-if="filter.FieldType == 'i' && !filter.Lookup"
+                         ng-model="filter.defaultValue"/>
+
+                  <div class="spec"
+                       style="display: inline-block;position:relative;width: calc(100% - 30px);"
+                       ng-if="filter.FieldType == 'i' && filter.Lookup"
+                       ng-click="editDefaultValue(filter);">
+
+                    <span ng-hide="true" type="text">{{filter.defaultValue}}</span>
+                    <input type="text" readonly ng-model="filter.defaultValueName"/>
+
+                    <div ng-if="filter.openPopup">
+                      <div style="position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;z-index: 2;"
+                           ng-click="filter.openPopup = false;$event.stopPropagation()"></div>
+                      <input style="position:absolute;width:200px;top:30px;z-index:3"
+                             type="text" placeholder="Search..."
+                             ng-model="filter.searchTerm"
+                             ng-click="$event.stopPropagation()"
+                             ng-change="loadLookup(filter, true);"/>
+
+                      <div scrolly="loadLookup(filter)"
+                           style="position:absolute;width:200px;height:300px;top: 60px;border:1px solid black;overflow-x:hidden;overflow-y:auto;background: white;z-index: 2;">
+                        <div class="acItem"
+                             ng-repeat="item in filter.LookupData.Values"
+                             ng-click="closePopupList(filter, item);$event.stopPropagation()">{{item.Name}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="igs_standardBtn2" ng-if="filter.FieldType == 'i' && filter.Lookup"
+                          ng-click="clearDefaultValue(filter);$event.stopPropagation()">X
+                  </button>
+
+                  <div ng-if="filter.FieldType == 'd'"
+                       moment-picker="filter.defaultValue" format="YYYY-MM-DD">
+                    <input placeholder="Select a date"
+                           ng-model="filter.defaultValue" ng-model-options="{ updateOn: 'blur' }">
+                  </div>
+
+                  <div ng-if="filter.FieldType == 't'"
+                       moment-picker="filter.defaultValue" format="YYYY-MM-DD HH:mm">
+                    <input placeholder="Select a date/time"
+                           ng-model="filter.defaultValue" ng-model-options="{ updateOn: 'blur' }">
+                  </div>
+
+                  <select ng-if="filter.FieldType == 'p'" ng-model="filter.defaultValue"
+                          ng-options="item.Id as item.Value for item in data.pickLists[filter.PicklistId] | filter: filter.searchTerm">
+                  </select>
+
+                  <md-input-container style="padding: 0" ng-if="filter.FieldType == 'm'">
+                    <md-select style="padding: 0" ng-model="filter.defaultValue"
+                               md-on-close="clearSearchTerm(filter)"
+                               multiple="">
+                      <md-option ng-value="item.Id"
+                                 ng-repeat="item in data.pickLists[filter.PicklistId] | filter: filter.searchTerm">
+                        {{item.Value}}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+
+                  <div style="position:relative;" ng-if="filter.FieldType == 'l' && filter.Lookup">
+                    <span ng-hide="true" type="text">{{filter.defaultValue}}</span>
+                    <span type="text">{{filter.defaultValueName}}</span>
+
+                    <button ng-click="editDefaultValue(filter, true);">Edit</button>
+                    <button ng-if="filter.defaultValue" ng-click="clearDefaultValue(filter)">Del</button>
+
+                    <div ng-if="filter.openPopup">
+                      <div style="position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;z-index: 2;"
+                           ng-click="filter.openPopup = false;"></div>
+                      <input
+                        style="position: absolute;width:200px;top: -183px;border:1px solid black;background: white;z-index: 2;"
+                        type="text" placeholder="Search..." ng-model="filter.searchTerm"
+                        ng-change="loadLookup(filter, true)"/>
+
+                      <div scrolly="loadLookup(filter)"
+                           style="position:absolute;width:200px;height:300px;top:-150px;border:1px solid black;overflow-y:scroll;background: white;z-index: 2;">
+                        <div ng-repeat="item in filter.LookupData.Values" ng-click="closePopupList(filter, item)">
+                          {{item.Name}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger" ng-click="onDeleteFilterField(filter)">Remove</button>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </panel>
+      </div>
+    </div>
+  </div>
+</div>
