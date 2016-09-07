@@ -704,3 +704,7 @@
 {"level":"error","message":"Connection error: connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2015-12-06T09:10:00.767Z"}
 {"level":"info","message":"Express server listening on port 1337","timestamp":"2015-12-06T09:10:27.861Z"}
 {"level":"info","message":"Connected to DB!","timestamp":"2015-12-06T09:10:27.901Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2016-09-06T22:32:59.250Z"}
+{"level":"info","message":"Express server listening on port 1337","timestamp":"2016-09-06T22:34:51.981Z"}
+{"level":"info","message":"Connected to DB!","timestamp":"2016-09-06T22:34:51.995Z"}
+{"level":"error","message":"POST 500 User validation failed","timestamp":"2016-09-06T22:35:33.874Z"}

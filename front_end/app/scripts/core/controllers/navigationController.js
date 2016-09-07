@@ -2,7 +2,20 @@ angular
     .module('theme.core.navigation_controller', ['theme.core.services'])
     .controller('NavigationController', ['$scope', '$location', '$timeout', function ($scope, $location, $timeout) {
         'use strict';
+/*
+* {{rootCtrl.translations.menu.signup}}
+ {{rootCtrl.translations.menu.main}}
+ {{rootCtrl.translations.menu.service}}
+ {{rootCtrl.translations.menu.portfolio}}
+ {{rootCtrl.translations.menu.contacts}}
+ {{rootCtrl.translations.menu.help}}
 
+ {{rootCtrl.translations.menu.projects}}
+ {{rootCtrl.translations.menu.tasks}}
+ {{rootCtrl.translations.menu.models}}
+ {{rootCtrl.translations.menu.scenes}}
+
+ * */
         $scope.menu = [
             {
                 label: 'Studio Designer',
@@ -11,34 +24,6 @@ angular
                     {
                         label: 'Home',
                         url: '#/__home'
-                    },
-                    {
-                        label: 'Address',
-                        url: '#/layout-horizontal'
-                    },
-                    {
-                        label: 'Contacts',
-                        url: '#/layout-horizontal2'
-                    },
-                    {
-                        label: 'Items',
-                        url: '#/layout-fixed'
-                    },
-                    {
-                        label: 'Activities',
-                        url: '#/layout-grid'
-                    },
-                    {
-                        label: 'Proposals',
-                        url: '#/layout-horizontal'
-                    },
-                    {
-                        label: 'Orders',
-                        url: '#/layout-horizontal2'
-                    },
-                    {
-                        label: 'Invoices',
-                        url: '#/layout-fixed'
                     }
                 ]
             },
@@ -49,10 +34,6 @@ angular
                     {
                         label: 'Control Panel',
                         url: '#/__rw_cpanel'
-                    },
-                    {
-                        label: 'Report Generator',
-                        url: '#/__rw_generator'
                     }
                 ]
             },

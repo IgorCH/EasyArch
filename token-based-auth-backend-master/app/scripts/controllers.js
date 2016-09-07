@@ -5,11 +5,14 @@
 angular.module('angularRestfulAuth')
     .controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$localStorage', 'Main', function($rootScope, $scope, $location, $localStorage, Main) {
 
+        $scope.email = "igor@mail.ru";
+        $scope.password = "pass";
+
         $scope.signin = function() {
             var formData = {
                 email: $scope.email,
                 password: $scope.password
-            }
+            };
 
             Main.signin(formData, function(res) {
                 $localStorage.token = res.data.token;
@@ -25,7 +28,7 @@ angular.module('angularRestfulAuth')
                 password: $scope.password
             };
 
-            Main.save(formData, function(res) {
+            Main.signup(formData, function(res) {
                 $localStorage.token = res.data.token;
                 $location.path('/me');
             }, function() {

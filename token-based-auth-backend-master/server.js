@@ -10,11 +10,12 @@ var port = process.env.PORT || 3001;
 var User     = require('./models/User');
 
 // Connect to DB
-mongoose.connect("localhost:27017");
+mongoose.connect("mongodb://localhost/auth");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
+
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
@@ -22,7 +23,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.post('/authenticate', function(req, res) {
+app.post('/signin', function(req, res) {
+
     User.findOne({email: req.body.email, password: req.body.password}, function(err, user) {
         if (err) {
             res.json({
@@ -47,7 +49,7 @@ app.post('/authenticate', function(req, res) {
 });
 
 
-app.post('/signin', function(req, res) {
+app.post('/signup', function(req, res) {
     User.findOne({email: req.body.email, password: req.body.password}, function(err, user) {
         if (err) {
             res.json({
@@ -65,6 +67,7 @@ app.post('/signin', function(req, res) {
                 userModel.email = req.body.email;
                 userModel.password = req.body.password;
                 userModel.save(function(err, user) {
+
                     user.token = jwt.sign(user, process.env.JWT_SECRET);
                     user.save(function(err, user1) {
                         res.json({
@@ -104,7 +107,7 @@ function ensureAuthorized(req, res, next) {
         req.token = bearerToken;
         next();
     } else {
-        res.send(403);
+        res.sendStatus(403);
     }
 }
 
