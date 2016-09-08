@@ -1,11 +1,14 @@
 angular
   .module('theme.core.login_controller', ['theme.core.services'])
-  .controller('LoginController', ['$scope', '$theme', 'ReportWriterDataSource',
-                          function($scope, $theme, ReportWriterDataSource) {
+  .controller('LoginController', ['$scope', '$theme', 'EasyArchDataSource',
+                          function($scope, $theme, EasyArchDataSource) {
     'use strict';
 
-    $scope.name = "0053B000000DtNaQAK";
-    $scope.pass = "11223344";
+    $scope.loginData = {
+        name : "igor",
+        password : "pass"
+    };
+
 
     $theme.set('fullscreen', true);
 
@@ -14,14 +17,10 @@ angular
     });
 
     $scope.logIn = function () {
-      var params = {
-        login: $scope.name,
-        password: $scope.pass
-      };
 
-      ReportWriterDataSource.login(params, function(res, isSuccess) {
+      EasyArchDataSource.login($scope.loginData, function(res, isSuccess) {
         if(isSuccess) {
-          window.location.href = "#/__home";
+          window.location.href = "#/home";
         }
       });
     };

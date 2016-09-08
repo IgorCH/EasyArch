@@ -18,68 +18,68 @@ angular
  * */
         $scope.menu = [
             {
-                label: 'Studio Designer',
+                label: 'Home',
                 iconClasses: 'glyphicon glyphicon-th-list',
-                children: [
-                    {
-                        label: 'Home',
-                        url: '#/__home'
-                    }
-                ]
+                url: '#/home'
             },
             {
-                label: 'Report Writer',
+                label: 'Service',
                 iconClasses: 'glyphicon glyphicon-pencil',
-                children: [
-                    {
-                        label: 'Control Panel',
-                        url: '#/__rw_cpanel'
-                    }
-                ]
+                url: '#/service'
             },
             {
-                label: 'Accounting',
+                label: 'Portfolio',
                 iconClasses: 'glyphicon glyphicon-usd',
-                children: []
+                url: '#/portfolio'
             },
             {
-                label: 'Products',
+                label: 'Contacts',
                 iconClasses: 'glyphicon glyphicon-shopping-cart',
-                children: []
-            },
-            {
-                label: 'Presentations',
-                iconClasses: 'glyphicon glyphicon-briefcase',
-                children: []
-            },
-            {
-                label: 'Timelines',
-                iconClasses: 'glyphicon glyphicon-time',
-                children: []
-            },
-            {
-                label: 'Calendar',
-                iconClasses: 'glyphicon glyphicon-calendar',
-                url: '#/calendar'
-            },
-            {
-                label: 'Files',
-                iconClasses: 'glyphicon glyphicon-file',
-                children: []
-            },
-            {
-                label: 'Reports',
-                iconClasses: 'glyphicon glyphicon-print',
-                children: []
+                url: '#/contacts'
             },
             {
                 label: 'Help',
-                iconClasses: 'glyphicon glyphicon-question-sign',
-                children: []
+                iconClasses: 'glyphicon glyphicon-briefcase',
+                url: '#/help'
+            },
+            {
+                label: 'Projects',
+                iconClasses: 'glyphicon glyphicon-time',
+                url: '#/projects',
+                children: [
+                    {
+                        label: 'Create New',
+                        iconClasses: 'glyphicon glyphicon-time',
+                        url: '#/new_project'
+                    }
+                ]
+            },
+            {
+                label: 'Tasks',
+                iconClasses: 'glyphicon glyphicon-calendar',
+                url: '#/tasks',
+                children: [
+                    {
+                        label: 'Create New',
+                        iconClasses: 'glyphicon glyphicon-time',
+                        url: '#/new_task'
+                    }
+                ]
+            },
+            {
+                label: 'Models',
+                iconClasses: 'glyphicon glyphicon-file',
+                url: '#/models'
+            },
+            {
+                label: 'Scenes',
+                iconClasses: 'glyphicon glyphicon-print',
+                url: '#/scenes'
             },
             {
                 label: 'Exit',
-                iconClasses: 'glyphicon glyphicon-arrow-left'
+                iconClasses: 'glyphicon glyphicon-arrow-left',
+                url: '#/exit'
             }
         ];
 

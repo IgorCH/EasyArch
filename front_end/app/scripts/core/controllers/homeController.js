@@ -1,13 +1,10 @@
 angular
   .module('theme.core.home_controller', ['theme.core.services'])
-  .controller('HomeController', ['$scope', '$theme', 'ReportWriterDataSource',
-                          function($scope, $theme, ReportWriterDataSource) {
+  .controller('HomeController', ['$scope', '$theme', 'EasyArchDataSource',
+                          function($scope, $theme, EasyArchDataSource) {
     'use strict';
 
-    $scope.home = {};
+     EasyArchDataSource.me({}, function(res){
 
-    ReportWriterDataSource.home({}, function(res) {
-      $scope.home = res.data;
-    });
-
+     })
   }]);

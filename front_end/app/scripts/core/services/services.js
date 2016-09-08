@@ -114,7 +114,7 @@ angular
     };
   }])
 
-  .service('ReportWriterDataSource', ["$resource", "$rootScope", "$http", function($resource, $rootScope, $http) {
+  .service('EasyArchDataSource', ["$resource", "$rootScope", "$http", function($resource, $rootScope, $http) {
 
     function isLocal () {
       if(window.location.href.indexOf("localhost") > -1){
@@ -125,6 +125,8 @@ angular
     }
 
     var rwds = {
+
+      token: "",
 
       processError: function  (response) {
 
@@ -139,7 +141,7 @@ angular
           result.isSuccess = false;
           //Spinner.done();
           //$state.go('login', { stateFrom: $state.current.name });
-          window.location.href = "#/__login";
+          window.location.href = "#/login";
 
         } else if(response.status != 200) {
 
@@ -151,7 +153,7 @@ angular
 
           //Если все ok - продливаем сессию
           //if(rwds.getCookie("sessid")) {
-          rwds.setCookie("sessid", rwds.getCookie("sessid"), 1);
+          //rwds.setCookie("sessid", rwds.getCookie("sessid"), 1);
           //}
 
         }
@@ -185,79 +187,46 @@ angular
         rwds.setCookie(name, "", -1);
       },
 
-      preprocessReport: function  (reports) {
-
-        angular.forEach(reports, function (report) {
-
-          report.Config = JSON.parse(report.Config);
-
-          angular.forEach(report.Config.filters, function(filter) {
-
-            if(filter.defaultValue) {
-
-              if(filter.FieldType == 'd') {
-
-                filter.defaultValue = new Date(filter.defaultValue.substr(0,4), filter.defaultValue.substr(4,2) - 1, filter.defaultValue.substr(6,2));
-
-              } else if(filter.FieldType == 't') {
-
-                filter.defaultValue = new Date(+filter.defaultValue);
-
-              } else if(filter.FieldType == 'm') {
-                //TODO Неуверен/Отладить надо
-                filter.defaultValue = filter.defaultValue.split(",");
-
-              }
-
-            }
-
-          });
-
-        });
-
-        return reports;
-
-      },
-
-      postprocessReport: function  (report) {
-
-        angular.forEach(report.Config.filters, function(filter) {
-
-          if(filter.LookupData) delete filter.LookupData;
-
-          if(filter.defaultValue) {
-
-            if(filter.FieldType == 'd') {
-
-              filter.defaultValue = "" + new Date(filter.defaultValue).format("yyyymmdd")
-
-            } else if(filter.FieldType == 't') {
-
-              filter.defaultValue = "" + new Date(filter.defaultValue).getTime();
-
-            }
-          } else {
-            filter.defaultValue = "";
-          }
-
-          filter.defaultValue = "" + filter.defaultValue;
-
-        });
-
-        report.Config = JSON.stringify(report.Config);
-
-        return report;
-      },
-
-      /*W*/
-      login: function (params, callback) {
-
+      signup: function (params, callback) {
         $http({
           method: 'POST',
-          url: '/api/login',
+          url: 'http://localhost:8080/api/signup',
           data: params
         }).then(function (response) {
-          rwds.setCookie("sessid", response.data.sessid, 1);
+          //rwds.setCookie("sessid", response.data.sessid, 1);
+          callback && callback(response, true);
+        }, function (response) {
+          //Spinner.done();
+          callback && callback(response, false);
+        });
+
+      },
+      /*W*/
+      login: function (params, callback) {
+        $http({
+          method: 'POST',
+          url: 'http://localhost:8080/api/login',
+          data: params
+        }).then(function (response) {
+
+          if(response.data.success) {
+            $http.defaults.headers.common['Authorization'] = response.data.token;
+          }
+
+          callback && callback(response, true);
+        }, function (response) {
+          //Spinner.done();
+          callback && callback(response, false);
+        });
+
+      },
+
+      me: function (params, callback) {
+          $http({
+          method: 'GET',
+          url: 'http://localhost:8080/api/me',
+          data: params
+        }).then(function (response) {
           callback && callback(response, true);
         }, function (response) {
           //Spinner.done();
@@ -294,287 +263,7 @@ angular
           callback && callback(response, false);
         });
       },
-      /*W*/
-      getAutoComplete: function (params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/reportwriter/ac/field?object=' + params.object + "&v="+params.text
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getAutoCompleteForHeaders: function (params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/reportwriter/ac/field?object=SDAccount&v=' + params.text
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getPickList: function(params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/picklist?fieldid=' + params.fieldid
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getPickLists: function(params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/picklist?fieldids=' + params.fieldids
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getLookup: function(params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/lookup/' + params.object + '?limit=' + params.limit + '&offset=' + params.offset + '&search=' + params.search
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getObjects: function (params, callback) {
 
-        var url = "/api/reportwriter/objects";
-
-        if(params.showreports) {
-          url = url + "?showreports=1";
-        }
-
-        $http({
-          method: 'GET',
-          url: url
-        }).then(function(response){
-          var result = rwds.processError(response);
-
-          angular.forEach(response.data, function(item) {
-            item.Reports = rwds.preprocessReport(item.Reports);
-          });
-
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      generateReport: function (params, callback) {
-
-        //TODO Убрать отсюда
-        angular.forEach(params.Filters, function(filter) {
-          if(filter.defaultValue == undefined || filter.defaultValue == null) {
-            filter.defaultValue = "";
-          }
-          filter.defaultValue = "" + filter.defaultValue;
-        });
-
-        $http({
-          method: 'POST',
-          url: '/api/reportwriter/',
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      generatePDF: function (params, callback) {
-        $http({
-          method: 'POST',
-          url: '/api/reportwriter?view=pdf',
-          data: params,
-          responseType: 'arraybuffer'
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-
-      },
-      /******************************************/
-      /*W*/
-      getChapter: function (params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/reportwriter/chapter?object=' + params.object
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      getChapters: function (params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/reportwriter/chapter?object=' + params.object + '&showfields=1'
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      createChapter: function (params, callback) {
-        $http({
-          method: 'POST',
-          url: '/api/reportwriter/chapter',
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      updateChapter: function (params, callback) {
-        $http({
-          method: 'PUT',
-          url: '/api/reportwriter/chapter/' + params.Id,
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-
-      },
-      /*W*/
-      deleteChapter: function (params, callback) {
-        $http({
-          method: 'DELETE',
-          url: '/api/reportwriter/chapter/' + params.Id
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      reorderChapter: function (params, callback) {
-        $http({
-          method: 'PATCH',
-          url: '/api/reportwriter/chapter/',
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /******************************************/
-      /*W*/
-      getField: function (params, callback) {
-        $http({
-          method: 'GET',
-          url: '/api/reportwriter/field?chapter=' + params.chapter
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      createField: function (params, callback) {
-        $http({
-          method: 'POST',
-          url: '/api/reportwriter/field',
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      updateField: function (params, callback) {
-        $http({
-          method: 'PUT',
-          url: '/api/reportwriter/field/' + params.Id,
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      deleteField: function (params, callback) {
-        $http({
-          method: 'DELETE',
-          url: '/api/reportwriter/field/' + params.Id
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
-      /*W*/
-      reorderField: function (params, callback) {
-        $http({
-          method: 'PATCH',
-          url: '/api/reportwriter/field/',
-          data: params
-        }).then(function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        }, function(response){
-          var result = rwds.processError(response);
-          callback && callback(response.data, result);
-        });
-      },
       /******************************************/
       /*W*/
       getReport: function (params, callback) {

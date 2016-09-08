@@ -1,146 +1,169 @@
 <div id="page-heading">
-	<ol class="breadcrumb">
-		<li><a href="#/">Dashboard</a></li>
-		<li class="active">Tasks</li>
-	</ol>
-
-	<h1>Tasks</h1>
+    <ol class="breadcrumb">
+        <li><a href="#/">Studio Designer</a></li>
+        <li>Report Writer</li>
+        <li class="active">Control Panel</li>
+    </ol>
 </div>
 
-<div class="container-fluid" ng-controller="TasksController">
-	<script type="text/ng-template" id="items_renderer.html">
-		<div class="task-container" as-sortable-item-handle>
-      <span class="label label-{{item.color || 'primary'}}" ng-show="!item.editing"></span>
-      <span class="task-description" ng-show="!item.editing">{{item.title}}</span>
-        <form class="form-horizontal" ng-submit="doneEditing(item)" ng-show="item.editing" data-nodrag>
-          <div class="form-group">
-            <div class="col-md-12">
-              <div class="input-group">
-            <div class="input-group-btn">
-              <div class="btn-group" dropdown style="">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                  <div class="label label-{{item.color||'primary'}} color-block"></div>
-                </button>
-                <ul class="dropdown-menu dropdown-colors" role="menu">
-                  <li><span class="label label-success" ng-click="item.color='success'"></span></li>
-                  <li><span class="label label-primary" ng-click="item.color='primary'"></span></li>
-                  <li><span class="label label-warning" ng-click="item.color='warning'"></span></li>
-                  <li><span class="label label-danger" ng-click="item.color='danger'"></span></li>
-                  <li><span class="label label-info" ng-click="item.color='info'"></span></li>
-                </ul>
-              </div>
-            </div>
-            <input type="text" class="form-control no-validate" ng-model="item.title" placeholder="Task title..." ng-keyup="cancelEdit($event, item)">
-            <div class="input-group-btn">
-              <input type="submit" class="btn btn-primary" value="Save" /	>
-            </div>
-          </div>
-            </div>
-          </div>
-        </form>
-		  </div>
-		  <div class="options todooptions">
-		    <div class="btn-group" ng-show="!item.editing">
-		        <button data-nodrag class="btn btn-default btn-xs" ng-click="complete(this, item)"><i class="glyphicon glyphicon-ok"></i></button>
-		        <button data-nodrag class="btn btn-default btn-xs" ng-click="edit(item)"><i class="glyphicon glyphicon-edit"></i></button>
-		        <button data-nodrag class="btn btn-default btn-xs" ng-click="remove(this)"><i class="glyphicon glyphicon-remove"></i></button>
-		    </div>
-		</div>
-	</script>
-
-	<div class="row">
-		<div class="col-xs-12">
-
-      <panel heading="Tasks" panel-class="panel-sky">
-        <panel-controls>
-          <panel-control-collapse></panel-control-collapse>
-          <panel-control-title></panel-control-title>
-          <panel-control-colors></panel-control-colors>
-          <button class="btn btn-primary btn-sm mr10" ng-click="showForm=true;showTasksTab=true;showCompletedTab=false"
-                  style="margin-top: -5px;">Add Task
-          </button>
-        </panel-controls>
-
-        <div>
-
-          <form class="form-horizontal" name="create_task"
-                ng-submit="newItem(newTaskTitle, newTaskLabelText, newTaskColor)" ng-show="showForm">
-            <div class="form-group">
-
-
-              <div class="col-xs-12">
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <div class="btn-group" dropdown style="">
-                      <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                        <div class="label label-{{newTaskColor||'primary'}} color-block"></div>
-                      </button>
-                      <ul class="dropdown-menu dropdown-colors" role="menu">
-                        <li><span class="label label-success" ng-click="newTaskColor='success'"></span></li>
-                        <li><span class="label label-primary" ng-click="newTaskColor='primary'"></span></li>
-                        <li><span class="label label-warning" ng-click="newTaskColor='warning'"></span></li>
-                        <li><span class="label label-danger" ng-click="newTaskColor='danger'"></span></li>
-                        <li><span class="label label-info" ng-click="newTaskColor='info'"></span></li>
-                      </ul>
+<div ng-controller="TasksController" class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <panel panel-class="panel-info" heading="Object">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <select class="form-control"
+                                ng-model="configData.currentObject"
+                                ng-change="onChangeObject()"
+                                ng-options="object as object.Name for object in data.objects">
+                        </select>
                     </div>
-                  </div>
-                  <input type="text" class="form-control no-validate" ng-model="newTaskTitle"
-                         placeholder="Task title..." ng-keyup="cancelAdd($event)">
+                </form>
+            </panel>
+            <panel panel-class="panel-info" heading="Chapters">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tasklist">
+                            <ul class="panel-tasks">
+                                <li style="padding-right:45px">
+                                    <div class="task-container" ng-click="onSelectHeader()">
+                                        <span ng-if="configData.currentColumnId == 0" class="label label-primary"></span>
+                                        <span class="task-description">Headers</span>
+                                    </div>
+                                </li>
 
-                  <div class="input-group-btn">
-                    <input
-                      class="btn btn-success btn-block"
-                      value="Add Task"
-                      type="submit"
-                      />
-                  </div>
+                                <li ng-repeat="column in data.columns" style="padding-right:45px">
+                                    <div class="task-container" ng-click="onSelectColumn(column)">
+                                        <span ng-if="configData.currentColumnId == column.Id" class="label label-primary"></span>
+                                        <span class="task-description">{{column.Name}}</span>
+                                    </div>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button data-nodrag class="btn btn-default btn-xs" ng-click="onRemoveColumn(column)"><i class="glyphicon glyphicon-remove"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-
-              <div class="col-xs-3 col-md-2">
-
-              </div>
-            </div>
-
-          </form>
+                <br/>
+                <button class="btn btn-default" ng-click="onAddColumn()">Add Chapter</button>
+            </panel>
         </div>
+        <div class="col-md-9">
+            <panel panel-class="panel-info" heading="Fields">
+                <panel-controls>
+                    <panel-control-collapse></panel-control-collapse>
+                    <button class="button-icon"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button class="button-icon"><i class="glyphicon glyphicon-wrench"></i></button>
+                </panel-controls>
+                <table class="table table-bordered table-condensed">
+                    <tr style="font-weight: bold">
+                        <td style="width:30%">Name</td>
+                        <td style="width:30%">Field</td>
+                        <td style="width:10%" ng-if="configData.currentColumnId != 0">Group By</td>
+                        <td style="width:5%" ng-if="configData.currentColumnId != 0">Filter</td>
+                        <td style="width:25%"></td>
+                    </tr>
+                    <tr ng-repeat="field in data.fields">
+                        <td>
+                            <span ng-if="!field.isEditing">{{field.Name}}</span>
+                            <input ng-if="field.isEditing" type="text" ng-model="field.Name"/>
+                        </td>
+                        <td>
+                            <div class="input-icon right">
+                                <i ng-show="loadingLocations" class="fa fa-refresh fa-spin"></i>
+                                <input type="text"
+                                       ng-disabled="!field.isEditing"
+                                       class="form-control"
+                                       placeholder="Type in a location"
+                                       ng-model="field.Field"
+                                       typeahead="address.Field for address in getAutoComplete($viewValue)"
+                                       typeahead-loading="loadingLocations">
+                            </div>
 
-        <div class="tasklist">
-          <ul ng-model="tasks" as-sortable="{}" class="panel-tasks">
-            <li
-              as-sortable-item
-              ng-repeat="item in tasks"
-              ng-include="'items_renderer.html'"
-              ng-style="{'border-left': item.color? '2px solid '+item.color:''}"
-              >
-            </li>
-          </ul>
+                            <!--span ng-if="!field.isEditing">{{field.Field}}</span>
+                            <md-autocomplete ng-if="field.isEditing"
+                                             md-selected-item="field.selectedItem"
+                                             md-search-text="field.searchText"
+                                             md-search-text-change="searchTextChange(field)"
+                                             md-selected-item-change="selectedItemChange(field, item)"
+                                             md-items="item in getAutoComplete(field.searchText)"
+                                             md-item-text="item.Field"
+                                             md-min-length="2">
+                              <md-item-template>
+                                <span ng-if="!item.Lookup" md-highlight-text="searchText" md-highlight-flags="^i">{{item.Field}} ({{getTypeNameByCode(item.Type)}})</span>
+                                <span ng-if="item.Lookup" md-highlight-text="searchText" md-highlight-flags="^i">{{item.Field}} *{{item.Lookup}}</span>
+                              </md-item-template>
+                              <md-not-found>
+                                No states matching "{{field.searchText}}" were found.
+                              </md-not-found>
+                            </md-autocomplete-->
+                        </td>
+                        <td ng-if="configData.currentColumnId != 0">
+                            <div class="checkbox block">
+                                <label class="checkbox-inline">
+                                    <input icheck type="checkbox" ng-disabled="!field.isEditing" ng-model="field.CanGroup">
+                                </label>
+                            </div>
+                        </td>
+                        <td ng-if="configData.currentColumnId != 0">
+                            <div class="checkbox block">
+                                <label class="checkbox-inline">
+                                    <input icheck type="checkbox" ng-disabled="!field.isEditing" ng-model="field.CanFilter">
+                                </label>
+                            </div>
+                        </td>
+                        <td class="form-buttons form-inline">
+                            <button class="btn btn-sm btn-primary" ng-if="!field.isEditing" ng-click="onEditField(field)">Edit</button>
+                            <button class="btn btn-default btn-sm" ng-if="field.isEditing" ng-click="onSaveField(field)">Save</button>
+                            <button class="btn btn-default btn-sm" ng-if="field.isEditing" ng-click="onCancelField(field)">Cancel</button>
+                            <button class="btn btn-sm btn-danger" ng-if="field.Id" ng-click="onRemoveField(field)">Remove</button>
+                        </td>
+                    </tr>
+                    <!--tr ng-repeat="user in users">
+                      <td>
+                        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                          {{ user.name || 'empty' }}
+                        </span>
+                      </td>
+                      <td>
+                        <span editable-select="user.status" e-name="status" e-form="rowform"
+                              e-ng-options="s.value as s.text for s in statuses">
+                          {{ showStatus(user) }}
+                        </span>
+                      </td>
+                      <td>
+                        <span editable-select="user.group" e-name="group" e-form="rowform"
+                              e-ng-options="g.id as g.text for g in groups">
+                          {{ showGroup(user) }}
+                        </span>
+                      </td>
+                      <td style="white-space: nowrap">
+
+                      </td>
+                      <td>
+                        <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)"
+                              ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+                          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-sm btn-primary">
+                            Save
+                          </button>
+                          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()"
+                                  class="btn btn-sm btn-default">
+                            Cancel
+                          </button>
+                        </form>
+                        <div class="buttons" ng-show="!rowform.$visible">
+                          <button class="btn btn-sm btn-primary" ng-click="rowform.$show()">Edit</button>
+                          <button class="btn btn-sm btn-danger" ng-click="removeUser($index)">Delete</button>
+                        </div>
+                      </td>
+                    </tr-->
+                </table>
+                <button class="btn btn-default" ng-click="onAddField()">Add Field</button>
+            </panel>
         </div>
-        <div class="tasklist">
-          <ul ng-model="tasksComplete" as-sortable="{}" class="panel-tasks completed">
-            <li
-              as-sortable-item
-              ng-repeat="item in tasksComplete"
-              ng-style="{'border-left': item.color? '2px solid '+item.color:''}"
-              >
-              <div class="task-container">
-                <span class="label label-{{item.color || 'primary'}}" ng-show="item.label"></span>
-                <span class="task-description">{{item.title}}</span>
-              </div>
-              <div class="options todooptions">
-                <div class="btn-group" ng-show="!item.editing">
-                  <button data-nodrag class="btn btn-default btn-xs" ng-click="incomplete(item, $index)"><i
-                    class="glyphicon glyphicon-repeat"></i></button>
-                </div>
-              </div>
-            </li>
-          </ul>
+    </div>
 
-        </div>
-      </panel>
-
-		</div>
-	</div>
-
-</div> <!-- container-fluid -->
+</div>
