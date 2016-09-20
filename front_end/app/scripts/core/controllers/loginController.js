@@ -5,10 +5,9 @@ angular
     'use strict';
 
     $scope.loginData = {
-        name : "igor",
-        password : "pass"
+        name : "admin",
+        password : "admin"
     };
-
 
     $theme.set('fullscreen', true);
 
@@ -20,7 +19,7 @@ angular
 
       EasyArchDataSource.login($scope.loginData, function(res, isSuccess) {
         if(isSuccess) {
-          window.location.href = "#/home";
+          window.location.href = "#/projects";
         }
       });
     };

@@ -1,0 +1,120 @@
+<div ng-controller="ProjectController">
+
+<div id="page-heading">
+    <ol class="breadcrumb">
+        <li><a href="#/">Dashboard</a></li>
+        <li>UI Components</li>
+        <li class="active">Tabs &amp; Accordions</li>
+    </ol>
+
+    <h1>{{project.title}}</h1>
+
+</div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <tabset panel-tabs="true" heading="Project workflow" panel-class="panel-primary">
+                <tab>
+                    <tab-heading>
+                        <!--i class="fa fa-desktop"></i-->
+                    </tab-heading>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <tabset tab-theme="danger" tab-position="top">
+                                <tab heading="Main">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores porro eveniet
+                                        debitis quas sed harum nobis libero voluptatibus dolorum odio at veniam aut id
+                                        corrupti hic esse quisquam fugiat. Asperiores in eveniet sapiente error fuga
+                                        tenetur ex ea dignissimos voluptas ab molestiae eos totam quo dolorem maxime
+                                        illo neque quia itaque.</p>
+                                </tab>
+
+                                <tab heading="Attachments">
+                                    <form ng-repeat="attach in project.attachments"
+                                          class="form-horizontal row-border"
+                                          ng-submit="">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">File</label>
+                                            <div class="col-sm-9">
+                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <div class="input-group">
+                                                        <div class="form-control uneditable-input"
+                                                             data-trigger="fileinput">
+                                                            <i class="fa fa-file fileinput-exists"></i>
+                                                            &nbsp;
+                                                            <span class="fileinput-filename"></span>
+                                                        </div>
+                                                        <span class="input-group-addon btn btn-default btn-file">
+                                                            <span class="fileinput-new">Select file</span>
+                                                            <span class="fileinput-exists">Change</span>
+                                                            <input type="file" file-model="attach.file"/>
+                                                        </span>
+                                                        <span class="input-group-addon btn btn-default fileinput-exists"
+                                                              data-dismiss="fileinput">Remove</span>
+                                                        <span class="input-group-addon btn btn-default fileinput-exists"
+                                                              ng-click="onUploadAttach(attach.file)">Upload</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <button class="btn btn-primary" ng-click="onCreateAttach()">New Attach</button>
+                                </tab>
+
+                                <tab heading="Models">
+
+                                    <button class="btn btn-primary" ng-click="onAddModel()">Add Model</button>
+                                </tab>
+
+                                <tab heading="Scenes">
+
+                                    <button class="btn btn-primary" ng-click="onAddScene()">Add Scene</button>
+                                </tab>
+
+                                <tab heading="Tasks">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <td>Id</td>
+                                                <td>Name</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr ng-repeat="task in project.tasks">
+                                                <td>{{task._id}}</td>
+                                                <td>{{task.title}}</td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#/task?id={{task._id}}">Edit</a>
+                                                    <a class="btn" ng-click="onDeleteTask(task)">Delete</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="btn btn-primary" ng-click="onCreateTask()">New Task</button>
+                                    </div>
+                                </tab>
+
+                                <tab heading="Results">
+                                    <button class="btn btn-primary" ng-click="onDownloadAllResults()">Download All</button>
+                                </tab>
+                            </tabset>
+                        </div>
+                    </div>
+                </tab>
+
+            </tabset>
+
+        </div>
+    </div>
+
+    <hr>
+
+
+</div> <!-- container-fluid -->
+</div>

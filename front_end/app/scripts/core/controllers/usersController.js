@@ -4,5 +4,17 @@ angular
                           function($scope, $theme, EasyArchDataSource) {
     'use strict';
 
+    $scope.users = [];
+    EasyArchDataSource.getUsers({}, function(res, resInfo) {
+      $scope.users = res;
+    });
 
-  }]);
+
+    $scope.onUpdateUser = function(user) {
+
+    };
+
+    $scope.onDeleteUser = function(user) {
+
+    };
+}]);

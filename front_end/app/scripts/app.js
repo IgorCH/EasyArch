@@ -4,7 +4,7 @@ angular
     'use strict';
     $routeProvider
       .when('/', {
-        templateUrl: 'views/index.html',
+        templateUrl: 'views/service.html',
         resolve: {
           loadCalendar: ['$ocLazyLoad', function($ocLazyLoad) {
             return $ocLazyLoad.load([
@@ -19,9 +19,8 @@ angular
         }
       })
       .when('#', {
-        templateUrl: 'views/index.html'
+        templateUrl: 'views/service.html'
       })
-
       .otherwise({
         redirectTo: '/'
       });

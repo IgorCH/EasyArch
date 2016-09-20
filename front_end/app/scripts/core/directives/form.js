@@ -1,37 +1,37 @@
 angular
   .module('theme.core.directives', [])
-  .directive('autosize', function() {
+  .directive('autosize', function () {
     'use strict';
     return {
       restrict: 'AC',
-      link: function(scope, element) {
+      link: function (scope, element) {
         element.autosize({
           append: '\n'
         });
       }
     };
   })
-  .directive('fullscreen', function() {
+  .directive('fullscreen', function () {
     'use strict';
     return {
       restrict: 'AC',
-      link: function(scope, element) {
+      link: function (scope, element) {
         element.fseditor({
           maxHeight: 500
         });
       }
     };
   })
-  .directive('colorpicker', function() {
+  .directive('colorpicker', function () {
     'use strict';
     return {
       restrict: 'AC',
-      link: function(scope, element) {
+      link: function (scope, element) {
         element.colorpicker();
       }
     };
   })
-  .directive('daterangepicker', function() {
+  .directive('daterangepicker', function () {
     'use strict';
     return {
       restrict: 'A',
@@ -40,8 +40,8 @@ angular
         start: '=dateBegin',
         end: '=dateEnd'
       },
-      link: function(scope, element) {
-        element.daterangepicker(scope.options, function(start, end) {
+      link: function (scope, element) {
+        element.daterangepicker(scope.options, function (start, end) {
           if (scope.start) {
             scope.start = start.format('MMMM D, YYYY');
           }
@@ -53,25 +53,25 @@ angular
       }
     };
   })
-  .directive('multiselect', ['$timeout', function($t) {
+  .directive('multiselect', ['$timeout', function ($t) {
     'use strict';
     return {
       restrict: 'A',
-      link: function(scope, element) {
-        $t(function() {
+      link: function (scope, element) {
+        $t(function () {
           element.multiSelect();
         });
       }
     };
   }])
-  .directive('wizard', function() {
+  .directive('wizard', function () {
     'use strict';
     return {
       restrict: 'A',
       scope: {
         options: '=wizard'
       },
-      link: function(scope, element) {
+      link: function (scope, element) {
         if (scope.options) {
           element.stepy(scope.options);
 
@@ -80,10 +80,10 @@ angular
             element.validate({
               errorClass: 'help-block',
               validClass: 'help-block',
-              highlight: function(element) {
+              highlight: function (element) {
                 angular.element(element).closest('.form-group').addClass('has-error');
               },
-              unhighlight: function(element) {
+              unhighlight: function (element) {
                 angular.element(element).closest('.form-group').removeClass('has-error');
               }
             });
@@ -96,16 +96,16 @@ angular
       }
     };
   })
-  .directive('maskinput', function() {
+  .directive('maskinput', function () {
     'use strict';
     return {
       restrict: 'A',
-      link: function(scope, element) {
+      link: function (scope, element) {
         element.inputmask();
       }
     };
   })
-  .directive('croppable', ['$timeout', function($t) {
+  .directive('croppable', ['$timeout', function ($t) {
     'use strict';
     return {
       restrict: 'A',
@@ -115,31 +115,45 @@ angular
         imgSelected: '&',
         cropInit: '&'
       },
-      link: function(scope, element) {
+      link: function (scope, element) {
         var myImg;
-        $t(function() {
+        $t(function () {
           if (scope.src) {
             myImg = element;
             element.width(element.width()); // stupid width bug
             angular.element(myImg).Jcrop({
               trackDocument: true,
-              onSelect: function(x) {
-                $t(function() {
+              onSelect: function (x) {
+                $t(function () {
                   scope.imgSelected({
                     coords: x
                   });
                 });
               },
               // aspectRatio: 1
-            }, function() {
+            }, function () {
               // Use the API to get the real image size 
               scope.bounds = this.getBounds();
             });
           }
         });
-        scope.$watch('bounds', function() {
+        scope.$watch('bounds', function () {
           scope.cropInit({
             bounds: scope.bounds
+          });
+        });
+      }
+    };
+  }])
+  .directive('fileModel', ['$parse', function ($parse) {
+    return {
+      restrict: 'A',
+      link: function (scope, element, attrs) {
+        var model = $parse(attrs.fileModel);
+        var modelSetter = model.assign;
+        element.bind('change', function () {
+          scope.$apply(function () {
+            modelSetter(scope, element[0].files[0]);
           });
         });
       }

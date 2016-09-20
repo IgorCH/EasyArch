@@ -18,11 +18,6 @@ angular
  * */
         $scope.menu = [
             {
-                label: 'Home',
-                iconClasses: 'glyphicon glyphicon-th-list',
-                url: '#/home'
-            },
-            {
                 label: 'Service',
                 iconClasses: 'glyphicon glyphicon-pencil',
                 url: '#/service'
@@ -48,24 +43,26 @@ angular
                 url: '#/projects',
                 children: [
                     {
-                        label: 'Create New',
-                        iconClasses: 'glyphicon glyphicon-time',
+                        label: 'Create New Project',
                         url: '#/new_project'
+                    },
+                    {
+                        label: 'Create New Task',
+                        url: '#/new_task'
                     }
                 ]
             },
-            {
+            /*{
                 label: 'Tasks',
                 iconClasses: 'glyphicon glyphicon-calendar',
                 url: '#/tasks',
                 children: [
                     {
                         label: 'Create New',
-                        iconClasses: 'glyphicon glyphicon-time',
                         url: '#/new_task'
                     }
                 ]
-            },
+            },*/
             {
                 label: 'Models',
                 iconClasses: 'glyphicon glyphicon-file',
@@ -75,6 +72,11 @@ angular
                 label: 'Scenes',
                 iconClasses: 'glyphicon glyphicon-print',
                 url: '#/scenes'
+            },
+            {
+                label: 'Users',
+                iconClasses: 'glyphicon glyphicon-print',
+                url: '#/users'
             },
             {
                 label: 'Exit',
