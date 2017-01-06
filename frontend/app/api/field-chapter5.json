@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 59,
+    "Chapter": 0,
+    "Name": "Design Firm Logo2",
+    "Field": "report_logo",
+    "FieldType": "s",
+    "CanGroup": true,
+    "CanFilter": false,
+    "OrderIndex": 0
+  },
+  {
+    "Id": 61,
+    "Chapter": 0,
+    "Name": "Design Firm Name",
+    "Field": "name",
+    "FieldType": "s",
+    "CanGroup": true,
+    "CanFilter": true,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 60,
+    "Chapter": 0,
+    "Name": "Design Firm Address",
+    "Field": "company_address",
+    "FieldType": "s",
+    "CanGroup": false,
+    "CanFilter": false,
+    "OrderIndex": 2
+  },
+  {
+    "Id": 217,
+    "Chapter": 0,
+    "Name": "Design Firm Address 2",
+    "Field": "company_address_2",
+    "FieldType": "s",
+    "CanGroup": false,
+    "CanFilter": false,
+    "OrderIndex": 3
+  },
+  {
+    "Id": 218,
+    "Chapter": 0,
+    "Name": "Design Firm Phone",
+    "Field": "phone",
+    "FieldType": "s",
+    "CanGroup": false,
+    "CanFilter": false,
+    "OrderIndex": 5
+  },
+  {
+    "Id": 219,
+    "Chapter": 0,
+    "Name": "Design Firm Email",
+    "Field": "email",
+    "FieldType": "s",
+    "CanGroup": false,
+    "CanFilter": false,
+    "OrderIndex": 6
+  },
+  {
+    "Id": 220,
+    "Chapter": 0,
+    "Name": "Design Firm Website",
+    "Field": "website",
+    "FieldType": "s",
+    "CanGroup": false,
+    "CanFilter": false,
+    "OrderIndex": 7
+  }
+]

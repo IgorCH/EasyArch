@@ -1,0 +1,96 @@
+@media (min-width: 568px) {
+  .filter_panel {
+    display: inline-block;
+    float: left;
+    width: 180px;
+  }
+
+  .content {
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+    width: calc(100% - 195px);
+  }
+}
+
+.checkbox.block {
+
+  margin-top: -2px;
+
+}
+
+.line-separator {
+
+  width: 200px;
+  height: 1px;
+  background-image: url("../img/separator.gif");
+  margin-left: 20px;
+  /*
+  background-image:
+    url(../assets/img/separator.gif);
+  */
+}
+
+.icheckbox_minimal-blue.checked.disabled {
+  background-position: -40px 0;
+  cursor: default;
+
+}
+
+.icheckbox_minimal-blue.checked.disabled ins {
+  opacity: 0.5 !important;
+}
+
+.icheckbox_minimal-blue.checked .disableStyle + ins {
+  opacity: 0 !important;
+}
+
+.angular-ui-tree-empty {
+  border: 0px dashed #bbb;
+  min-height: 10px;
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.panelLookup {
+  margin: 10px 0 25px 0;
+}
+
+.panel-info .panel-heading h2.ng-binding {
+  text-transform: none;
+}
+
+.tableHeader {
+  font-weight: bold;
+  color: #707881;
+}
+
+.form-horizontal .checkbox {
+  padding-top: 6px !important;
+  min-height: 26px !important;
+}
+
+.checkbox-inline {
+  height: 20px !important;
+}
+
+.fa.fa-refresh.fa-spin {
+
+  margin-right: 35px;
+  margin-top: 6px;
+  z-index: 999
+
+}
+
+.checkbox-inline {
+  background-color: #ffffff;
+}
+
+
+
+.table_align_td_right td{
+  text-align: right;
+  padding: 2px;
+
+
+}

@@ -1,0 +1,64 @@
+{
+  "57": [
+    {
+      "Id": 607,
+      "FieldId": 63,
+      "OrderIndex": 1,
+      "Value": "Always"
+    },
+    {
+      "Id": 608,
+      "FieldId": 63,
+      "OrderIndex": 2,
+      "Value": "Never"
+    },
+    {
+      "Id": 609,
+      "FieldId": 63,
+      "OrderIndex": 3,
+      "Value": "Zero"
+    }
+  ],
+  "64": [
+    {
+      "Id": 610,
+      "FieldId": 64,
+      "OrderIndex": 1,
+      "Value": "Yes"
+    },
+    {
+      "Id": 611,
+      "FieldId": 64,
+      "OrderIndex": 2,
+      "Value": "No"
+    }
+  ],
+  "65": [
+    {
+      "Id": 612,
+      "FieldId": 65,
+      "OrderIndex": 1,
+      "Value": "Yes"
+    },
+    {
+      "Id": 613,
+      "FieldId": 65,
+      "OrderIndex": 2,
+      "Value": "No"
+    }
+  ],
+  "66": [
+    {
+      "Id": 614,
+      "FieldId": 66,
+      "OrderIndex": 1,
+      "Value": "1"
+    },
+    {
+      "Id": 615,
+      "FieldId": 66,
+      "OrderIndex": 2,
+      "Value": "2"
+    }
+  ]
+}

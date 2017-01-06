@@ -1,0 +1,229 @@
+[
+  {
+    "Id": 1,
+    "Name": "Items",
+    "ApiName": "SDItems",
+    "Reports": [
+      {
+        "Id": 70,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "New Report Sample",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":false,\"headers\":[],\"columns\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"$$hashKey\":\"object:551\"},{\"Id\":42,\"Chapter\":5,\"Name\":\"Client Address\",\"Field\":\"client.address\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":true,\"$$hashKey\":\"object:552\"},{\"Id\":43,\"Chapter\":5,\"Name\":\"Client Address 2\",\"Field\":\"client.address_2\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":3,\"warn\":true,\"$$hashKey\":\"object:553\"},{\"Id\":45,\"Chapter\":5,\"Name\":\"Client State\",\"Field\":\"client.state\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":5,\"warn\":true,\"$$hashKey\":\"object:554\"},{\"Id\":155,\"Chapter\":18,\"Name\":\"Selling Quantity\",\"Field\":\"selling_quantity\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:555\"},{\"Id\":156,\"Chapter\":18,\"Name\":\"Selling Unit Cost\",\"Field\":\"selling_unit_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":1,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:556\"},{\"Id\":157,\"Chapter\":18,\"Name\":\"Selling Cost\",\"Field\":\"selling_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:557\"},{\"Id\":164,\"Chapter\":18,\"Name\":\"Total Selling\",\"Field\":\"total_selling\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":9,\"warn\":false,\"$$hashKey\":\"object:558\"}],\"filters\":[{\"Id\":41,\"Chapter\":5,\"Name\":\"Client Name\",\"Field\":\"client.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"defaultValue\":\"test\",\"$$hashKey\":\"object:1923\",\"compareMethod\":\"\u003e=\"},{\"Id\":226,\"Chapter\":11,\"Name\":\"Copy Purchase\",\"Field\":\"copy_purchase\",\"FieldType\":\"p\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":30,\"$$hashKey\":\"object:1575\",\"values\":[],\"compareMethod\":\"in\",\"defaultValue\":\"\"}]}",
+        "UserAccess": [
+          {
+            "Id": 2880,
+            "Name": "Aries Swangler"
+          },
+          {
+            "Id": 2876,
+            "Name": "Hadija Rowe"
+          },
+          {
+            "Id": 2884,
+            "Name": "Ivana Epifania Crescimanni"
+          }
+        ]
+      },
+      {
+        "Id": 71,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "New Report Amount",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":true,\"headers\":[],\"columns\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"$$hashKey\":\"object:2451\"},{\"Id\":41,\"Chapter\":5,\"Name\":\"Client Name\",\"Field\":\"client.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"warn\":true,\"$$hashKey\":\"object:2452\"},{\"Id\":42,\"Chapter\":5,\"Name\":\"Client Address\",\"Field\":\"client.address\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":true,\"$$hashKey\":\"object:2453\"},{\"Id\":43,\"Chapter\":5,\"Name\":\"Client Address 2\",\"Field\":\"client.address_2\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":3,\"warn\":true,\"$$hashKey\":\"object:2454\"},{\"Id\":155,\"Chapter\":18,\"Name\":\"Selling Quantity\",\"Field\":\"selling_quantity\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2455\"},{\"Id\":156,\"Chapter\":18,\"Name\":\"Selling Unit Cost\",\"Field\":\"selling_unit_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":1,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2456\"},{\"Id\":157,\"Chapter\":18,\"Name\":\"Selling Cost\",\"Field\":\"selling_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2457\"},{\"Id\":164,\"Chapter\":18,\"Name\":\"Total Selling\",\"Field\":\"total_selling\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":9,\"warn\":false,\"$$hashKey\":\"object:2458\"}],\"filters\":[]}",
+        "UserAccess": null
+      },
+      {
+        "Id": 72,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "Has Result",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":true,\"headers\":[{\"Id\":59,\"Chapter\":0,\"Name\":\"Design Firm Logo\",\"Field\":\"report_logo\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Left\",\"$$hashKey\":\"object:14313\"},{\"Id\":-2,\"Name\":\"Report Name\",\"Field\":\"report.name\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Center\",\"$$hashKey\":\"object:14314\"},{\"Id\":-3,\"Name\":\"Report Date\",\"Field\":\"report.date\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Left\",\"$$hashKey\":\"object:14315\"},{\"Id\":-6,\"Name\":\"Blank Line\",\"Field\":\"_blank\",\"Reusable\":true,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"center\",\"$$hashKey\":\"object:14316\"},{\"Id\":-4,\"Name\":\"Report Time\",\"Field\":\"report.time\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Left\",\"$$hashKey\":\"object:14317\"},{\"Id\":620,\"Chapter\":0,\"Name\":\"Design Firm Name\",\"Field\":\"name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Left\",\"$$hashKey\":\"object:14318\"},{\"Id\":621,\"Chapter\":0,\"Name\":\"Design Firm City\",\"Field\":\"firm_city\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":8,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"Right\",\"$$hashKey\":\"object:14319\"},{\"Id\":-5,\"Name\":\"Report Page Number\",\"Field\":\"report.pagenumber\",\"HeaderPosition\":\"footer\",\"HeaderAlign\":\"Left\",\"$$hashKey\":\"object:14320\"}],\"columns\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"GroupTotal\":true,\"$$hashKey\":\"object:14361\"},{\"Id\":619,\"Chapter\":11,\"Name\":\"Item Component\",\"Field\":\"item_component\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":6,\"warn\":false,\"GroupBy\":true,\"GroupTotal\":true,\"$$hashKey\":\"object:14362\"},{\"Id\":95,\"Chapter\":11,\"Name\":\"Item #\",\"Field\":\"item\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":4,\"warn\":false,\"GroupBy\":false,\"$$hashKey\":\"object:14363\"},{\"Id\":42,\"Chapter\":5,\"Name\":\"Client Address\",\"Field\":\"client.address\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"$$hashKey\":\"object:14364\"},{\"Id\":45,\"Chapter\":5,\"Name\":\"Client State\",\"Field\":\"client.state\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":5,\"warn\":false,\"$$hashKey\":\"object:14365\"},{\"Id\":155,\"Chapter\":18,\"Name\":\"Selling Quantity\",\"Field\":\"selling_quantity\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:14366\"},{\"Id\":156,\"Chapter\":18,\"Name\":\"Selling Unit Cost\",\"Field\":\"selling_unit_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":1,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:14367\"},{\"Id\":157,\"Chapter\":18,\"Name\":\"Selling Cost\",\"Field\":\"selling_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:14368\"},{\"Id\":164,\"Chapter\":18,\"Name\":\"Total Selling\",\"Field\":\"total_selling\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":9,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:14369\"},{\"Id\":96,\"Chapter\":11,\"Name\":\"Component\",\"Field\":\"component\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":5,\"warn\":false,\"GroupBy\":false,\"$$hashKey\":\"object:14370\"}],\"filters\":[{\"Id\":613,\"Chapter\":6,\"Name\":\"Vendor Name\",\"Field\":\"vendor.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"values\":[],\"defaultValue\":\"Test\",\"$$hashKey\":\"object:15231\",\"compareMethod\":\"=\"}]}",
+        "UserAccess": [
+          {
+            "Id": 2874,
+            "Name": "Adriana Kuligowska"
+          },
+          {
+            "Id": 2868,
+            "Name": "Alexandra Lynn Chunn"
+          }
+        ]
+      },
+      {
+        "Id": 79,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "Report with Group By",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":true,\"headers\":[],\"columns\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"$$hashKey\":\"object:2590\"},{\"Id\":41,\"Chapter\":5,\"Name\":\"Client Name\",\"Field\":\"client.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"warn\":false,\"$$hashKey\":\"object:2591\"},{\"Id\":612,\"Chapter\":6,\"Name\":\"Vendor Id\",\"Field\":\"vendor.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"$$hashKey\":\"object:2717\",\"warn\":false,\"GroupBy\":true},{\"Id\":613,\"Chapter\":6,\"Name\":\"Vendor Name\",\"Field\":\"vendor.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"$$hashKey\":\"object:2718\",\"warn\":false},{\"Id\":140,\"Chapter\":17,\"Name\":\"Purchase Cost\",\"Field\":\"purchase_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":3,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2592\"},{\"Id\":157,\"Chapter\":18,\"Name\":\"Selling Cost\",\"Field\":\"selling_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2593\"},{\"Id\":164,\"Chapter\":18,\"Name\":\"Total Selling\",\"Field\":\"total_selling\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":9,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:2594\"}],\"filters\":[]}",
+        "UserAccess": [
+          {
+            "Id": 2869,
+            "Name": "Amber Elizabeth Gerard"
+          },
+          {
+            "Id": 2880,
+            "Name": "Aries Swangler"
+          }
+        ]
+      },
+      {
+        "Id": 80,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "New Report Demo",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":true,\"headers\":[{\"Id\":59,\"Chapter\":0,\"Name\":\"Design Firm Logo\",\"Field\":\"report_logo\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\",\"$$hashKey\":\"object:592\"},{\"Id\":620,\"Chapter\":0,\"Name\":\"Design Firm Name\",\"Field\":\"name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":1,\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\",\"$$hashKey\":\"object:593\"},{\"Id\":-2,\"Name\":\"Report Name\",\"Field\":\"report.name\",\"$$hashKey\":\"object:1491\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\"},{\"Id\":-3,\"Name\":\"Report Date\",\"Field\":\"report.date\",\"$$hashKey\":\"object:1492\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\"},{\"Id\":-5,\"Name\":\"Report Page Number\",\"Field\":\"report.pagenumber\",\"$$hashKey\":\"object:1494\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\"}],\"columns\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"GroupTotal\":true,\"$$hashKey\":\"object:658\"},{\"Id\":94,\"Chapter\":11,\"Name\":\"Room\",\"Field\":\"room.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":3,\"warn\":false,\"GroupBy\":true,\"GroupTotal\":true,\"$$hashKey\":\"object:659\"},{\"Id\":619,\"Chapter\":11,\"Name\":\"Item Component\",\"Field\":\"item_component\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":6,\"warn\":false,\"GroupBy\":true,\"GroupTotal\":false,\"$$hashKey\":\"object:660\"},{\"Id\":612,\"Chapter\":6,\"Name\":\"Vendor Id\",\"Field\":\"vendor.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"$$hashKey\":\"object:661\"},{\"Id\":100,\"Chapter\":11,\"Name\":\"Proposal #\",\"Field\":\"proposal.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":9,\"warn\":false,\"$$hashKey\":\"object:662\"},{\"Id\":102,\"Chapter\":11,\"Name\":\"Order #\",\"Field\":\"order_c.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":11,\"warn\":false,\"$$hashKey\":\"object:663\"},{\"Id\":104,\"Chapter\":11,\"Name\":\"Invoice #\",\"Field\":\"invoice.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":13,\"warn\":false,\"$$hashKey\":\"object:664\"},{\"Id\":130,\"Chapter\":16,\"Name\":\"Item Description\",\"Field\":\"item_description\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":1,\"warn\":false,\"$$hashKey\":\"object:665\"},{\"Id\":140,\"Chapter\":17,\"Name\":\"Purchase Cost\",\"Field\":\"purchase_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":3,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:666\"},{\"Id\":157,\"Chapter\":18,\"Name\":\"Selling Price\",\"Field\":\"selling_cost\",\"FieldType\":\"f\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":false,\"Total\":true,\"$$hashKey\":\"object:667\"}],\"filters\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"defaultValue\":\"\",\"$$hashKey\":\"object:2063\"},{\"Id\":612,\"Chapter\":6,\"Name\":\"Vendor Id\",\"Field\":\"vendor.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"defaultValue\":\"\",\"$$hashKey\":\"object:2064\"}]}",
+        "UserAccess": null
+      },
+      {
+        "Id": 88,
+        "Object": 1,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "Items report",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":true,\"headers\":[{\"Id\":59,\"Chapter\":0,\"Name\":\"Design Firm Logo\",\"Field\":\"report_logo\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":0,\"$$hashKey\":\"object:10143\",\"HeaderPosition\":\"header\",\"HeaderAlign\":\"left\"}],\"columns\":[{\"Id\":41,\"Chapter\":5,\"Name\":\"Client Name\",\"Field\":\"client.custom_name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":true,\"OrderIndex\":1,\"$$hashKey\":\"object:9496\",\"warn\":false},{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"$$hashKey\":\"object:9495\",\"warn\":false},{\"Id\":237,\"Chapter\":11,\"Name\":\"Time Tax Percent\",\"Field\":\"time_tax_percent\",\"FieldType\":\"f\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":41,\"$$hashKey\":\"object:9680\",\"warn\":false,\"Total\":true}],\"filters\":[{\"Id\":609,\"Chapter\":5,\"Name\":\"Client Id\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"$$hashKey\":\"object:10397\",\"values\":[],\"defaultValue\":\"\"},{\"Id\":93,\"Chapter\":11,\"Name\":\"Room List\",\"Field\":\"room_list.name\",\"FieldType\":\"s\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":2,\"$$hashKey\":\"object:10483\",\"values\":[],\"defaultValue\":\"\"}]}",
+        "UserAccess": [
+          {
+            "Id": 2878,
+            "Name": "Alberta Jean Stringham"
+          },
+          {
+            "Id": 6946,
+            "Name": "Bob Mass"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Activities",
+    "ApiName": "SDActivities"
+  },
+  {
+    "Id": 3,
+    "Name": "Proposals",
+    "ApiName": "SDProposals"
+  },
+  {
+    "Id": 4,
+    "Name": "Orders",
+    "ApiName": "SDOrders"
+  },
+  {
+    "Id": 5,
+    "Name": "Invoices",
+    "ApiName": "SDInvoices",
+    "Reports": [
+      {
+        "Id": 64,
+        "Object": 5,
+        "OwnerId": 2863,
+        "AccountId": 1126,
+        "Name": "invoices by the date",
+        "Config": "{\"excludeFromBudget\":false,\"firstComponentOnly\":false,\"showDetails\":false,\"headers\":[],\"columns\":[{\"Id\":380,\"Chapter\":42,\"Name\":\"Client Name\",\"Field\":\"client.name\",\"FieldType\":\"s\",\"CanGroup\":false,\"CanFilter\":false,\"OrderIndex\":2,\"warn\":true,\"$$hashKey\":\"object:7091\"},{\"Id\":395,\"Chapter\":43,\"Name\":\"Invoice Date\",\"Field\":\"invoice_type\",\"FieldType\":\"p\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":0,\"warn\":false,\"GroupBy\":true,\"$$hashKey\":\"object:7092\"},{\"Id\":398,\"Chapter\":43,\"Name\":\"Date Revised\",\"Field\":\"revised_date\",\"FieldType\":\"d\",\"CanGroup\":true,\"CanFilter\":true,\"OrderIndex\":1,\"warn\":false,\"GroupBy\":true,\"$$hashKey\":\"object:7093\"}],\"filters\":[]}",
+        "UserAccess": null
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Cash Receipts",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 7,
+    "Name": "Cash Disbursements",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 9,
+    "Name": "Account Register",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 10,
+    "Name": "Deposit Slip",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 11,
+    "Name": "Payment Application",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 12,
+    "Name": "Pending Payments",
+    "ApiName": "SDMakePayment"
+  },
+  {
+    "Id": 13,
+    "Name": "Sales Tax",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 14,
+    "Name": "Reconciliation",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 15,
+    "Name": "Journal Entries",
+    "ApiName": "SDJournalEntries"
+  },
+  {
+    "Id": 16,
+    "Name": "Accounts Receivable",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 17,
+    "Name": "Accounts Payable",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 18,
+    "Name": "Work in Progress",
+    "ApiName": "SDItems"
+  },
+  {
+    "Id": 19,
+    "Name": "Client Deposits",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 20,
+    "Name": "Vendor Deposits",
+    "ApiName": "SDGeneralLedger"
+  },
+  {
+    "Id": 8,
+    "Name": "Addresses",
+    "ApiName": "SDAddress"
+  },
+  {
+    "Id": 21,
+    "Name": "Contacts",
+    "ApiName": "SDContacts"
+  },
+  {
+    "Id": 22,
+    "Name": "Rooms",
+    "ApiName": "SDRooms"
+  },
+  {
+    "Id": 23,
+    "Name": "Chart of Accounts",
+    "ApiName": "SDChartofAccounts"
+  },
+  {
+    "Id": 24,
+    "Name": "Inventory",
+    "ApiName": "SDInventory"
+  }
+]

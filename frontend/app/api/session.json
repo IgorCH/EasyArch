@@ -1,0 +1,22 @@
+{
+  "account": {
+    "Id": 1126,
+    "Name": "NYSID",
+    "Roles": {
+      "Report Tester": true
+    }
+  },
+  "roles": {
+    "Report Tester": true,
+    "Administrator": true
+  },
+  "sessid": "sF|RCe5LVwL5mZFHRjbCtI6yYdwypzrRc",
+  "user": {
+    "Id": 2863,
+    "Login": "0033b000001uypjqag@studioitinc.com",
+    "Name": "Ela Drumgoole",
+    "AccountId": 1126,
+    "UISettings": "{\"topNavThemeClass\":\"navbar-default\",\"sidebarThemeClass\":\"sidebar-inverse\",\"fixedHeader\":true,\"layoutHorizontal\":true,\"layoutBoxed\":false,\"pageTransitionStyle\":\"fadeIn\",\"dropdownTransitionStyle\":\"flipInX\"}",
+    "Roles": null
+  }
+}

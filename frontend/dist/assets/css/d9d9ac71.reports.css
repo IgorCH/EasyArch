@@ -1,0 +1,68 @@
+
+.popoverBackground + table td .vs_popupWhite.popupWide {
+    width: 1400px;
+}
+
+.report table.reportHeader {
+
+}
+
+.report table.reportHeader td {
+    text-align: left;
+}
+.report table.reportHeader td:first-child {
+    width: 200px;
+}
+
+/*************************/
+
+.report table.reportFooter {
+
+}
+
+.report table.reportFooter td {
+    text-align: left;
+}
+
+.report table.reportFooter td:first-child {
+    width: 200px;
+}
+
+/*************************/
+
+.report table.reportBody {
+
+}
+
+.report table.reportBody tr {
+    padding: 5px 10px;
+}
+
+.report table.reportBody th,
+.report table.reportBody td {
+    text-align: left;
+}
+
+.report table.reportBody th.reportNumber,
+.report table.reportBody td.reportNumber {
+//text-align: right;
+}
+
+.report table.reportBody th {
+    background: #8E8A8B;
+    color: #F0F0F0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.report table.reportBody tr:nth-child(odd) {
+    background: #EDEDED;
+}
+
+.report table.reportBody tr:nth-child(even) {
+    background: #FFFFFF;
+}
+
+.report table.reportBody tr.reportTotals {
+    /*background: #DCDCDC;*/
+}

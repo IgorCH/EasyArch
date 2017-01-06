@@ -1,0 +1,312 @@
+//(<768px) Маленькая ширина экрана xs
+//(≥768px и <992) Планшеты Средняя ширина экрана  sm
+//(≥992px и <1200px) Ноутбуки	Большая ширина экрана  md
+//(≥1200px) Компьютеры lg
+@media (min-width: 768px) {
+  .filter_panel {
+    display: inline-block;
+    float: left;
+    width: 180px;
+  }
+
+  .content {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 195px);
+    margin-left: 15px;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.cardsContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card {
+    margin: 11px;
+    width: 280px;
+    height: 447px;
+    padding: 0;
+
+    background-color: #FFF;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+
+    box-shadow: 1px 1px 3px #aaa;
+  }
+
+  .cardLabel {
+    padding-left: 5px;
+    font-size: 14px;
+    height: 18px;
+    line-height: 19px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 30px;
+    margin-top: 2px;
+  }
+
+  .imgWrapper {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+
+    img {
+      height: 100%;
+      object-fit: scale-down;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .imgInfo {
+    background-color: #f2f2f2;
+    color: #888888;
+    padding: 12px;
+    font-size: 11px;
+    height: 147px;
+
+    & > div {
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .card:hover .imgInfo {
+    background-color: transparent;
+  }
+
+  .cardDescription {
+    height: 4.5em;
+    line-height: 1.5em;
+    overflow: hidden;
+    margin-top: 5px;
+    font-size: 12px;
+    height: 3em;
+    margin-left: 5px;
+  }
+}
+
+.imgsContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .imgCard {
+    margin: 5px;
+    padding: 0px;
+    width: 160px;
+    height: 160px;
+    background-color: #FFF;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    box-shadow: 1px 1px 3px #aaa;
+
+    .btns {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      display: none;
+
+      i {
+        font-size: 16px;
+        width: 20px
+      }
+    }
+
+    &:hover .btns {
+      display: block;
+    }
+
+    img {
+      height: 100%;
+      object-fit: scale-down;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.primaryImgContainer {
+
+  .imgWrapper {
+
+    padding: 0px;
+    width: 250px;
+    height: 250px;
+    background-color: #FFF;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    box-shadow: 1px 1px 3px #aaa;
+
+    img {
+      height: 100%;
+      object-fit: scale-down;
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Fix of Z-index conflict with bootstrap.modal && bootstrap.dialog
+.modal {
+  z-index: 1060;
+}
+
+.modal-backdrop {
+  z-index: 1059;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ui-tree с классом .sd
+.angular-ui-tree.sd {
+
+}
+
+.angular-ui-tree.sd > .angular-ui-tree-nodes {
+
+}
+
+.angular-ui-tree.sd > .angular-ui-tree-nodes > .angular-ui-tree-node {
+
+}
+
+.angular-ui-tree.sd > .angular-ui-tree-nodes > .angular-ui-tree-node  .angular-ui-tree-handle {
+  cursor: default;
+  background: #FAFAFA;
+}
+
+.angular-ui-tree.sd > .angular-ui-tree-nodes > .angular-ui-tree-node > .angular-ui-tree-handle {
+  cursor: pointer;
+  background: #F0F0F0;
+}
+
+.angular-ui-tree.sd .btn {
+  color: grey;
+  cursor: pointer
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//panel-tasks с классом sd
+.panel-tasks.sd li {
+
+}
+
+.panel-tasks.sd li:hover {
+  background: RGBA(156, 159, 161, 0.2);
+}
+
+.panel-tasks.sd li.selected {
+  background: RGBA(156, 159, 161, 0.4);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Fullscreen helpers
+.focusedform .navbar, .focusedform footer, .focusedform .hide_fs {
+  display: none;
+}
+
+.focusedform .form-print {
+  width: 800px;
+  margin: 0 auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//media print
+@media print {
+  .hideOnPrint {
+    display: none !important;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#page-heading h1 {
+  padding: 0 20px;
+}
+
+#page-heading .options {
+  top: 0px;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.popoverBackground + table td .vs_popupWhite.popupWide {
+ width: 1400px;
+}
+
+.report table.reportHeader {
+
+}
+
+.report table.reportHeader td {
+  text-align: left;
+}
+.report table.reportHeader td:first-child {
+  width: 200px;
+}
+
+/*************************/
+
+.report table.reportFooter {
+
+}
+
+.report table.reportFooter td {
+  text-align: left;
+}
+
+.report table.reportFooter td:first-child {
+  width: 200px;
+}
+
+/*************************/
+
+.report table.reportBody {
+
+}
+
+.report table.reportBody tr {
+  padding: 5px 10px;
+}
+
+.report table.reportBody th,
+.report table.reportBody td {
+  text-align: left;
+}
+
+.report table.reportBody th.reportNumber,
+.report table.reportBody td.reportNumber {
+  text-align: right;
+}
+
+.report table.reportBody th {
+  background: #8E8A8B;
+  color: #F0F0F0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.report table.reportBody tr:nth-child(odd) {
+  background: #EDEDED;
+}
+
+.report table.reportBody tr:nth-child(even) {
+  background: #FFFFFF;
+}
+
+.report table.reportBody tr.reportTotals {
+  /*background: #DCDCDC;*/
+}
+
+.report table {
+  width: 100%;
+}

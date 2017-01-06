@@ -1,0 +1,145 @@
+{
+  "List": [
+    {
+      "id": 3074,
+      "name": "Bob Mass",
+      "swuser_lookup_name": "Bob Mass",
+      "administrator": true,
+      "createddate": 1388074490
+    },
+    {
+      "id": 11378,
+      "name": "Frank Yamamoto",
+      "swuser_lookup_name": "Frank Yamamoto",
+      "administrator": false,
+      "createddate": 1455045699
+    },
+    {
+      "id": 11379,
+      "name": "Shohei Shimokawa",
+      "swuser_lookup_name": "Jenika Cuadra",
+      "administrator": false,
+      "createddate": 1455553145
+    },
+    {
+      "id": 11380,
+      "name": "Tammy Kristen Li",
+      "swuser_lookup_name": "Rita Moloney",
+      "administrator": true,
+      "createddate": 1455549106
+    },
+    {
+      "id": 11381,
+      "name": "Jessica Nicole Stamler",
+      "swuser_lookup_name": "Julie Roitman",
+      "administrator": true,
+      "createddate": 1455549138
+    },
+    {
+      "id": 11382,
+      "name": "Camila Takenaka",
+      "swuser_lookup_name": "Marti Diehl",
+      "administrator": true,
+      "createddate": 1455549216
+    },
+    {
+      "id": 11383,
+      "name": "Pamela Joseph",
+      "swuser_lookup_name": "Matthew Dias",
+      "administrator": true,
+      "createddate": 1455549058
+    },
+    {
+      "id": 11384,
+      "name": "Sara Esther Bodner",
+      "swuser_lookup_name": "",
+      "administrator": true,
+      "createddate": 1455552957
+    },
+    {
+      "id": 11385,
+      "name": "Lisanna R DeSieno",
+      "swuser_lookup_name": "Sam Pilkington",
+      "administrator": true,
+      "createddate": 1455553036
+    },
+    {
+      "id": 11386,
+      "name": "Mae McKenna",
+      "swuser_lookup_name": "Arley Ann Ross",
+      "administrator": true,
+      "createddate": 1455553099
+    },
+    {
+      "id": 11387,
+      "name": "Jui Yun Chen",
+      "swuser_lookup_name": "Lisa Oakes",
+      "administrator": true,
+      "createddate": 1455552991
+    },
+    {
+      "id": 11388,
+      "name": "Hadija Rowe",
+      "swuser_lookup_name": "NHID INTERN",
+      "administrator": true,
+      "createddate": 1455549124
+    },
+    {
+      "id": 11389,
+      "name": "Ellen Fisher",
+      "swuser_lookup_name": "Caitlin Timson",
+      "administrator": true,
+      "createddate": 1458082198
+    },
+    {
+      "id": 11390,
+      "name": "Victoria Grimes",
+      "swuser_lookup_name": "",
+      "administrator": true,
+      "createddate": 1455553069
+    },
+    {
+      "id": 11391,
+      "name": "Taylor Lindsey Callaway",
+      "swuser_lookup_name": "Gunther Toth",
+      "administrator": true,
+      "createddate": 1455552973
+    },
+    {
+      "id": 11392,
+      "name": "Aries Swangler",
+      "swuser_lookup_name": "Jill Danly",
+      "administrator": true,
+      "createddate": 1455549202
+    },
+    {
+      "id": 11393,
+      "name": "Shayna Palley",
+      "swuser_lookup_name": "John Paul Garcia",
+      "administrator": true,
+      "createddate": 1455553113
+    },
+    {
+      "id": 11394,
+      "name": "Adriana Kuligowska",
+      "swuser_lookup_name": "Mary O'Neill",
+      "administrator": true,
+      "createddate": 1455549088
+    },
+    {
+      "id": 11395,
+      "name": "Dongsheng Xie",
+      "swuser_lookup_name": "Jeff Morter",
+      "administrator": true,
+      "createddate": 1455549230
+    },
+    {
+      "id": 11396,
+      "name": "Amber Elizabeth Gerard",
+      "swuser_lookup_name": "Jack Brown",
+      "administrator": true,
+      "createddate": 1455549000
+    }
+  ],
+  "TotalFound": 1455549000
+}

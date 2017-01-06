@@ -1,0 +1,29 @@
+{
+  "List": [
+    {
+      "id": 1,
+      "name": "Administrator"
+    },
+    {
+      "id": 2,
+      "name": "Sales"
+    },
+    {
+      "id": 3,
+      "name": "Support"
+    },
+    {
+      "id": 4,
+      "name": "User"
+    },
+    {
+      "id": 5,
+      "name": "Tester"
+    },
+    {
+      "id": 6,
+      "name": "Report Tester"
+    }
+  ],
+  "TotalFound": 6
+}

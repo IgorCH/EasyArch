@@ -1,0 +1,19 @@
+{
+  "active": true,
+  "address_id": 55,
+  "address_name": "Name of Address",
+  "email": "e@mail.ru",
+  "email_invoices": true,
+  "email_orders": true,
+  "email_proposals": true,
+  "email_quotes": true,
+  "fax": "+7-978-777-777",
+  "home_email": "h@mail.ru",
+  "home_phone": "+7-505-111-111",
+  "id": 2323,
+  "mobile": "+9-9999-999",
+  "name": "String of Name",
+  "note": "String of Note",
+  "phone": "String of Phone",
+  "title": "String of Title"
+}

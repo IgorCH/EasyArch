@@ -1,0 +1,14 @@
+{
+  "name": "grunt-contrib-nodeunit",
+  "homepage": "https://github.com/gruntjs/grunt-contrib-nodeunit",
+  "version": "0.4.1",
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.1",
+    "commit": "7a41f9c5d9169311f579ffe9d7aad2032ebd22be"
+  },
+  "_source": "https://github.com/gruntjs/grunt-contrib-nodeunit.git",
+  "_target": "~0.4.1",
+  "_originalSource": "grunt-contrib-nodeunit"
+}

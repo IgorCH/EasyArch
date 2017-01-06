@@ -1,0 +1,1746 @@
+[
+  {
+    "Id": 5,
+    "Object": 1,
+    "Name": "Client",
+    "OrderIndex": 0,
+    "Fields": [
+      {
+        "Id": 40,
+        "Chapter": 5,
+        "Name": "Client Id",
+        "Field": "client.id",
+        "FieldType": "i",
+        "Lookup": "sd_address",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 41,
+        "Chapter": 5,
+        "Name": "Client Name",
+        "Field": "client.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 42,
+        "Chapter": 5,
+        "Name": "Client Address",
+        "Field": "client.address",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 43,
+        "Chapter": 5,
+        "Name": "Client Address 2",
+        "Field": "client.address_2",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 44,
+        "Chapter": 5,
+        "Name": "Client City",
+        "Field": "client.city",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 45,
+        "Chapter": 5,
+        "Name": "Client State",
+        "Field": "client.state",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 46,
+        "Chapter": 5,
+        "Name": "Client Postal Code",
+        "Field": "client.postal_code",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 47,
+        "Chapter": 5,
+        "Name": "Client Country",
+        "Field": "client.country",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 48,
+        "Chapter": 5,
+        "Name": "Client Phone",
+        "Field": "client.phone",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 49,
+        "Chapter": 5,
+        "Name": "Client Mobile",
+        "Field": "client.mobile",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 50,
+        "Chapter": 5,
+        "Name": "Client Email",
+        "Field": "client.email",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 51,
+        "Chapter": 5,
+        "Name": "Client Website",
+        "Field": "client.website",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Object": 1,
+    "Name": "Vendor",
+    "OrderIndex": 1,
+    "Fields": [
+      {
+        "Id": 52,
+        "Chapter": 6,
+        "Name": "Vendor Id",
+        "Field": "vendor.id",
+        "FieldType": "i",
+        "Lookup": "sd_address",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 53,
+        "Chapter": 6,
+        "Name": "Vendor Name",
+        "Field": "vendor.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 54,
+        "Chapter": 6,
+        "Name": "Vendor Address",
+        "Field": "vendor.address",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 55,
+        "Chapter": 6,
+        "Name": "Vendor Address 2",
+        "Field": "vendor.address_2",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 56,
+        "Chapter": 6,
+        "Name": "Vendor City",
+        "Field": "vendor.city",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 57,
+        "Chapter": 6,
+        "Name": "Vendor State",
+        "Field": "vendor.state",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 67,
+        "Chapter": 6,
+        "Name": "Vendor Postal Code",
+        "Field": "vendor.postal_code",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 68,
+        "Chapter": 6,
+        "Name": "Vendor Country",
+        "Field": "vendor.country",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 69,
+        "Chapter": 6,
+        "Name": "Vendor Phone",
+        "Field": "vendor.phone",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 70,
+        "Chapter": 6,
+        "Name": "Vendor Mobile",
+        "Field": "vendor.mobile",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 71,
+        "Chapter": 6,
+        "Name": "Vendor Email",
+        "Field": "vendor.email",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 72,
+        "Chapter": 6,
+        "Name": "Vendor Website",
+        "Field": "vendor.website",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Object": 1,
+    "Name": "Ship To",
+    "OrderIndex": 2,
+    "Fields": [
+      {
+        "Id": 79,
+        "Chapter": 8,
+        "Name": "Ship To Id",
+        "Field": "ship_to.id",
+        "FieldType": "i",
+        "Lookup": "sd_address",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 74,
+        "Chapter": 8,
+        "Name": "Ship To Name",
+        "Field": "ship_to.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 76,
+        "Chapter": 8,
+        "Name": "Ship To Address",
+        "Field": "ship_to.address",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 77,
+        "Chapter": 8,
+        "Name": "Ship To Address 2",
+        "Field": "ship_to.address_2",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 78,
+        "Chapter": 8,
+        "Name": "Ship To City",
+        "Field": "ship_to.city",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 80,
+        "Chapter": 8,
+        "Name": "Ship To State",
+        "Field": "ship_to.state",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 81,
+        "Chapter": 8,
+        "Name": "Ship To Postal Code",
+        "Field": "ship_to.postal_code",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 82,
+        "Chapter": 8,
+        "Name": "Ship To Country",
+        "Field": "ship_to.country",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 83,
+        "Chapter": 8,
+        "Name": "Ship To Phone",
+        "Field": "ship_to.phone",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 84,
+        "Chapter": 8,
+        "Name": "Ship To Mobile",
+        "Field": "ship_to.mobile",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 85,
+        "Chapter": 8,
+        "Name": "Ship To Email",
+        "Field": "ship_to.email",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 86,
+        "Chapter": 8,
+        "Name": "Ship To Website",
+        "Field": "ship_to.website",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 12
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Object": 1,
+    "Name": "OP Showroom",
+    "OrderIndex": 3,
+    "Fields": [
+      {
+        "Id": 87,
+        "Chapter": 9,
+        "Name": "OP Showroom Id",
+        "Field": "da_showroom.id",
+        "FieldType": "i",
+        "Lookup": "da_account",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 88,
+        "Chapter": 9,
+        "Name": "OP Showroom Name",
+        "Field": "da_showroom.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 0
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Object": 1,
+    "Name": "OP Manufacturer",
+    "OrderIndex": 4,
+    "Fields": [
+      {
+        "Id": 89,
+        "Chapter": 10,
+        "Name": "OP Manufacturer Id",
+        "Field": "da_manufacturer.id",
+        "FieldType": "i",
+        "Lookup": "da_account",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 90,
+        "Chapter": 10,
+        "Name": "OP Manufacturer Name",
+        "Field": "da_manufacturer.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 0
+      }
+    ]
+  },
+  {
+    "Id": 11,
+    "Object": 1,
+    "Name": "Item Codes",
+    "OrderIndex": 5,
+    "Fields": [
+      {
+        "Id": 91,
+        "Chapter": 11,
+        "Name": "Item Id",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 92,
+        "Chapter": 11,
+        "Name": "Sales Code",
+        "Field": "sales_code.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 93,
+        "Chapter": 11,
+        "Name": "Room List",
+        "Field": "room_list.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 94,
+        "Chapter": 11,
+        "Name": "Room",
+        "Field": "room.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 95,
+        "Chapter": 11,
+        "Name": "Item #",
+        "Field": "item",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 96,
+        "Chapter": 11,
+        "Name": "Component",
+        "Field": "component",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 97,
+        "Chapter": 11,
+        "Name": "Product Id",
+        "Field": "product.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 98,
+        "Chapter": 11,
+        "Name": "Inventory Id",
+        "Field": "inventory_id.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 99,
+        "Chapter": 11,
+        "Name": "Active",
+        "Field": "active",
+        "FieldType": "b",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 100,
+        "Chapter": 11,
+        "Name": "Proposal #",
+        "Field": "proposal.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 101,
+        "Chapter": 11,
+        "Name": "Proposal Date",
+        "Field": "proposal.proposal_date",
+        "FieldType": "d",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 102,
+        "Chapter": 11,
+        "Name": "Order #",
+        "Field": "order_c.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 103,
+        "Chapter": 11,
+        "Name": "Order Date",
+        "Field": "order_c.order_date",
+        "FieldType": "d",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 12
+      },
+      {
+        "Id": 104,
+        "Chapter": 11,
+        "Name": "Invoice #",
+        "Field": "invoice.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 13
+      },
+      {
+        "Id": 105,
+        "Chapter": 11,
+        "Name": "Invoice Date",
+        "Field": "invoice.invoice_date",
+        "FieldType": "d",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 14
+      },
+      {
+        "Id": 106,
+        "Chapter": 11,
+        "Name": "Vendor Invoice #",
+        "Field": "vendor_invoice",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 15
+      },
+      {
+        "Id": 107,
+        "Chapter": 11,
+        "Name": "Vendor Invoice Date",
+        "Field": "vendor_invoice_date",
+        "FieldType": "d",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 16
+      },
+      {
+        "Id": 108,
+        "Chapter": 11,
+        "Name": "Vendor Invoice Due",
+        "Field": "vendor_invoice_due",
+        "FieldType": "d",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 17
+      },
+      {
+        "Id": 109,
+        "Chapter": 11,
+        "Name": "Item Code 1",
+        "Field": "item_code_1.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 18
+      },
+      {
+        "Id": 110,
+        "Chapter": 11,
+        "Name": "Item Code 2",
+        "Field": "item_code_2.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 19
+      },
+      {
+        "Id": 111,
+        "Chapter": 11,
+        "Name": "Client Status",
+        "Field": "sdp_item_status",
+        "FieldType": "p",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 20
+      },
+      {
+        "Id": 112,
+        "Chapter": 11,
+        "Name": "Vendor Status",
+        "Field": "sdp_vendor_status",
+        "FieldType": "p",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 21
+      },
+      {
+        "Id": 113,
+        "Chapter": 11,
+        "Name": "Showroom",
+        "Field": "showroom.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 22
+      },
+      {
+        "Id": 114,
+        "Chapter": 11,
+        "Name": "Manufacturer",
+        "Field": "manufacturer.name",
+        "FieldType": "s",
+        "CanGroup": true,
+        "CanFilter": true,
+        "OrderIndex": 23
+      },
+      {
+        "Id": 221,
+        "Chapter": 11,
+        "Name": "Designer",
+        "Field": "designer",
+        "FieldType": "l",
+        "Lookup": "sd_employees",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 25
+      },
+      {
+        "Id": 222,
+        "Chapter": 11,
+        "Name": "Client Ship Via",
+        "Field": "client_ship_via",
+        "FieldType": "l",
+        "Lookup": "sd_ship_via",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 26
+      },
+      {
+        "Id": 223,
+        "Chapter": 11,
+        "Name": "Vendor Ship Via",
+        "Field": "vendor_ship_via",
+        "FieldType": "l",
+        "Lookup": "sd_ship_via",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 27
+      },
+      {
+        "Id": 224,
+        "Chapter": 11,
+        "Name": "Client Terms",
+        "Field": "client_terms",
+        "FieldType": "l",
+        "Lookup": "sd_terms",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 28
+      },
+      {
+        "Id": 225,
+        "Chapter": 11,
+        "Name": "Vendor Terms",
+        "Field": "vendor_terms",
+        "FieldType": "l",
+        "Lookup": "sd_terms",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 29
+      },
+      {
+        "Id": 226,
+        "Chapter": 11,
+        "Name": "Copy Purchase",
+        "Field": "copy_purchase",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 30
+      },
+      {
+        "Id": 227,
+        "Chapter": 11,
+        "Name": "CFA",
+        "Field": "cfa",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 31
+      },
+      {
+        "Id": 228,
+        "Chapter": 11,
+        "Name": "Specify Only",
+        "Field": "specify_only",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 32
+      },
+      {
+        "Id": 229,
+        "Chapter": 11,
+        "Name": "Pinterest",
+        "Field": "pinterest",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 33
+      },
+      {
+        "Id": 230,
+        "Chapter": 11,
+        "Name": "Freight Tracking",
+        "Field": "freight_tracking",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 34
+      },
+      {
+        "Id": 231,
+        "Chapter": 11,
+        "Name": "Expediting",
+        "Field": "expediting",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 35
+      },
+      {
+        "Id": 232,
+        "Chapter": 11,
+        "Name": "Tax Location",
+        "Field": "tax_location",
+        "FieldType": "l",
+        "Lookup": "sd_tax_locations",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 36
+      },
+      {
+        "Id": 233,
+        "Chapter": 11,
+        "Name": "Tax Rule",
+        "Field": "tax_rule",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 37
+      },
+      {
+        "Id": 234,
+        "Chapter": 11,
+        "Name": "Tax Percent 1",
+        "Field": "tax_percent_1",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 38
+      },
+      {
+        "Id": 235,
+        "Chapter": 11,
+        "Name": "Tax Percent 2",
+        "Field": "tax_percent_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 39
+      },
+      {
+        "Id": 236,
+        "Chapter": 11,
+        "Name": "Tax Percent 3",
+        "Field": "tax_percent_3",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 40
+      },
+      {
+        "Id": 237,
+        "Chapter": 11,
+        "Name": "Time Tax Percent",
+        "Field": "time_tax_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 41
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "Object": 1,
+    "Name": "Item Dates",
+    "OrderIndex": 6,
+    "Fields": [
+      {
+        "Id": 116,
+        "Chapter": 15,
+        "Name": "Request for Quote",
+        "Field": "request_for_quote",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 117,
+        "Chapter": 15,
+        "Name": "Quote Received",
+        "Field": "quote_received",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 118,
+        "Chapter": 15,
+        "Name": "CFA Approved",
+        "Field": "cfa_approved",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 119,
+        "Chapter": 15,
+        "Name": "Order Acknowledged",
+        "Field": "order_c.acknowledged_date",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 120,
+        "Chapter": 15,
+        "Name": "Est Ship Date",
+        "Field": "est_ship_date",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 121,
+        "Chapter": 15,
+        "Name": "Date Shipped",
+        "Field": "date_shipped",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 122,
+        "Chapter": 15,
+        "Name": "Received",
+        "Field": "received",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 123,
+        "Chapter": 15,
+        "Name": "Delivered",
+        "Field": "delivered",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 124,
+        "Chapter": 15,
+        "Name": "Specification Date",
+        "Field": "specification_date",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 125,
+        "Chapter": 15,
+        "Name": "Specification Revision",
+        "Field": "specification_revision",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": true,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 126,
+        "Chapter": 15,
+        "Name": "Approved Date",
+        "Field": "approved_date",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 127,
+        "Chapter": 15,
+        "Name": "Approved By",
+        "Field": "approved_by",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 12
+      },
+      {
+        "Id": 128,
+        "Chapter": 15,
+        "Name": "Rejected Date",
+        "Field": "rejected_date",
+        "FieldType": "d",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 13
+      },
+      {
+        "Id": 129,
+        "Chapter": 15,
+        "Name": "Rejected By",
+        "Field": "rejected_by",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 14
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "Object": 1,
+    "Name": "Item Description",
+    "OrderIndex": 7,
+    "Fields": [
+      {
+        "Id": 130,
+        "Chapter": 16,
+        "Name": "Item Description",
+        "Field": "item_description",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 131,
+        "Chapter": 16,
+        "Name": "Sidemark",
+        "Field": "item_sidemark",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 132,
+        "Chapter": 16,
+        "Name": "Client Description",
+        "Field": "client_description",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 133,
+        "Chapter": 16,
+        "Name": "Vendor Description",
+        "Field": "vendor_description",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 134,
+        "Chapter": 16,
+        "Name": "Finish",
+        "Field": "finish_description",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 135,
+        "Chapter": 16,
+        "Name": "Finish Description",
+        "Field": "finish_description",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      }
+    ]
+  },
+  {
+    "Id": 17,
+    "Object": 1,
+    "Name": "Item Purchase Costs",
+    "OrderIndex": 8,
+    "Fields": [
+      {
+        "Id": 137,
+        "Chapter": 17,
+        "Name": "Unit",
+        "Field": "unit.name",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 0
+      },
+      {
+        "Id": 138,
+        "Chapter": 17,
+        "Name": "Purchase Quantity",
+        "Field": "purchase_quantity",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 139,
+        "Chapter": 17,
+        "Name": "Purchase Unit Cost",
+        "Field": "purchase_unit_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 140,
+        "Chapter": 17,
+        "Name": "Purchase Cost",
+        "Field": "purchase_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 141,
+        "Chapter": 17,
+        "Name": "Other Costs",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 142,
+        "Chapter": 17,
+        "Name": "Sales Tax 1",
+        "Field": "purchase_sales_tax",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 143,
+        "Chapter": 17,
+        "Name": "Sales Tax 2",
+        "Field": "purchase_sales_tax_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 144,
+        "Chapter": 17,
+        "Name": "Total Purchase",
+        "Field": "total_price",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 145,
+        "Chapter": 17,
+        "Name": "Purchase Deposit %",
+        "Field": "purchase_deposit_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 146,
+        "Chapter": 17,
+        "Name": "Purchase Deposit Amount",
+        "Field": "purchase_deposit",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 147,
+        "Chapter": 17,
+        "Name": "Other Cost Deposit Amount",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 148,
+        "Chapter": 17,
+        "Name": "Sales Tax Deposit %",
+        "Field": "purchase_sales_tax_dep_per",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 149,
+        "Chapter": 17,
+        "Name": "Sales Tax Deposit Amount",
+        "Field": "purchase_sales_tax_dep",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 12
+      },
+      {
+        "Id": 150,
+        "Chapter": 17,
+        "Name": "Total Purchase Deposit Amount",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 13
+      },
+      {
+        "Id": 151,
+        "Chapter": 17,
+        "Name": "Discount Taken",
+        "Field": "discount",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 14
+      },
+      {
+        "Id": 152,
+        "Chapter": 17,
+        "Name": "Vendor Payments",
+        "Field": "vendor_payments",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 15
+      },
+      {
+        "Id": 153,
+        "Chapter": 17,
+        "Name": "Vendor Deposit Balance",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 16
+      },
+      {
+        "Id": 154,
+        "Chapter": 17,
+        "Name": "Vendor Total Balance",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 17
+      }
+    ]
+  },
+  {
+    "Id": 18,
+    "Object": 1,
+    "Name": "Item Selling Costs",
+    "OrderIndex": 9,
+    "Fields": [
+      {
+        "Id": 155,
+        "Chapter": 18,
+        "Name": "Selling Quantity",
+        "Field": "selling_quantity",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 156,
+        "Chapter": 18,
+        "Name": "Selling Unit Cost",
+        "Field": "selling_unit_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 157,
+        "Chapter": 18,
+        "Name": "Selling Cost",
+        "Field": "selling_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 158,
+        "Chapter": 18,
+        "Name": "Selling Mark Up %",
+        "Field": "selling_mark_up_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 159,
+        "Chapter": 18,
+        "Name": "Selling Mark Up Amount",
+        "Field": "selling_mark_up",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 160,
+        "Chapter": 18,
+        "Name": "Selling + Mark Up",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 161,
+        "Chapter": 18,
+        "Name": "Other Costs",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 162,
+        "Chapter": 18,
+        "Name": "Sales Tax 1",
+        "Field": "selling_sales_tax",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 163,
+        "Chapter": 18,
+        "Name": "Sales Tax 2",
+        "Field": "selling_sales_tax_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 164,
+        "Chapter": 18,
+        "Name": "Total Selling",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 165,
+        "Chapter": 18,
+        "Name": "Selling Taxable",
+        "Field": "selling_taxable",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 166,
+        "Chapter": 18,
+        "Name": "Mark Up Taxable",
+        "Field": "mark_up_taxable",
+        "FieldType": "p",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 12
+      },
+      {
+        "Id": 167,
+        "Chapter": 18,
+        "Name": "Selling Deposit %",
+        "Field": "selling_deposit_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 13
+      },
+      {
+        "Id": 168,
+        "Chapter": 18,
+        "Name": "Selling Deposit Amount",
+        "Field": "selling_deposit",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 14
+      },
+      {
+        "Id": 169,
+        "Chapter": 18,
+        "Name": "Selling Mark Up Deposit %",
+        "Field": "mark_up_deposit_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 15
+      },
+      {
+        "Id": 170,
+        "Chapter": 18,
+        "Name": "Selling Mark Up Deposit Amount",
+        "Field": "mark_up_deposit",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 16
+      },
+      {
+        "Id": 171,
+        "Chapter": 18,
+        "Name": "Other Cost Deposit Amount",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 17
+      },
+      {
+        "Id": 172,
+        "Chapter": 18,
+        "Name": "Sales Tax Deposit %",
+        "Field": "sales_tax_deposit_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 18
+      },
+      {
+        "Id": 173,
+        "Chapter": 18,
+        "Name": "Sales Tax Deposit Amount",
+        "Field": "sales_tax_deposit",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 19
+      },
+      {
+        "Id": 174,
+        "Chapter": 18,
+        "Name": "Total Selling Deposit Amount",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 20
+      },
+      {
+        "Id": 175,
+        "Chapter": 18,
+        "Name": "Client Payments",
+        "Field": "client_payment",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 21
+      },
+      {
+        "Id": 176,
+        "Chapter": 18,
+        "Name": "Client Deposit Balance",
+        "Field": "proposal.client_deposit_balance",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 22
+      },
+      {
+        "Id": 177,
+        "Chapter": 18,
+        "Name": "Client Total Balance",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 23
+      }
+    ]
+  },
+  {
+    "Id": 19,
+    "Object": 1,
+    "Name": "Item Budgets",
+    "OrderIndex": 10,
+    "Fields": [
+      {
+        "Id": 178,
+        "Chapter": 19,
+        "Name": "Budget Quantity Low",
+        "Field": "budget_quantity",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 179,
+        "Chapter": 19,
+        "Name": "Budget Quantity High",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      },
+      {
+        "Id": 180,
+        "Chapter": 19,
+        "Name": "Budget Unit Cost Low",
+        "Field": "budget_unit_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 3
+      },
+      {
+        "Id": 181,
+        "Chapter": 19,
+        "Name": "Budget Unit Cost High",
+        "Field": "budget_unit_cost_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 4
+      },
+      {
+        "Id": 182,
+        "Chapter": 19,
+        "Name": "Budget Cost Low",
+        "Field": "budget_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 5
+      },
+      {
+        "Id": 183,
+        "Chapter": 19,
+        "Name": "Budget Cost High",
+        "Field": "budget_cost_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 6
+      },
+      {
+        "Id": 184,
+        "Chapter": 19,
+        "Name": "Budget Mark Up % Low",
+        "Field": "budget_mark_up_percent",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 7
+      },
+      {
+        "Id": 185,
+        "Chapter": 19,
+        "Name": "Budget Mark Up % High",
+        "Field": "budget_mark_up_percent_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 8
+      },
+      {
+        "Id": 186,
+        "Chapter": 19,
+        "Name": "Budget Mark Up Amount Low",
+        "Field": "budget_mark_up",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 9
+      },
+      {
+        "Id": 187,
+        "Chapter": 19,
+        "Name": "Budget Mark Up Amount High",
+        "Field": "budget_mark_up_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 10
+      },
+      {
+        "Id": 188,
+        "Chapter": 19,
+        "Name": "Budget Total Amount Low",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 11
+      },
+      {
+        "Id": 189,
+        "Chapter": 19,
+        "Name": "Budget Total Amount High",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 12
+      },
+      {
+        "Id": 190,
+        "Chapter": 19,
+        "Name": "Budget Other Costs Low",
+        "Field": "budget_other_cost",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 13
+      },
+      {
+        "Id": 191,
+        "Chapter": 19,
+        "Name": "Budget Other Costs High",
+        "Field": "budget_other_cost_2",
+        "FieldType": "f",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 14
+      },
+      {
+        "Id": 192,
+        "Chapter": 19,
+        "Name": "Budget Over Under Low",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 15
+      },
+      {
+        "Id": 193,
+        "Chapter": 19,
+        "Name": "Budget Over Under High",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 16
+      }
+    ]
+  },
+  {
+    "Id": 20,
+    "Object": 1,
+    "Name": "Item Profits",
+    "OrderIndex": 11,
+    "Fields": [
+      {
+        "Id": 194,
+        "Chapter": 20,
+        "Name": "Total Profit",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 1
+      },
+      {
+        "Id": 195,
+        "Chapter": 20,
+        "Name": "Gross Profit Margin",
+        "Field": "id",
+        "FieldType": "i",
+        "Lookup": "sd_items",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      }
+    ]
+  },
+  {
+    "Id": 27,
+    "Object": 1,
+    "Name": "Proposals",
+    "OrderIndex": 12,
+    "Fields": [
+      {
+        "Id": 272,
+        "Chapter": 27,
+        "Name": "New proposal Field",
+        "Field": "freight_tracking",
+        "FieldType": "s",
+        "CanGroup": false,
+        "CanFilter": false,
+        "OrderIndex": 2
+      }
+    ]
+  }
+]

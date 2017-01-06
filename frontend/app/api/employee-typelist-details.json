@@ -1,0 +1,53 @@
+{
+  "group_lookup_name": [
+    {
+      "Id": 111,
+      "Name": "Associate Designer"
+    },
+    {
+      "Id": 333,
+      "Name": "Principal"
+    },
+    {
+      "Id": 444,
+      "Name": "Senior Designer"
+    }
+  ],
+  "activity_lookup_name": [
+    {
+      "Id": 444,
+      "Name": "Meeting"
+    },
+    {
+      "Id": 555,
+      "Name": "Note"
+    },
+    {
+      "Id": 666,
+      "Name": "Phone Message"
+    },
+    {
+      "Id": 777,
+      "Name": "SP Client Message"
+    },
+    {
+      "Id": 888,
+      "Name": "SP Vendor Message"
+    }
+  ],
+  "swuser_lookup_name": [
+    {
+      "Id": 911,
+      "Name": "Petya"
+    },
+    {
+      "Id": 922,
+      "Name": "Vasya"
+    },
+    {
+      "Id": 933,
+      "Name": "Dima"
+    }
+  ],
+  "TotalFound": 10
+}
