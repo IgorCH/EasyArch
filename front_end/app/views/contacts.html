@@ -1,0 +1,72 @@
+<div id="page-heading">
+  <ol class="breadcrumb">
+    <li><a href="#/">Studio Designer</a></li>
+    <li>Report Writer</li>
+    <li class="active">Generator</li>
+  </ol>
+</div>
+
+<div ng-controller="ContactsController" class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-inbox">
+        <div class="panel-body">
+          <div class="inbox-mail-heading">
+            <div class="clearfix spmg-2">
+              <div class="pull-left">
+                <a href="app-inbox" class="btn btn-default spmg2"><i class="fa fa-fw fa-level-up fa-rotate-270"></i></a>
+                <div class="btn-group spmg2">
+                  <a href="#" class="btn btn-default"><i class="fa fa-fw fa-save"></i></a>
+                  <a href="#" class="btn btn-default"><i class="fa fa-fw fa-trash-o"></i></a>
+                </div>
+              </div>
+              <div class="pull-right">
+                <a href="#" class="btn btn-success spmg2"><i class="fa fa-paper-plane mr5"></i><span class="hidden-xs">Send</span></a>
+              </div>
+            </div>
+          </div>
+          <form action="" role="form" id="inbox-compose-form" class="form-horizontal">
+            <div class="form-group mb10">
+              <div class="col-md-12">
+                <div class="input-icon right">
+                  <a href="#" class="icon show-next-formgroup">CC</a>
+                  <input type="text" class="form-control tokenfield-email" value="" placeholder="To">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb10" style="display: none;">
+              <div class="col-md-12">
+                <div class="input-icon right">
+                  <a href="#" class="icon show-next-formgroup">BCC</a>
+                  <input type="text" class="form-control tokenfield-email" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb10" style="display:none;">
+              <div class="col-md-12"><input type="text" class="form-control"></div>
+            </div>
+            <div class="form-group mb10">
+              <div class="col-md-12"><input type="text" class="form-control" placeholder="Subject for email"></div>
+            </div>
+            <div class="form-group mb10">
+              <div class="col-xs-12">
+                <div class="composer" text-angular ng-model="mailBody"
+                     ta-toolbar="[['p','h3'],['bold','italics', 'underline'], ['justifyLeft', 'justifyCenter', 'justifyRight'], ['indent', 'outdent'], ['insertImage', 'insertLink', 'insertVideo']]">
+                  <h3>Default Editor</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nobis laboriosam repellat ipsum deserunt voluptate eos praesentium atque eligendi libero. Nam, id, eligendi natus facilis ullam pariatur numquam amet illum repudiandae ex porro labore in perferendis vero nobis iure ratione? Repudiandae, vel, quo, dolores velit vero debitis sed non odio culpa quasi excepturi tempore saepe atque quod repellendus aliquam eum neque dolorem beatae veniam quis id deserunt dignissimos voluptatum incidunt necessitatibus inventore reprehenderit consequatur esse perferendis ipsum earum pariatur et eaque sequi a harum sit similique itaque dicta expedita unde. Animi, quo, facilis laudantium quas commodi aut harum reprehenderit explicabo.</p>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="inbox-mail-footer">
+            <div class="clearfix spmg-2">
+              <div class="pull-right">
+                <a href="#" class="btn btn-success spmg2"><i class="fa fa-paper-plane mr5"></i><span class="hidden-xs">Send</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

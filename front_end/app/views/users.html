@@ -1,0 +1,48 @@
+<div id="page-heading">
+  <ol class="breadcrumb">
+    <li><a href="#/">Studio Designer</a></li>
+    <li>Report Writer</li>
+    <li class="active">Control Panel</li>
+  </ol>
+</div>
+
+<div ng-controller="UsersController" class="container-fluid">
+  <panel panel-class="panel-info" heading="Users">
+    <div class="table-responsive">
+      <table class="table">
+      <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Mail</td>
+        <td>Password</td>
+        <td>Is Client</td>
+        <td>Is Worder</td>
+        <td>Is Manager</td>
+        <td>Is Admin</td>
+        <td></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user._id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.clientRights}}</td>
+        <td>{{user.workerRights}}</td>
+        <td>{{user.managerRights}}</td>
+        <td>{{user.adminRights}}</td>
+        <td>
+          <button class="btn btn-default"
+                  ng-click="onUpdateUser(user)">Update</button>
+          <button class="btn btn-danger"
+                  ng-click="onDeleteUser(user)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+      </div>
+
+  </panel>
+</div>

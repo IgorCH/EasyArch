@@ -1,0 +1,36 @@
+<div id="page-heading">
+  <ol class="breadcrumb">
+    <li><a href="#/">Studio Designer</a></li>
+    <li>Report Writer</li>
+    <li class="active">Control Panel</li>
+  </ol>
+</div>
+
+<div ng-controller="ProjectsController" class="container-fluid">
+  <panel panel-class="panel-info" heading="Projects">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Owner</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="project in projects">
+            <td>{{project._id}}</td>
+            <td>{{project.title}}</td>
+            <td>{{project.ownerId}}</td>
+            <td>
+              <a href="#/project?id={{project._id}}">Edit</a>
+              <a class="btn" ng-click="onDeleteProject(project)">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" ng-click="onCreateProject()">New Project</button>
+    </div>
+  </panel>
+</div>
