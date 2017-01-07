@@ -1,7 +1,8 @@
-var _ = require("lodash");
-
+var nconf = require("nconf");
 var express = require("express");
 var router = express.Router();
+
+var User = require("../models/user");
 
 var jwt = require('jsonwebtoken');
 
@@ -11,56 +12,86 @@ var passportJWT = require("passport-jwt");
 var ExtractJwt = passportJWT.ExtractJwt;
 var JwtStrategy = passportJWT.Strategy;
 
-var users = require("../models/user");
-
 var jwtOptions = {
     jwtFromRequest: ExtractJwt.fromAuthHeader(),
-    secretOrKey: 'ea_passport_secret_key__IROIG@#$%^&*(){_)*(^&%#MFIL'
+    secretOrKey: nconf.get("passport:secretKey")
 };
 
 var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
-    console.log('payload received', jwt_payload);
-    // usually this would be a database call:
-    var user = users[_.findIndex(users, {id: jwt_payload.id})];
-    next(null, user || false);
+    User.findOne({_id: jwt_payload._id}, function(err, user){
+        next(null, user || false);
+    });
 });
 
 passport.use(strategy);
 
-router.post("/registration", function(req, res) {
+router.post("/registration", function(req, res, next) {
+
+    var user = new User({
+        email: req.body.email,
+        password: req.body.password,
+        name: req.body.name,
+        lng: 'RU'
+    });
+
+    user.save(function(err) {
+        if(err) {
+            next(err);
+        } else {
+            var payload = {_id: user._id};
+            var token = jwt.sign(payload, jwtOptions.secretOrKey);
+            req.session.email = req.body.email;
+            req.session.token = token;
+            res.json({ token: token, user: user });
+        }
+
+    });
 
 });
 
 router.post("/login", function(req, res) {
 
-    if(req.body.name && req.body.password) {
-        var name = req.body.name;
+    if(req.body.email && req.body.password) {
+        var email = req.body.email;
         var password = req.body.password;
     }
 
-    // usually this would be a database call:
-    var user = users[_.findIndex(users, {name: name})];
-    if(!user) {
-        res.status(401).json({message: "User not found"});
-    }
+    User.findOne({email: email}).exec(function(err, user){
+        if(!user) {
+            res.status(401).json({message: "User not found"});
+        }
 
-    if(user.password === req.body.password) {
-        // from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
-        var payload = {id: user.id};
-        var token = jwt.sign(payload, jwtOptions.secretOrKey);
-        res.json({ message: "ok", token: token });
-    } else {
-        res.status(401).json({message: "Pass did not match"});
-    }
+        if(user.password === req.body.password) {
+            var payload = {_id: user._id};
+            var token = jwt.sign(payload, jwtOptions.secretOrKey);
+            req.session.email = req.body.email;
+            req.session.token = token;
+            res.json({ token: token, user: user });
+        } else {
+            res.status(401).json({message: "Pass did not match"});
+        }
+    });
 
 });
 
 router.post("/logout", function(req, res) {
-
+    req.session.destroy(function(err){
+        if(err){
+            res.status(401).json({message: "error"});
+        } else {
+            res.json({message: "ok"});
+        }
+    });
 });
 
-router.get("/list", function(req, res) {
-    users.find({}, function(err, users) {
+router.get("/list", passport.authenticate('jwt', { session: false }), function(req, res) {
+    User.find({}, function(err, users) {
+        res.json(users);
+    });
+});
+
+router.get("/list2", function(req, res) {
+    User.find({}, function(err, users) {
         res.json(users);
     });
 });
@@ -70,10 +101,10 @@ router.get("/secret", passport.authenticate('jwt', { session: false }), function
 });
 
 router.get("/secretDebug",
-  function(req, res, next){
+  function(req, res, next) {
       console.log(req.get('Authorization'));
       next();
-  }, function(req, res){
+  }, function(req, res) {
       res.json("debugging");
   });
 

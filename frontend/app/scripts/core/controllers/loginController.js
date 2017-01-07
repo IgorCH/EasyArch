@@ -4,7 +4,7 @@ angular
     function ($scope, $theme, DADataSource, $state, $stateParams) {
       'use strict';
 
-      $scope.name = "test";
+      $scope.email = "test";
       $scope.pass = "test";
 
       $scope.profile = {};
@@ -17,7 +17,7 @@ angular
 
       $scope.logIn = function () {
         var params = {
-          name: $scope.name,
+          email: $scope.email,
           password: $scope.pass
         };
 

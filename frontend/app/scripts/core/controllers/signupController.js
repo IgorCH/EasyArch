@@ -7,7 +7,6 @@ angular
       $scope.email = "test";
       $scope.name = "test";
       $scope.password = "test";
-      $scope.password2 = "test";
 
       $theme.set('fullscreen', true);
 
@@ -17,8 +16,9 @@ angular
 
       $scope.signup = function () {
         var params = {
+          email: $scope.email,
           name: $scope.name,
-          password: $scope.pass
+          password: $scope.password
         };
 
         DADataSource.registration(params, function (res, isSuccess) {

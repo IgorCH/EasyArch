@@ -1,6 +1,5 @@
 **.idea
 **node_modules
-doc1-help.docx
-doc2-plan.txt
-doc3-todo.txt
+./config/config.json
+docs/
 front_end/dist 

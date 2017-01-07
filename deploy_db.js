@@ -1,4 +1,7 @@
-var db = require('./db/mongoose');
+var mongoose = require('mongoose');
+var nconf = require('nconf');
+nconf.argv().env().file({ file: './config/config.json' });
+mongoose.connect(nconf.get("db:database"));
 
 var User = require('./models/user');
 var Project = require('./models/project');
@@ -33,7 +36,7 @@ User.remove({}, function(err) {
     var user2 = new User({
         email: 'igor2@mail.ru',
         password: 'pass',
-        name: 'igor',
+        name: 'igor2',
         lng: 'EN'
     });
 

@@ -10,11 +10,16 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "connect-redis": "^3.2.0",
+    "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "express-session": "^1.14.2",
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.6",
+    "nconf": "^0.8.4",
     "passport": "^0.3.2",
-    "passport-jwt": "^2.2.1"
+    "passport-jwt": "^2.2.1",
+    "redis": "^2.6.3"
   }
 }
