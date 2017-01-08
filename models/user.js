@@ -13,8 +13,23 @@ var UserSchema = new Schema({
     email: {
         type: String
     },
+    img: {
+        type: String
+    },
     lng: {
         type: String
+    },
+    admin: {
+        type: Boolean
+    },
+    manager: {
+        type: Boolean
+    },
+    designer: {
+        type: Boolean
+    },
+    client: {
+        type: Boolean
     }
 });
 

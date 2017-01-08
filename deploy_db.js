@@ -18,10 +18,14 @@ User.remove({}, function(err) {
     createProducers();
 
     var user = new User({
-        email: 'igor@mail.ru',
-        password: 'pass',
-        name: 'igor',
-        lng: 'RU'
+        email: 'admin@mail.com',
+        password: 'admin',
+        name: 'admin',
+        lng: 'RU',
+        admin: true,
+        manager: true,
+        designer: true,
+        client: true
     });
 
     user.save(function(err, user) {
@@ -34,13 +38,55 @@ User.remove({}, function(err) {
     });
 
     var user2 = new User({
-        email: 'igor2@mail.ru',
-        password: 'pass',
-        name: 'igor2',
-        lng: 'EN'
+        email: 'manager@mail.com',
+        password: 'manager',
+        name: 'manager',
+        lng: 'RU',
+        admin: false,
+        manager: true,
+        designer: true,
+        client: true
     });
 
     user2.save(function(err, user) {
+        if(err) {
+            return console.log(err);
+        } else {
+            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
+        }
+    });
+
+    var user3 = new User({
+        email: 'designer@mail.com',
+        password: 'designer',
+        name: 'designer',
+        lng: 'RU',
+        admin: false,
+        manager: false,
+        designer: true,
+        client: true
+    });
+
+    user3.save(function(err, user) {
+        if(err) {
+            return console.log(err);
+        } else {
+            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
+        }
+    });
+
+    var user4 = new User({
+        email: 'client@mail.com',
+        password: 'client',
+        name: 'client',
+        lng: 'RU',
+        admin: false,
+        manager: false,
+        designer: false,
+        client: true
+    });
+
+    user4.save(function(err, user) {
         if(err) {
             return console.log(err);
         } else {

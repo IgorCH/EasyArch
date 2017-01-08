@@ -1,8 +1,7 @@
 angular
   .module('theme.core.da_data_source', [])
-  .service('DADataSource', ["$rootScope", "$http", "restHelper", '$state', '$cookieStore', function ($rootScope, $http, restHelper, $state, $cookieStore) {
-
-    var profile = {};
+  .service('DADataSource', ["$rootScope", "$http", "restHelper", '$state', '$cookieStore', '$localStorage',
+    function ($rootScope, $http, restHelper, $state, $cookieStore, $localStorage) {
 
     var dads = {
       /*W*/
@@ -15,6 +14,10 @@ angular
         }).then(function (response) {
 
           $http.defaults.headers.common.Authorization = 'JWT ' + response.data.token;
+          $localStorage.token = response.data.token;
+          $localStorage.user = response.data.user;
+          $rootScope.broadcast("logged_in");
+
           callback && callback(response, true);
         }, function (response) {
 
@@ -31,6 +34,8 @@ angular
         }).then(function (response) {
 
           $http.defaults.headers.common.Authorization = 'JWT ' + response.data.token;
+          $localStorage.user = response.data.user;
+          $rootScope.broadcast("logged_in");
 
           callback && callback(response, true);
         }, function (response) {

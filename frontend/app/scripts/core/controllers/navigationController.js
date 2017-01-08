@@ -723,6 +723,7 @@ angular
       ]
     };
 
+    //Update Menu
     function updateMenu (roles) {
 
       function isItemExists (itemLabel) {
@@ -794,14 +795,14 @@ angular
       }
     }
 
-    updateMenu($localStorage.roles || {});
+    updateMenu($localStorage.user || {});
 
-    $rootScope.$on("logged_in", function(event, data) {
-      var roles = data.roles || {};
-      $localStorage.roles = roles;
-      updateMenu(roles);
+    $rootScope.$on("logged_in", function(event) {
+      updateMenu($localStorage.user || {});
       setParent($scope.menu, null);
     });
+
+    //Update Menu
 
     var setParent = function (children, parent) {
       angular.forEach(children, function (child) {
@@ -826,61 +827,62 @@ angular
       }
     };
 
-    function isPathExists (path) {
-      var result = false;
-      angular.forEach(menus, function (menu) {
+    //function isPathExists (path) {
+    //  var result = false;
+    //  angular.forEach(menus, function (menu) {
+    //
+    //    angular.forEach(menu, function (menuItem) {
+    //
+    //      if (menuItem.url == path) {
+    //        result = true;
+    //      }
+    //
+    //      if (menuItem.children) {
+    //        angular.forEach(menuItem.children, function (child) {
+    //          if (child.url == path) {
+    //            result = true;
+    //          }
+    //        });
+    //      }
+    //
+    //    });
+    //
+    //  });
+    //
+    //  return result;
+    //}
+    //
+    //function isPathAvailable (path) {
+    //
+    //  var result = false;
+    //  angular.forEach($scope.menu, function(menuItem){
+    //    if(menuItem.url == path) {
+    //      result = true;
+    //    }
+    //    if(menuItem.children) {
+    //      angular.forEach(menuItem.children, function(child){
+    //
+    //        if(child.url == path) {
+    //          result = true;
+    //        }
+    //      });
+    //    }
+    //  });
+    //
+    //  return result;
+    //}
+    //
+    //$scope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    //  if(isPathExists($state.href(toState)) && !isPathAvailable($state.href(toState))) {
+    //    $location.path('/Dashboard')
+    //  }
+    //});
+    //
+    //$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+    //
+    //});
 
-        angular.forEach(menu, function (menuItem) {
-
-          if (menuItem.url == path) {
-            result = true;
-          }
-
-          if (menuItem.children) {
-            angular.forEach(menuItem.children, function (child) {
-              if (child.url == path) {
-                result = true;
-              }
-            });
-          }
-
-        });
-
-      });
-
-      return result;
-    }
-
-    function isPathAvailable (path) {
-
-      var result = false;
-      angular.forEach($scope.menu, function(menuItem){
-        if(menuItem.url == path) {
-          result = true;
-        }
-        if(menuItem.children) {
-          angular.forEach(menuItem.children, function(child){
-
-            if(child.url == path) {
-              result = true;
-            }
-          });
-        }
-      });
-
-      return result;
-    }
-
-    $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-      if(isPathExists($state.href(toState)) && !isPathAvailable($state.href(toState))) {
-        $location.path('/Dashboard')
-      }
-    });
-
-    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-
-    });
-
+    //System
     setParent($scope.menu, null);
 
     $scope.openItems = [];

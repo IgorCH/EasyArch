@@ -71,7 +71,6 @@ router.post("/login", function(req, res) {
             res.status(401).json({message: "Pass did not match"});
         }
     });
-
 });
 
 router.post("/logout", function(req, res) {

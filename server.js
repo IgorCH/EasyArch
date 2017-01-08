@@ -19,15 +19,15 @@ app.use(ea_passport.passport.initialize());
 app.use(cors());
 
 app.use(session({
-  secret: nconf.get("redis:secret"),
+  saveUninitialized: true,
+  resave: true,
+  secret: nconf.get("redis:secretKey"),
   store: new redisStore({
     host: nconf.get("redis:host"),
     port: nconf.get("redis:port"),
     client: client,
     ttl: 260
-  }),
-  saveUninitialized: false,
-  resave: false
+  })
 }));
 
 app.use(cookieParser(nconf.get("express:cookieParserSecretKey")));
@@ -39,6 +39,6 @@ app.use('/prod', express.static(__dirname + '/frontend/dist'));
 
 app.use('/api/user', ea_passport.router);
 
-app.listen(3000, function() {
-  console.log("Express running on port 3000");
+app.listen(nconf.get("express:port"), function() {
+  console.log("Express running on port " + nconf.get("express:port"));
 });
