@@ -35,16 +35,15 @@ router.post("/registration", function(req, res, next) {
     });
 
     user.save(function(err) {
-        if(err) {
-            next(err);
-        } else {
+        if(!err) {
             var payload = {_id: user._id};
             var token = jwt.sign(payload, jwtOptions.secretOrKey);
             req.session.email = req.body.email;
             req.session.token = token;
             res.json({ token: token, user: user });
+        } else {
+            res.status(401).json({message: "error"});
         }
-
     });
 
 });

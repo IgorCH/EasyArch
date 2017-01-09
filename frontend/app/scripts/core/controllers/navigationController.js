@@ -1,6 +1,7 @@
 angular
   .module('theme.core.navigation_controller', ['theme.core.services'])
-  .controller('NavigationController', ['$scope', '$location', '$timeout', '$rootScope', '$localStorage', '$state', function ($scope, $location, $timeout, $rootScope, $localStorage, $state) {
+  .controller('NavigationController', ['$scope', '$location', '$timeout', '$rootScope', '$localStorage', '$state',
+    function ($scope, $location, $timeout, $rootScope, $localStorage, $state) {
     'use strict';
 
     var menus = {

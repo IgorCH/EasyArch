@@ -7,7 +7,7 @@
     "secretKey": "ea_passport_secret_key__IROIG@#$%^&*(){_)*(^&%#MFIL"
   },
   "db": {
-    "database": "mongodb://localhost/archi"
+    "database": "mongodb://localhost/ea"
   },
   "redis": {
     "host": "localhost",
