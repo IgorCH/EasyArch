@@ -3,6 +3,8 @@ var nconf = require('nconf');
 nconf.argv().env().file({ file: './config/config.json' });
 mongoose.connect(nconf.get("db:database"));
 
+var hash = require("./passport/hash").hash;
+
 var User = require('./models/user');
 var Project = require('./models/project');
 var Task = require('./models/task');
@@ -17,81 +19,102 @@ User.remove({}, function(err) {
 
     createProducers();
 
-    var user = new User({
-        email: 'admin@mail.com',
-        password: 'admin',
-        name: 'admin',
-        lng: 'RU',
-        admin: true,
-        manager: true,
-        designer: true,
-        client: true
+    hash('admin', function(err, salt, hash){
+        if (err) throw err;
+        
+        var user = new User({
+            email: 'admin@mail.com',
+            salt: salt,
+            hash: hash,
+            name: 'admin',
+            lng: 'RU',
+            admin: true,
+            manager: true,
+            designer: true,
+            client: true
+        });
+    
+        user.save(function(err, user) {
+            if(err) {
+                return console.log(err);
+            } else {
+                console.log("New user - %s:%s:%s", user.id, user.name);
+                createDB(user.id);
+            }
+        });
     });
 
-    user.save(function(err, user) {
-        if(err) {
-            return console.log(err);
-        } else {
-            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
-            createDB(user.id);
-        }
+    hash('manager', function(err, salt, hash) {
+        if (err) throw err;
+
+        var user2 = new User({
+            email: 'manager@mail.com',
+            salt: salt,
+            hash: hash,
+            name: 'manager',
+            lng: 'RU',
+            admin: false,
+            manager: true,
+            designer: true,
+            client: true
+        });
+
+        user2.save(function (err, user) {
+            if (err) {
+                return console.log(err);
+            } else {
+                console.log("New user - %s:%s:%s", user.id, user.name);
+            }
+        });
+
     });
 
-    var user2 = new User({
-        email: 'manager@mail.com',
-        password: 'manager',
-        name: 'manager',
-        lng: 'RU',
-        admin: false,
-        manager: true,
-        designer: true,
-        client: true
+    hash('designer', function(err, salt, hash) {
+        if (err) throw err;
+        var user3 = new User({
+            email: 'designer@mail.com',
+            salt: salt,
+            hash: hash,
+            password: 'designer',
+            name: 'designer',
+            lng: 'RU',
+            admin: false,
+            manager: false,
+            designer: true,
+            client: true
+        });
+
+        user3.save(function (err, user) {
+            if (err) {
+                return console.log(err);
+            } else {
+                console.log("New user - %s:%s:%s", user.id, user.name);
+            }
+        });
     });
 
-    user2.save(function(err, user) {
-        if(err) {
-            return console.log(err);
-        } else {
-            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
-        }
-    });
+    hash('client', function(err, salt, hash) {
+        if (err) throw err;
+        var user4 = new User({
+            email: 'client@mail.com',
+            salt: salt,
+            hash: hash,
+            password: 'client',
+            name: 'client',
+            lng: 'RU',
+            admin: false,
+            manager: false,
+            designer: false,
+            client: true
+        });
 
-    var user3 = new User({
-        email: 'designer@mail.com',
-        password: 'designer',
-        name: 'designer',
-        lng: 'RU',
-        admin: false,
-        manager: false,
-        designer: true,
-        client: true
-    });
-
-    user3.save(function(err, user) {
-        if(err) {
-            return console.log(err);
-        } else {
-            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
-        }
-    });
-
-    var user4 = new User({
-        email: 'client@mail.com',
-        password: 'client',
-        name: 'client',
-        lng: 'RU',
-        admin: false,
-        manager: false,
-        designer: false,
-        client: true
-    });
-
-    user4.save(function(err, user) {
-        if(err) {
-            return console.log(err);
-        } else {
-            console.log("New user - %s:%s:%s", user.id, user.name, user.password);
-        }
+        user4.save(function (err, user) {
+            if (err) {
+                return console.log(err);
+            } else {
+                console.log("New user - %s:%s:%s", user.id, user.name);
+            }
+        });
     });
 
 });

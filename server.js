@@ -11,17 +11,15 @@ var session = require('express-session');
 
 //var redis = require("redis");
 //var redisStore = require('connect-redis')(session);
+//var redisClient  = redis.createClient();
 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//var client  = redis.createClient();
+
 
 var cors = require('cors');
 var auth = require('./routes/auth');
-
-//var ea_passport = require('./passport/passport');
-//app.use(ea_passport.passport.initialize());
 
 app.use(cors());
 
@@ -32,7 +30,7 @@ app.use(session({
   //, store: new redisStore({
   //   host: nconf.get("redis:host"),
   //   port: nconf.get("redis:port"),
-  //   client: client,
+  //   client: redisClient,
   //   ttl: 260
   // })
 }));

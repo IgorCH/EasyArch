@@ -2,34 +2,43 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
+    email: {
+        type: String
+    },
     name: {
         type: String,
         required: true
     },
-    password: {
+    salt : {
         type: String,
         required: true
     },
-    email: {
-        type: String
+    hash : {
+        type: String,
+        required: true
     },
     img: {
         type: String
     },
     lng: {
-        type: String
+        type: String,
+        default: "RU"
     },
     admin: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     manager: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     designer: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     client: {
-        type: Boolean
+        type: Boolean,
+        default: true
     }
 });
 
