@@ -1,6 +1,6 @@
 module.exports = {
     isAdmin: function(req, res, next) {
-        if (req.session.user.isAdmin) {
+        if (req.session.user && req.session.user.isAdmin) {
             next();
         } else {
             res.status(401).json({message: "Not Enough Rights"})
@@ -8,7 +8,7 @@ module.exports = {
     },
 
     isManager: function (req, res, next) {
-        if (req.session.user.isManager) {
+        if (req.session.user && req.session.user.isManager) {
             next();
         } else {
             res.status(401).json({message: "Not Enough Rights"})
@@ -16,7 +16,7 @@ module.exports = {
     },
 
     isDesigner: function (req, res, next) {
-        if (req.session.user.isDesigner) {
+        if (req.session.user && req.session.user.isDesigner) {
             next();
         } else {
             res.status(401).json({message: "Not Enough Rights"})
@@ -24,7 +24,7 @@ module.exports = {
     },
 
     isClient: function (req, res, next) {
-        if (req.session.user.isClient) {
+        if (req.session.user && req.session.user.isClient) {
             next();
         } else {
             res.status(401).json({message: "Not Enough Rights"})

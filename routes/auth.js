@@ -71,28 +71,4 @@ router.get("/logout", function(req, res) {
     });
 });
 
-router.get("/list", passport.isDesigner, function(req, res) {
-    User.find({}, function(err, users) {
-        res.json(users);
-    });
-});
-
-router.get("/list2", function(req, res) {
-    User.find({}, function(err, users) {
-        res.json(users);
-    });
-});
-
-router.get("/secret", function(req, res){
-    res.json({message: "Success! You can not see this without a token"});
-});
-
-router.get("/secretDebug",
-  function(req, res, next) {
-      console.log(req.get('Authorization'));
-      next();
-  }, function(req, res) {
-      res.json("debugging");
-  });
-
 module.exports = router;
