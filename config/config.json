@@ -13,5 +13,8 @@
     "host": "localhost",
     "port": 6379,
     "secretKey": "RDF&E$^%UYI^UT&YO*{GVJG"
+  },
+  "files": {
+    "path": "./public"
   }
 }

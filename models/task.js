@@ -3,9 +3,7 @@ var Schema = mongoose.Schema;
 
 var Task = new Schema({
     title: { type: String, required: true },
-    authorId: { type: String, required: true },
-    projectId: { type: String, required: true },
-    isActive: { type: Boolean, required: true, default: true }
+    description: { type: String }
 });
 
 Task.path('title').validate(function (v) {

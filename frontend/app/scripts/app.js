@@ -3,27 +3,63 @@ angular
   .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
     'use strict';
 
-    $urlRouterProvider.otherwise('/Dashboard');
+    $urlRouterProvider.otherwise('/landing');
 
     $stateProvider
 
-      .state('Login', {
-        url: '/Login?redirectTo',
+      .state('landing', {
+        url: '/landing',
         templateUrl: 'views/Login.html',
         controller: 'LoginController'
       })
-      .state('Signup', {
-        url: '/Signup?redirectTo',
+
+      .state('login', {
+        url: '/login?redirectTo',
+        templateUrl: 'views/Login.html',
+        controller: 'LoginController'
+      })
+
+      .state('signup', {
+        url: '/signup?redirectTo',
         templateUrl: 'views/Signup.html',
         controller: 'LoginController'
       })
 
-      .state('Dashboard', {
-        url: '/Dashboard',
-        templateUrl: 'views/DashboardHome.html',
-        controller: 'DashboardHomeController'
+      .state('projects', {
+        url: '/projects',
+        templateUrl: 'views/Projects.html',
+        controller: 'ProjectsController'
       })
 
+      .state('project', {
+        url: '/project?id',
+        templateUrl: 'views/Project.html',
+        controller: 'ProjectController'
+      })
+
+      .state('tasks', {
+        url: '/tasks',
+        templateUrl: 'views/Tasks.html',
+        controller: 'TasksController'
+      })
+
+      .state('task', {
+        url: '/task?id',
+        templateUrl: 'views/Task.html',
+        controller: 'TaskController'
+      })
+
+      .state('users', {
+        url: '/users',
+        templateUrl: 'views/Task.html',
+        controller: 'TaskController'
+      })
+
+      .state('profile', {
+        url: '/profile?id',
+        templateUrl: 'views/Task.html',
+        controller: 'TaskController'
+      })
     }
   ])
 
@@ -74,7 +110,9 @@ angular
     $httpProvider.interceptors.push('httpInterceptor');
 
   }])
-  //.run(['DADataSource', function(DADataSource) {
-
-  //}])
+  .run(['DADataSource', '$localStorage', function(DADataSource, $localStorage) {
+    //DADataSource.session({}, function(){
+    //  $localStorage.user = response.data.user;
+    //});
+  }])
   ;

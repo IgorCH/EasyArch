@@ -1,109 +1,72 @@
 var express = require('express');
-var passport = require('passport');
 var router = express.Router();
 
-var libs = '../../libs/';
-var log = require(libs + 'log')(module);
+var Project = require('../models/project');
+var Task = require('../models/task');
+var passport = require('../passport/passport');
 
-var db = require(libs + 'db/mongoose');
-var Project = require(libs + 'model/project');
-var Task = require(libs + 'model/task');
-
-var auth = function(req, res, next){
-    if (!req.isAuthenticated())
-        res.sendStatus(401);
-    else
-        next();
-};
-
-router.get('/', auth, function(req, res) {
+router.get('/', passport.isClient, function(req, res) {
     Project.find(function (err, projects) {
         if (!err) {
-            return res.json(projects);
-            //TODO +Всю информацию для фильтров
-            //люди
+            return res.json({message: "ok", projects: projects});
         } else {
-            res.statusCode = 500;
-            log.error('Internal error(%d): %s', res.statusCode, err.message);
-            return res.json({
-                error: 'Server error'
-            });
+            return res.status(500).json({message: 'Error'});
         }
     });
 });
 
-router.post('/', auth, function(req, res) {
+router.post('/', passport.isClient, function(req, res) {
 
     var project = new Project({
         title: req.query.title,
-        authorId: '12123'
+        authorId: req.session.user.id
     });
 
     project.save(function (err) {
         if (!err) {
-            log.info("New Project created with id: %s", project.id);
-            return res.json({
-                status: 'OK',
-                project: project
-            });
+            return res.json({message: 'ok', project: project});
         } else {
             if(err.name === 'ValidationError') {
-                res.statusCode = 400;
-                res.json({
-                    error: 'Validation error'
-                });
+                res.status(400).json({message: 'Validation error'});
             } else {
-                res.statusCode = 500;
-                res.json({
-                    error: 'Server error'
-                });
+                res.status(500).json({message: 'Server error'});
             }
-            log.error('Internal error(%d): %s', res.statusCode, err.message);
         }
     });
 });
 
-router.get('/:id', auth, function(req, res) {
+router.get('/:id', passport.isClient, function(req, res) {
 
     Project.findById(req.params.id, function (err, project) {
 
         if(!project) {
-            res.statusCode = 404;
-            return res.json({
-                error: 'Not found'
-            });
+            return res.status(400).json({message: 'Not found'});
         }
 
         if (!err) {
             Task.find({ projectId:  project.id }, function(err, tasks) {
                 if(!err) {
                     return res.json({
-                        status: 'OK',
+                        message: 'ok',
                         project: project,
                         tasks: tasks
                     });
                 } else {
-                    console.log('error');
+                    return res.status(500).json({message: 'Server error'});
                 }
             });
         } else {
-            res.statusCode = 500;
-            return res.json({
-                error: 'Server error'
-            });
+            return res.status(500).json({message: 'Server error'});
         }
     });
 });
 
-router.put('/:id', auth, function (req, res){
+router.put('/:id', passport.isClient, function (req, res){
     var projectId = req.params.id;
 
-    Project.findById(articleId, function (err, project) {
+    Project.findById(projectId, function (err, project) {
         if(!project) {
-            res.statusCode = 404;
-            return res.json({
-                error: 'Not found'
-            });
+            return res.status(404).json({message: 'Not found'});
         }
 
          project.title = req.body.title;
@@ -113,21 +76,12 @@ router.put('/:id', auth, function (req, res){
 
          project.save(function (err) {
             if (!err) {
-                return res.json({
-                    status: 'OK',
-                    project: project
-                });
+                return res.json({message: 'ok', project: project});
             } else {
                 if(err.name === 'ValidationError') {
-                    res.statusCode = 400;
-                    return res.json({
-                        error: 'Validation error'
-                    });
+                    return res.status(400).json({message: 'Validation error'});
                 } else {
-                    res.statusCode = 500;
-                    return res.json({
-                        error: 'Server error'
-                    });
+                    return res.status(500).json({message: 'Server error'});
                 }
             }
         });

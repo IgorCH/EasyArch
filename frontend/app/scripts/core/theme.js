@@ -35,6 +35,13 @@ angular
     'theme.core.login_controller',
     'theme.core.signup_controller',
 
-    'theme.core.rest_helper'
+    'theme.core.projects_controller',
+    'theme.core.project_controller',
+
+    'theme.core.tasks_controller',
+    'theme.core.task_controller',
+
+    'theme.core.rest_helper',
+    'theme.core.project_data_source'
 
   ]);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Studio Designer</title>
+  <title>Easy Arch</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Studio Designer">
@@ -251,10 +251,6 @@
 <script src="../bower_components/bootstrap-datepaginator/dist/bootstrap-datepaginator.min.js"></script>
 <script src="../bower_components/velocity/velocity.js"></script>
 <script src="../bower_components/velocity/velocity.ui.js"></script>
-<script src="../bower_components/Sortable/Sortable.js"></script>
-<script src="../bower_components/Sortable/ng-sortable.js"></script>
-<script src="../bower_components/Sortable/knockout-sortable.js"></script>
-<script src="../bower_components/Sortable/react-sortable-mixin.js"></script>
 <script src="../bower_components/autoNumeric/autoNumeric.js"></script>
 <script src="../bower_components/ngstorage/ngStorage.js"></script>
 <script src="../bower_components/lodash/dist/lodash.compat.js"></script>
@@ -269,16 +265,6 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-
-<script src="scripts/core/controllers/mainController.js"></script>
-<script src="scripts/core/controllers/messagesController.js"></script>
-<script src="scripts/core/controllers/navigationController.js"></script>
-<script src="scripts/core/controllers/notificationsController.js"></script>
-
-<script src="scripts/core/controllers/loginController.js"></script>
-<script src="scripts/core/controllers/signupController.js"></script>
-
-<script src="scripts/core/controllers/dashboardHomeController.js"></script>
 <script src="scripts/core/directives/sdGrid.js"></script>
 <script src="scripts/core/directives/crNumeric.js"></script>
 <script src="scripts/core/directives/stopPropagation.js"></script>
@@ -295,10 +281,25 @@
 <script src="scripts/core/modules/panels/panels.js"></script>
 <script src="scripts/core/modules/panels/directives.js"></script>
 
-<script src="scripts/core/services/restHelper.js"></script>
-<script src="scripts/core/services/homeDataSource.js"></script>
+<!---------------------------------------------------------------------------->
+<script src="scripts/core/controllers/mainController.js"></script>
+<script src="scripts/core/controllers/navigationController.js"></script>
+<script src="scripts/core/controllers/notificationsController.js"></script>
 
+<script src="scripts/core/controllers/dashboardHomeController.js"></script>
+<script src="scripts/core/controllers/loginController.js"></script>
+<script src="scripts/core/controllers/signupController.js"></script>
+
+<script src="scripts/core/controllers/projectsController.js"></script>
+<script src="scripts/core/controllers/projectController.js"></script>
+
+<script src="scripts/core/controllers/tasksController.js"></script>
+<script src="scripts/core/controllers/taskController.js"></script>
+
+<script src="scripts/core/services/restHelper.js"></script>
 <script src="scripts/core/services/DADataSource.js"></script>
+<script src="scripts/core/services/ProjectDataSource.js"></script>
+<!---------------------------------------------------------------------------->
 
 <script src="scripts/core/services/services.js"></script>
 <script src="scripts/core/services/theme.js"></script>

@@ -4,8 +4,8 @@ angular
     function ($scope, $theme, DADataSource, $state, $stateParams) {
       'use strict';
 
-      $scope.email = "test";
-      $scope.pass = "test";
+      $scope.email = "client@mail.com";
+      $scope.pass = "client";
 
       $scope.profile = {};
 

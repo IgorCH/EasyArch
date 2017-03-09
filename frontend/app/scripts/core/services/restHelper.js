@@ -10,19 +10,17 @@ angular
 
       processError: function (response) {
 
-        if(this.isLocal()) return;
-
         var result = {
           isSuccess: response.status === 200
         };
 
         if (response.status == 500) {
 
-          $bootbox.alert(response.data);
+          $bootbox.alert(response.data.message);
 
         } else if (response.status == 400) {
 
-          $bootbox.alert(response.data);
+          $bootbox.alert(response.data.message);
 
         } else if (response.status == 401 && $state.current.name != "Login") {
 
@@ -30,7 +28,7 @@ angular
 
         } else if (response.status != 200 &&  $state.current.name != "Login") {
 
-          $bootbox.alert(response.data);
+          $bootbox.alert(response.data.message);
 
         } else {
 

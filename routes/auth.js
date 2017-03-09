@@ -10,11 +10,10 @@ router.post("/registration", function(req, res, next) {
 
     if(req.body.email && req.body.name && req.body.password) {
 
-        hash('foobar', function (err, salt, hash) {
+        hash(req.body.password, function (err, salt, hash) {
 
             var user = new User({
                 email: req.body.email,
-                password: req.body.password,
                 name: req.body.name,
                 salt: salt,
                 hash: hash
@@ -43,19 +42,19 @@ router.post("/login", function(req, res) {
         User.findOne({email: req.body.email}).exec(function (err, user) {
             if (!user) {
                 res.status(401).json({message: "User not found"});
+            } else {
+                hash(req.body.password, user.salt, function (err, hash) {
+                    if (hash == user.hash) {
+                        req.session.regenerate(function () {
+                            req.session.user = user;
+                            res.json({message: "ok", user: user});
+                        });
+                    } else {
+                        res.status(401).json({message: "Pass did not match"});
+                    }
+
+                });
             }
-
-            hash(req.body.password, user.salt, function (err, hash) {
-                if (hash == user.hash) {
-                    req.session.regenerate(function () {
-                        req.session.user = user;
-                        res.json({message: "ok", user: user});
-                    });
-                } else {
-                    res.status(401).json({message: "Pass did not match"});
-                }
-
-            });
 
         });
     }

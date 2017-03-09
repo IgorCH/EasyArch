@@ -1,5 +1,3 @@
-<div ng-controller="ProjectController">
-
 <div id="page-heading">
     <ol class="breadcrumb">
         <li><a href="#/">Dashboard</a></li>
@@ -8,13 +6,11 @@
     </ol>
 
     <h1>{{project.title}}</h1>
-
 </div>
-<div class="container-fluid">
 
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-
             <tabset panel-tabs="true" heading="Project workflow" panel-class="panel-primary">
                 <tab>
                     <tab-heading>
@@ -29,6 +25,17 @@
                                         corrupti hic esse quisquam fugiat. Asperiores in eveniet sapiente error fuga
                                         tenetur ex ea dignissimos voluptas ab molestiae eos totam quo dolorem maxime
                                         illo neque quia itaque.</p>
+
+
+                                    <form method="post"
+                                          enctype="multipart/form-data"
+                                          action="/api/file/upload">
+                                        <p>Title: <input type="text" name="title"/></p>
+                                        <p>Image: <input type="file" name="image"/></p>
+                                        <p>Image2: <input type="file" name="image2"/></p>
+                                        <p><input type="submit" value="Upload"/></p>
+                                    </form>
+
                                 </tab>
 
                                 <tab heading="Attachments">
@@ -116,5 +123,4 @@
     <hr>
 
 
-</div> <!-- container-fluid -->
 </div>

@@ -7,7 +7,6 @@ var hash = require("./passport/hash").hash;
 
 var User = require('./models/user');
 var Project = require('./models/project');
-var Task = require('./models/task');
 var Scene = require('./models/scene');
 var Model = require('./models/model');
 
@@ -38,8 +37,7 @@ User.remove({}, function(err) {
             if(err) {
                 return console.log(err);
             } else {
-                console.log("New user - %s:%s:%s", user.id, user.name);
-                createDB(user.id);
+                console.log("New user - %s:%s", user.id, user.name);
             }
         });
     });
@@ -63,7 +61,7 @@ User.remove({}, function(err) {
             if (err) {
                 return console.log(err);
             } else {
-                console.log("New user - %s:%s:%s", user.id, user.name);
+                console.log("New user - %s:%s", user.id, user.name);
             }
         });
 
@@ -88,7 +86,7 @@ User.remove({}, function(err) {
             if (err) {
                 return console.log(err);
             } else {
-                console.log("New user - %s:%s:%s", user.id, user.name);
+                console.log("New user - %s:%s", user.id, user.name);
             }
         });
     });
@@ -112,7 +110,8 @@ User.remove({}, function(err) {
             if (err) {
                 return console.log(err);
             } else {
-                console.log("New user - %s:%s:%s", user.id, user.name);
+                createDB(user);
+                console.log("New user - %s:%s", user.id, user.name);
             }
         });
     });
@@ -121,87 +120,75 @@ User.remove({}, function(err) {
 
 //-------------------------------------//
 
-function createDB (userId) {
+function createDB (user) {
     Project.remove({}, function(err) {
-        Task.remove({}, function(err) {
 
-            var project1 = new Project({
-                title: 'Project 1',
-                authorId: userId,
-                price: '100',
-                status: 'Created'
-            });
-
-            project1.save(function(err, project) {
-                if(!err) {
-                    console.log("New Project - %s:%s:%s", project.title, project.authorId, userId);
-                    var task1 = new Task({title: 'Task 1', authorId: userId, projectId: project.id});
-                    task1.save(function(err, task) {
-                        if(!err) {console.log("New Task - %s:%s:%s", task.title, task.authorId, task.id);}
-                        else {return console.log(err);}
-                    });
-                    var task2 = new Task({title: 'Task 2', authorId: userId, projectId: project.id});
-                    task2.save(function(err, task) {
-                        if(!err) {console.log("New Task - %s:%s:%s", task.title, task.authorId, task.id);}
-                        else {return console.log(err);}
-                    });
-                } else {
-                    return console.log(err);
+        var project1 = new Project({
+            title: 'Project 1',
+            client: user,
+            price: '100',
+            tasks: [
+                {
+                    title: "Title",
+                    description: "Description of task"
                 }
-            });
+            ]
+        });
 
-            var project2 = new Project({
-                title: 'Project 2',
-                authorId: userId,
-                price: '100',
-                status: 'Created'
-            });
+        project1.save(function(err, project) {
+            if(!err) {
+                console.log("New Project - %s:%s", project.title, project.client.id);
+            } else {
+                return console.log(err);
+            }
+        });
 
-            project2.save(function(err, project) {
+        var project2 = new Project({
+            title: 'Project 2',
+            client: user,
+            price: '100',
+            tasks: [
+                {
+                    title: "Title",
+                    description: "Description of task"
+                }
+            ]
+        });
+
+        project2.save(function(err, project) {
                 if(!err) {
-                    console.log("New Project - %s:%s", project2.title, project2.authorId);
-                    var task1 = new Task({title: 'Task 1', authorId: userId, projectId: project.id});
-                    task1.save(function(err, task) {
-                        if(!err) {console.log("New Task - %s:%s:%s", task.title, task.authorId, task.id);}
-                        else {return console.log(err);}
-                    });
-                    var task2 = new Task({title: 'Task 2', authorId: userId, projectId: project.id});
-                    task2.save(function(err, task) {
-                        if(!err) {console.log("New Task - %s:%s", task.title, task.authorId, task.id);}
-                        else {return console.log(err);}
-                    });
+                    console.log("New Project - %s:%s", project2.title, project2.client.id);
                 }
                 else {return console.log(err);}
             });
-        });
     });
 
     //-------------------------------------//
 
     Scene.remove({}, function(err) {
-        var newScene1 = new Scene({title: 'Scene 1', authorId: userId, url: '1'});
+        var newScene1 = new Scene({title: 'Scene 1', authorId: user, url: '1'});
         newScene1.save(function (err, client) {
-            if (!err) { console.log("New scene - %s:%s:%s", newScene1.title, newScene1.authorId, newScene1.url); }
+            if (!err) { console.log("New scene - %s:%s:%s", newScene1.title, newScene1.authorId.id, newScene1.url); }
             else { return console.log(err); }
         });
-        var newScene2 = new Scene({title: 'Scene 2', authorId: userId, url: '2'});
+        var newScene2 = new Scene({title: 'Scene 2', authorId: user, url: '2'});
         newScene2.save(function (err, client) {
-            if (!err) { console.log("New scene - %s:%s:%s", newScene2.title, newScene2.authorId, newScene2.url); }
+            if (!err) { console.log("New scene - %s:%s:%s", newScene2.title, newScene2.authorId.id, newScene2.url); }
             else { return console.log(err); }
         });
-        var newScene3 = new Scene({title: 'Scene 3', authorId: userId, url: '3'});
+        var newScene3 = new Scene({title: 'Scene 3', authorId: user, url: '3'});
         newScene3.save(function (err, client) {
-            if (!err) { console.log("New scene - %s:%s:%s", newScene3.title, newScene3.authorId, newScene3.url); }
+            if (!err) { console.log("New scene - %s:%s:%s", newScene3.title, newScene3.authorId.id, newScene3.url); }
             else { return console.log(err); }
         });
-        var newScene4 = new Scene({title: 'Scene 4', authorId: userId, url: '4'});
+        var newScene4 = new Scene({title: 'Scene 4', authorId: user, url: '4'});
         newScene4.save(function (err, client) {
-            if (!err) { console.log("New scene - %s:%s:%s", newScene4.title, newScene4.authorId, newScene4.url); }
+            if (!err) { console.log("New scene - %s:%s:%s", newScene4.title, newScene4.authorId.id, newScene4.url); }
             else { return console.log(err); }
         });
-        var newScene5 = new Scene({title: 'Scene 5', authorId: userId, url: '5'});
+        var newScene5 = new Scene({title: 'Scene 5', authorId: user, url: '5'});
         newScene5.save(function (err, client) {
-            if (!err) { console.log("New scene - %s:%s:%s", newScene5.title, newScene5.authorId, newScene5.url); }
+            if (!err) { console.log("New scene - %s:%s:%s", newScene5.title, newScene5.authorId.id, newScene5.url); }
             else { return console.log(err); }
         });
     });
@@ -209,29 +196,29 @@ function createDB (userId) {
     //-------------------------------------//
 
     Model.remove({}, function(err) {
-        var newModel1 = new Model({title: 'Model 1', authorId: userId, url: '1'});
+        var newModel1 = new Model({title: 'Model 1', authorId: user, url: '1'});
         newModel1.save(function(err, client) {
-            if(!err) {console.log("New model - %s:%s:%s", newModel1.title, newModel1.authorId, newModel1.url);}
+            if(!err) {console.log("New model - %s:%s:%s", newModel1.title, newModel1.authorId.id, newModel1.url);}
             else { return console.log(err);}
         });
-        var newModel2 = new Model({title: 'Model 2', authorId: userId, url: '2'});
+        var newModel2 = new Model({title: 'Model 2', authorId: user, url: '2'});
         newModel2.save(function(err, client) {
-            if(!err) {console.log("New model - %s:%s:%s", newModel2.title, newModel2.authorId, newModel2.url);}
+            if(!err) {console.log("New model - %s:%s:%s", newModel2.title, newModel2.authorId.id, newModel2.url);}
             else { return console.log(err);}
         });
-        var newModel3 = new Model({title: 'Model 3', authorId: userId, url: '3'});
+        var newModel3 = new Model({title: 'Model 3', authorId: user, url: '3'});
         newModel3.save(function(err, client) {
-            if(!err) {console.log("New model - %s:%s:%s", newModel3.title, newModel3.authorId, newModel3.url);}
+            if(!err) {console.log("New model - %s:%s:%s", newModel3.title, newModel3.authorId.id, newModel3.url);}
             else { return console.log(err);}
         });
-        var newModel4 = new Model({title: 'Model 4', authorId: userId, url: '4'});
+        var newModel4 = new Model({title: 'Model 4', authorId: user, url: '4'});
         newModel4.save(function(err, client) {
-            if(!err) {console.log("New model - %s:%s:%s", newModel4.title, newModel4.authorId, newModel4.url);}
+            if(!err) {console.log("New model - %s:%s:%s", newModel4.title, newModel4.authorId.id, newModel4.url);}
             else { return console.log(err);}
         });
-        var newModel5 = new Model({title: 'Model 5', authorId: userId, url: '5'});
+        var newModel5 = new Model({title: 'Model 5', authorId: user, url: '5'});
         newModel5.save(function(err, client) {
-            if(!err) {console.log("New model - %s:%s:%s", newModel5.title, newModel5.authorId, newModel5.url);}
+            if(!err) {console.log("New model - %s:%s:%s", newModel5.title, newModel5.authorId.id, newModel5.url);}
             else { return console.log(err);}
         });
     });

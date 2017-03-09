@@ -6,24 +6,20 @@ angular
     var dads = {
       /*W*/
       registration: function (params, callback) {
-
         $http({
           method: 'POST',
           url: '/api/user/registration',
           data: params
         }).then(function (response) {
 
-          $http.defaults.headers.common.Authorization = 'JWT ' + response.data.token;
-          $localStorage.token = response.data.token;
           $localStorage.user = response.data.user;
-          $rootScope.broadcast("logged_in");
+          $rootScope.$broadcast("logged_in");
 
           callback && callback(response, true);
         }, function (response) {
 
           callback && callback(response, false);
         });
-
       },
       login: function (params, callback) {
         var self = this;
@@ -33,9 +29,8 @@ angular
           data: params
         }).then(function (response) {
 
-          $http.defaults.headers.common.Authorization = 'JWT ' + response.data.token;
           $localStorage.user = response.data.user;
-          $rootScope.broadcast("logged_in");
+          $rootScope.$broadcast("logged_in");
 
           callback && callback(response, true);
         }, function (response) {
@@ -45,19 +40,34 @@ angular
       },
       /*W*/
       logout: function (params, callback) {
-
         $http({
           method: 'GET',
           url: '/api/user/logout'
         }).then(function successCallback(response) {
-          $cookieStore.remove("sessid");
+          $localStorage.user = {}
           callback && callback(response, true);
         }, function errorCallback(response) {
-          //Spinner.done();
+
           callback && callback(response, false);
         });
+      },
 
-      }
+      session: function (params, callback) {
+        $http({
+          method: 'POST',
+          url: '/api/user/session',
+          data: params
+        }).then(function (response) {
+
+          $localStorage.user = response.data.user;
+          $rootScope.$broadcast("logged_in");
+
+          callback && callback(response, true);
+        }, function (response) {
+
+          callback && callback(response, false);
+        });
+      },
 
     };
 

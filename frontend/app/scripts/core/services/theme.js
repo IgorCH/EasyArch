@@ -10,7 +10,7 @@ angular
       leftbarShown: false,
       rightbarCollapsed: false,
       fullscreen: false,
-      layoutHorizontal: true,
+      layoutHorizontal: false,
       layoutHorizontalLargeIcons: false,
       layoutBoxed: false,
       showSmallSearchBar: false,
@@ -23,22 +23,22 @@ angular
 
     this.settings = DEFAULT_SETTINGS;
     var that = this;
-
-    var settingsStr = $localStorage.UISettings;
-    if (settingsStr) {
-      var parsedSettings = JSON.parse(settingsStr);
-      for(var key in parsedSettings) {
-        this.settings[key] = parsedSettings[key];
-      }
-    }
-
-    var point = this.settings;
-
-    $rootScope.$on("logged_in", function(event, data) {
-      for (var key in data.user.UISettings) {
-        that.set(key, data.user.UISettings[key]);
-      }
-    });
+    //
+    // var settingsStr = $localStorage.UISettings;
+    // if (settingsStr) {
+    //   var parsedSettings = JSON.parse(settingsStr);
+    //   for(var key in parsedSettings) {
+    //     this.settings[key] = parsedSettings[key];
+    //   }
+    // }
+    //
+    // var point = this.settings;
+    //
+    // $rootScope.$on("logged_in", function(event, data) {
+    //   for (var key in data.user.UISettings) {
+    //     that.set(key, data.user.UISettings[key]);
+    //   }
+    // });
 
     var brandColors = {
       'default': '#ecf0f1',
@@ -88,7 +88,7 @@ angular
 
     this.set = function (key, value) {
       this.settings[key] = value;
-      this.saveSettings(key, value);
+      //this.saveSettings(key, value);
 
       $rootScope.$broadcast('themeEvent:changed', {
         key: key,
@@ -101,28 +101,28 @@ angular
       return this.settings;
     };
 
-    var saveTimer;
-    this.saveSettings = function (key, value) {
-      var fields = ['topNavThemeClass', 'sidebarThemeClass', "fixedHeader", "layoutHorizontal",
-                    "layoutBoxed", "pageTransitionStyle", "dropdownTransitionStyle"];
-
-
-      if(fields.indexOf(key) == -1) {
-        return;
-      }
-
-      var settings = {};
-
-      angular.forEach(fields, function(field) {
-        settings[field] = that.settings[field]
-      });
-
-      var _settings = JSON.stringify(settings);
-      $localStorage.UISettings = _settings;
-      saveTimer && clearTimeout(saveTimer);
-      saveTimer = setTimeout(function() {
-        DADataSource.saveSettings(_settings, function(res) {});
-      }, 1000);
-    };
+    // var saveTimer;
+    // this.saveSettings = function (key, value) {
+    //   var fields = ['topNavThemeClass', 'sidebarThemeClass', "fixedHeader", "layoutHorizontal",
+    //                 "layoutBoxed", "pageTransitionStyle", "dropdownTransitionStyle"];
+    //
+    //
+    //   if(fields.indexOf(key) == -1) {
+    //     return;
+    //   }
+    //
+    //   var settings = {};
+    //
+    //   angular.forEach(fields, function(field) {
+    //     settings[field] = that.settings[field]
+    //   });
+    //
+    //   var _settings = JSON.stringify(settings);
+    //   $localStorage.UISettings = _settings;
+    //   saveTimer && clearTimeout(saveTimer);
+    //   saveTimer = setTimeout(function() {
+    //     DADataSource.saveSettings(_settings, function(res) {});
+    //   }, 1000);
+    // };
 
   }]);

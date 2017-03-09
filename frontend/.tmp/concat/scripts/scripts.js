@@ -150,7 +150,7 @@ angular.module('theme.core.main_controller', ['theme.core.services', 'theme.core
 
       $scope.logOut = function () {
         DADataSource.logout({}, function () {
-          $state.go('Login');
+          $state.go('login');
         });
 
       };
@@ -1281,7 +1281,7 @@ angular
 
         DADataSource.login(params, function (res, isSuccess) {
           if (isSuccess) {
-            $state.go($stateParams.redirectTo || 'Dashboard');
+            $state.go($stateParams.redirectTo || 'home');
           }
         });
       };
@@ -3816,7 +3816,7 @@ angular
 
         } else if (response.status == 401 && $state.current.name != "Login") {
 
-          $state.go("Login", {redirectTo: $state.current.name });
+          $state.go("login", {redirectTo: $state.current.name });
 
         } else if (response.status != 200 &&  $state.current.name != "Login") {
 

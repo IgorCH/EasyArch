@@ -1,12 +1,12 @@
 angular
   .module('theme.core.project_controller', ['theme.core.services'])
-  .controller('ProjectController', ['$scope', '$theme', 'EasyArchDataSource', '$routeParams',
-    function ($scope, $theme, EasyArchDataSource, $routeParams) {
+  .controller('ProjectController', ['$scope', '$theme', '$state', '$stateParams', 'ProjectDataSource',
+    function ($scope, $theme, $state, $stateParams, ProjectDataSource) {
       'use strict';
 
       $scope.project = {};
-      EasyArchDataSource.getProject({projectId: $routeParams.id}, function (res, resInfo) {
-        if (resInfo.isSuccess) {
+      ProjectDataSource.getProject({projectId: $stateParams.id}, function (res) {
+        if (res.data.message == "ok") {
           $scope.project = res;
         }
       });
@@ -21,14 +21,14 @@ angular
       };
 
       $scope.onUploadAttach = function (file) {
-        EasyArchDataSource.uploadFile({projectId: $scope.project._id, file: file}, function (res, resInfo) {
-          if (resInfo.isSuccess) {
+        ProjectDataSource.uploadFile({projectId: $scope.project._id, file: file}, function (res) {
+          if (res.data.message == "ok") {
 
             var newAttach = {
 
             };
-            EasyArchDataSource.createAttach({projectId: $scope.project._id, attach: newAttach}, function (res, resInfo) {
-              if (resInfo.isSuccess) {
+            ProjectDataSource.createAttach({projectId: $scope.project._id, attach: newAttach}, function (res) {
+              if (res.data.message == "ok") {
 
 
 

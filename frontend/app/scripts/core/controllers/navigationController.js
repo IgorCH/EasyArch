@@ -5,719 +5,76 @@ angular
     'use strict';
 
     var menus = {
-      "Default": [],
-      "Administrator": [
+      "Default": [
         {
-          label: 'Dashboard',
+          label: 'Главная',
           priority: 1,
           iconClasses: 'glyphicon glyphicon-th-list',
           url: '#/Dashboard'
-        },
+        }
+      ],
+      "Client": [
         {
-          label: 'Projects',
+          label: 'Проекты',
           priority: 2,
           iconClasses: 'glyphicon glyphicon-th-list',
           children: [
             {
-              label: 'Address',
-              url: '#/AddressList',
+              label: 'Проекты',
+              url: '#/Projects',
               priority: 1
             },
             {
-              label: 'Contacts',
-              url: '#/ContactsList',
-              priority: 2
-            },
-            {
-              label: 'Items',
-              url: '#/ItemsList',
-              priority: 3
-            },
-
-            {
-              label: 'Proposals',
-              url: '#/ProposalsList',
-              priority: 4
-            },
-            {
-              label: 'Orders',
-              url: '#/OrdersList',
-              priority: 5
-            },
-            {
-              label: 'Invoices',
-              url: '#/InvoicesList',
-              priority: 6
-            },
-            {
-              lineSeparator: true,
-              priority: 7
-            },
-            {
-              label: 'Activities',
-              url: '#/ActivitiesList',
-              priority: 8
-            },
-            {
-              label: 'Timelines',
-              url: '#/Timelines',
-              priority: 9
-            },
-            {
-              label: 'Calendar',
-              url: '#/Calendar',
-              priority: 10
-            }
-          ]
-        },
-        {
-          label: 'Accounting',
-          priority: 3,
-          iconClasses: 'glyphicon glyphicon-usd',
-          children: [
-            {
-              label: 'Balance',
-              url: '#/Balance',
-              priority: 1
-            },
-            {
-              label: 'MONEY IN',
-              url: '#/MoneyIn',
-              priority: 2
-            },
-            {
-              label: 'Make Deposit',
-              url: '#/MakeDeposit',
-              priority: 3
-            },
-            {
-              label: 'MONEY OUT',
-              url: '#/MoneyOut',
-              priority: 4
-            },
-            {
-              label: 'Reconciliation',
-              url: '#/Reconciliation',
-              priority: 5
-            },
-            {
-              label: 'Journal Entry',
-              url: '#/JournalEntry',
-              priority: 6
-            },
-            {
-              label: 'General Ledger',
-              url: '#/GeneralLedger',
-              priority: 7
-            }
-          ]
-        },
-        {
-          label: 'Client Portal',
-          priority: 4,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/ClientPresentationsList'
-        },
-        {
-          label: 'Vendor Portal',
-          priority: 5,
-          iconClasses: 'glyphicon glyphicon-file',
-          children: [
-            {
-              label: 'New Products',
-              url: '#/NewProducts'
-            },
-            {
-              label: 'My Products',
-              url: '#/MyProducts'
-            },
-            {
-              label: 'My Inventory',
-              url: '#/MyInventory'
-            },
-            {
-              label: 'Orders',
-              url: '#/Orders'
-            }
-          ]
-        },
-        {
-          label: 'Files',
-          priority: 6,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/Files'
-        },
-        {
-          label: 'Reports',
-          priority: 7,
-          iconClasses: 'glyphicon glyphicon-print',
-          children: [
-            {
-              label: 'Reports',
-              url: '#/RW_Generator',
-              priority: 1
-            },
-            {
-              label: 'Financials',
-              url: '#/ReportsFinancials',
+              label: 'Задачи',
+              url: '#/Tasks',
               priority: 2
             }
           ]
         },
+      ],
+      "Designer": [
         {
-          label: 'Administration',
-          priority: 8,
-          iconClasses: 'glyphicon glyphicon-file',
+          label: 'Ресурсы',
+          priority: 1,
+          iconClasses: 'glyphicon glyphicon-th-list',
           children: [
             {
-              label: 'Users',
-              url: '#/Admin_Users',
+              label: 'Сцены',
+              url: '#/Scenes',
               priority: 1
             },
             {
-              label: 'Accounts',
-              url: '#/Admin_Accounts',
-              priority: 2
-            },
-            {
-              label: 'Control Panel',
-              url: '#/RW_ControlPanel',
-              priority: 3
+              label: 'Модели',
+              url: '#/Models',
+              priority: 1
             }
           ]
         }
       ],
-      "Sales": [
+      "Manager": [
         {
-          label: 'Dashboard',
-          priority: 1,
-          iconClasses: 'glyphicon glyphicon-th-list',
-          url: '#/Dashboard'
-        }
-      ],
-      "Support": [
-        {
-          label: 'Dashboard',
-          priority: 1,
-          iconClasses: 'glyphicon glyphicon-th-list',
-          url: '#/Dashboard'
-        },
-        {
-          label: 'Projects',
+          label: 'Управление проектами',
           priority: 2,
           iconClasses: 'glyphicon glyphicon-th-list',
           children: [
             {
-              label: 'Address',
-              url: '#/AddressList',
+              label: 'Management',
+              url: '#/Management',
               priority: 1
-            },
-            {
-              label: 'Contacts',
-              url: '#/ContactsList',
-              priority: 2
-            },
-            {
-              label: 'Items',
-              url: '#/ItemsList',
-              priority: 3
-            },
-
-            {
-              label: 'Proposals',
-              url: '#/ProposalsList',
-              priority: 4
-            },
-            {
-              label: 'Orders',
-              url: '#/OrdersList',
-              priority: 5
-            },
-            {
-              label: 'Invoices',
-              url: '#/InvoicesList',
-              priority: 6
-            },
-            {
-              lineSeparator: true,
-              priority: 7
-            },
-            {
-              label: 'Activities',
-              url: '#/ActivitiesList',
-              priority: 8
-            },
-            {
-              label: 'Timelines',
-              url: '#/Timelines',
-              priority: 9
-            },
-            {
-              label: 'Calendar',
-              url: '#/Calendar',
-              priority: 10
-            }
-          ]
-        },
-        {
-          label: 'Accounting',
-          priority: 3,
-          iconClasses: 'glyphicon glyphicon-usd',
-          children: [
-            {
-              label: 'Balance',
-              url: '#/Balance',
-              priority: 1
-            },
-            {
-              label: 'MONEY IN',
-              url: '#/MoneyIn',
-              priority: 2
-            },
-            {
-              label: 'Make Deposit',
-              url: '#/MakeDeposit',
-              priority: 3
-            },
-            {
-              label: 'MONEY OUT',
-              url: '#/MoneyOut',
-              priority: 4
-            },
-            {
-              label: 'Reconciliation',
-              url: '#/Reconciliation',
-              priority: 5
-            },
-            {
-              label: 'Journal Entry',
-              url: '#/JournalEntry',
-              priority: 6
-            },
-            {
-              label: 'General Ledger',
-              url: '#/GeneralLedger',
-              priority: 7
-            }
-          ]
-        },
-        {
-          label: 'Client Portal',
-          priority: 4,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/ClientPresentationsList'
-        },
-        {
-          label: 'Vendor Portal',
-          priority: 5,
-          iconClasses: 'glyphicon glyphicon-file',
-          children: [
-            {
-              label: 'New Products',
-              url: '#/NewProducts'
-            },
-            {
-              label: 'My Products',
-              url: '#/MyProducts'
-            },
-            {
-              label: 'My Inventory',
-              url: '#/MyInventory'
-            },
-            {
-              label: 'Orders',
-              url: '#/Orders'
-            }
-          ]
-        },
-        {
-          label: 'Files',
-          priority: 6,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/Files'
-        },
-        {
-          label: 'Reports',
-          priority: 7,
-          iconClasses: 'glyphicon glyphicon-print',
-          children: [
-            {
-              label: 'Reports',
-              url: '#/RW_Generator',
-              priority: 1
-            },
-            {
-              label: 'Financials',
-              url: '#/ReportsFinancials',
-              priority: 2
-            }
-          ]
-        },
-        {
-          label: 'Administration',
-          priority: 8,
-          iconClasses: 'glyphicon glyphicon-file',
-          children: [
-            {
-              label: 'Users',
-              url: '#/Admin_Users',
-              priority: 1
-            },
-            {
-              label: 'Accounts',
-              url: '#/Admin_Accounts',
-              priority: 2
-            },
-            {
-              label: 'Control Panel',
-              url: '#/RW_ControlPanel',
-              priority: 3
             }
           ]
         }
       ],
-      "User": [
+      "Admin": [
         {
-          label: 'Dashboard',
-          priority: 1,
-          iconClasses: 'glyphicon glyphicon-th-list',
-          url: '#/Dashboard'
-        },
-        {
-          label: 'Projects',
+          label: 'Администрирование',
           priority: 2,
           iconClasses: 'glyphicon glyphicon-th-list',
           children: [
             {
-              label: 'Address',
-              url: '#/AddressList',
+              label: 'Пользователи',
+              url: '#/Users_Admin',
               priority: 1
-            },
-            {
-              label: 'Contacts',
-              url: '#/ContactsList',
-              priority: 2
-            },
-            {
-              label: 'Items',
-              url: '#/ItemsList',
-              priority: 3
-            },
-
-            {
-              label: 'Proposals',
-              url: '#/ProposalsList',
-              priority: 4
-            },
-            {
-              label: 'Orders',
-              url: '#/OrdersList',
-              priority: 5
-            },
-            {
-              label: 'Invoices',
-              url: '#/InvoicesList',
-              priority: 6
-            },
-            {
-              lineSeparator: true,
-              priority: 7
-            },
-            {
-              label: 'Activities',
-              url: '#/ActivitiesList',
-              priority: 8
-            },
-            {
-              label: 'Timelines',
-              url: '#/Timelines',
-              priority: 9
-            },
-            {
-              label: 'Calendar',
-              url: '#/Calendar',
-              priority: 10
-            }
-          ]
-        },
-        {
-          label: 'Accounting',
-          priority: 3,
-          iconClasses: 'glyphicon glyphicon-usd',
-          children: [
-            {
-              label: 'Balance',
-              url: '#/Balance',
-              priority: 1
-            },
-            {
-              label: 'MONEY IN',
-              url: '#/MoneyIn',
-              priority: 2
-            },
-            {
-              label: 'Make Deposit',
-              url: '#/MakeDeposit',
-              priority: 3
-            },
-            {
-              label: 'MONEY OUT',
-              url: '#/MoneyOut',
-              priority: 4
-            },
-            {
-              label: 'Reconciliation',
-              url: '#/Reconciliation',
-              priority: 5
-            },
-            {
-              label: 'Journal Entry',
-              url: '#/JournalEntry',
-              priority: 6
-            },
-            {
-              label: 'General Ledger',
-              url: '#/GeneralLedger',
-              priority: 7
-            }
-          ]
-        },
-        {
-          label: 'Client Portal',
-          priority: 4,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/ClientPresentationsList'
-        },
-        {
-          label: 'Vendor Portal',
-          priority: 5,
-          iconClasses: 'glyphicon glyphicon-file',
-          children: [
-            {
-              label: 'New Products',
-              url: '#/NewProducts',
-              priority: 1
-            },
-            {
-              label: 'My Products',
-              url: '#/MyProducts',
-              priority: 2
-            },
-            {
-              label: 'My Inventory',
-              url: '#/MyInventory',
-              priority: 3
-            },
-            {
-              label: 'Orders',
-              url: '#/Orders',
-              priority: 4
-            }
-          ]
-        },
-        {
-          label: 'Files',
-          priority: 6,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/Files'
-        },
-        {
-          label: 'Reports',
-          priority: 7,
-          iconClasses: 'glyphicon glyphicon-print',
-          children: [
-            {
-              label: 'Reports',
-              url: '#/Reports',
-              priority: 1
-            },
-            {
-              label: 'Report Builder',
-              url: '#/RW_Generator',
-              priority: 2
-            },
-            {
-              label: 'Control Panel',
-              url: '#/RW_ControlPanel',
-              priority: 3
-            }
-          ]
-        }
-      ],
-      "Tester": [
-        {
-          label: 'Dashboard',
-          priority: 1,
-          iconClasses: 'glyphicon glyphicon-th-list',
-          url: '#/Dashboard'
-        },
-        {
-          label: 'Projects',
-          priority: 2,
-          iconClasses: 'glyphicon glyphicon-th-list',
-          children: [
-            {
-              label: 'Address',
-              url: '#/AddressList',
-              priority: 1
-            },
-            {
-              label: 'Contacts',
-              url: '#/ContactsList',
-              priority: 2
-            },
-            {
-              label: 'Items',
-              url: '#/ItemsList',
-              priority: 3
-            },
-
-            {
-              label: 'Proposals',
-              url: '#/ProposalsList',
-              priority: 4
-            },
-            {
-              label: 'Orders',
-              url: '#/OrdersList',
-              priority: 5
-            },
-            {
-              label: 'Invoices',
-              url: '#/InvoicesList',
-              priority: 6
-            },
-            {
-              lineSeparator: true,
-              priority: 7
-            },
-            {
-              label: 'Activities',
-              url: '#/ActivitiesList',
-              priority: 8
-            },
-            {
-              label: 'Timelines',
-              url: '#/Timelines',
-              priority: 9
-            },
-            {
-              label: 'Calendar',
-              url: '#/Calendar',
-              priority: 10
-            }
-          ]
-        },
-        {
-          label: 'Accounting',
-          priority: 3,
-          iconClasses: 'glyphicon glyphicon-usd',
-          children: [
-            {
-              label: 'Balance',
-              url: '#/Balance',
-              priority: 1
-            },
-            {
-              label: 'MONEY IN',
-              url: '#/MoneyIn',
-              priority: 2
-            },
-            {
-              label: 'Make Deposit',
-              url: '#/MakeDeposit',
-              priority: 3
-            },
-            {
-              label: 'MONEY OUT',
-              url: '#/MoneyOut',
-              priority: 4
-            },
-            {
-              label: 'Reconciliation',
-              url: '#/Reconciliation',
-              priority: 5
-            },
-            {
-              label: 'Journal Entry',
-              url: '#/JournalEntry',
-              priority: 6
-            },
-            {
-              label: 'General Ledger',
-              url: '#/GeneralLedger',
-              priority: 7
-            }
-          ]
-        },
-        {
-          label: 'Client Portal',
-          priority: 4,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/ClientPresentationsList'
-        },
-        {
-          label: 'Vendor Portal',
-          priority: 5,
-          iconClasses: 'glyphicon glyphicon-file',
-          children: [
-            {
-              label: 'New Products',
-              url: '#/NewProducts'
-            },
-            {
-              label: 'My Products',
-              url: '#/MyProducts'
-            },
-            {
-              label: 'My Inventory',
-              url: '#/MyInventory'
-            },
-            {
-              label: 'Orders',
-              url: '#/Orders'
-            }
-          ]
-        },
-        {
-          label: 'Files',
-          priority: 6,
-          iconClasses: 'glyphicon glyphicon-file',
-          url: '#/Files'
-        },
-        {
-          label: 'Reports',
-          priority: 7,
-          iconClasses: 'glyphicon glyphicon-print',
-          children: [
-            {
-              label: 'Reports',
-              url: '#/RW_Generator',
-              priority: 2
-            },
-            {
-              label: 'Financials',
-              url: '#/ReportsFinancials',
-              priority: 3
-            }
-          ]
-        }
-      ],
-      "Report Tester": [
-        {
-          label: 'Reports',
-          priority: 7,
-          iconClasses: 'glyphicon glyphicon-print',
-          children: [
-            {
-              label: 'Reports',
-              url: '#/RW_Generator',
-              priority: 2
-            },
-            {
-              label: 'Financials',
-              url: '#/ReportsFinancials',
-              priority: 2
             }
           ]
         }
@@ -725,75 +82,25 @@ angular
     };
 
     //Update Menu
-    function updateMenu (roles) {
+    function updateMenu (user) {
 
-      function isItemExists (itemLabel) {
-        var result = false;
-        angular.forEach($scope.menu, function(menuItem){
-          if(menuItem.label == itemLabel.label) {
-            result = true;
-          }
-        });
-        return result;
-      }
+      $scope.menu = menus.Default;
 
-      function isSubItemExists (menuItem, child) {
-        var result = false;
-        angular.forEach(menuItem.children, function(menuChild) {
-          if(menuChild.label == child.label) {
-            result = true;
-          }
-        });
-        return result;
-      }
+        if(user.client) {
+          $scope.menu = $scope.menu.concat(menus.Client);
+        }
 
-      $scope.menu = [];
-      for(var role in roles) {
-        angular.forEach(menus[role], function(menuItem) {
+        if(user.designer) {
+          $scope.menu = $scope.menu.concat(menus.Designer);
+        }
 
-          if(!isItemExists(menuItem)) {
+        if(user.manager) {
+          $scope.menu = $scope.menu.concat(menus.Manager);
+        }
 
-            var newMenuItem = {
-              label: menuItem.label,
-              priority: menuItem.priority,
-              iconClasses: menuItem.iconClasses,
-              url: menuItem.url
-            };
-
-            if(menuItem.children && menuItem.children.length) {
-              newMenuItem.children = [];
-
-              angular.forEach(menuItem.children, function (childItem) {
-                if (!isSubItemExists(newMenuItem, childItem)) {
-                  newMenuItem.children.push(childItem);
-                }
-              });
-
-            }
-
-            $scope.menu.push(newMenuItem);
-
-          } else {
-
-            //else add children
-            var currentScopeMenuItem;
-            angular.forEach($scope.menu, function(scopeMenuItem) {
-              if(scopeMenuItem.label == menuItem.label) {
-                currentScopeMenuItem = scopeMenuItem;
-              }
-            });
-
-            if(menuItem.children) {
-              angular.forEach(menuItem.children, function(childItem) {
-                if(!isSubItemExists(currentScopeMenuItem, childItem)) {
-                  currentScopeMenuItem.children.push(childItem);
-                }
-              });
-            }
-
-          }
-        });
-      }
+        if(user.admin) {
+          $scope.menu = $scope.menu.concat(menus.Admin);
+        }
     }
 
     updateMenu($localStorage.user || {});

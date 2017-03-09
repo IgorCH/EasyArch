@@ -3,10 +3,13 @@ var Schema = mongoose.Schema;
 
 var Project = new Schema({
     title: { type: String, required: true },
-    authorId: { type: String, required: true },
+    client : { type: Schema.Types.ObjectId, ref: 'User' },
+    manager : { type: Schema.Types.ObjectId, ref: 'User' },
+    designers : [{ type: Schema.Types.ObjectId, ref: 'User' }],
     square: { type: Number },
     price: { type: String },
-    status: { type: String, required: true, default: 'Created' },
+    closed: { type: Boolean, default: false },
+    tasks: [],
     files: { type: Array },
     models: { type: Array },
     scenes: { type: Array },
