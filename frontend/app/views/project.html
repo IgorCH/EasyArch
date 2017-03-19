@@ -39,6 +39,29 @@
                                 </tab>
 
                                 <tab heading="Attachments">
+
+																	<!--<input accept="image/*"-->
+																				 <!--name="file"-->
+																				 <!--ng-value="fileToUpload"-->
+																				 <!--value="{{fileToUpload}}"-->
+																				 <!--file-model="fileToUpload"-->
+																				 <!--set-file-data="fileToUpload = value;"-->
+																				 <!--type="file"-->
+																				 <!--id="my_file" />-->
+
+																	<!--<input type="file" name="files" ng-model="file"/>-->
+																	<!--<input accept="image/*"-->
+																				 <!--name="file"-->
+																				 <!--ng-value="fileToUpload"-->
+																				 <!--value="{{fileToUpload}}"-->
+																				 <!--file-model="fileToUpload"-->
+																				 <!--set-file-data="fileToUpload = value;"-->
+																				 <!--type="file"-->
+																				 <!--id="my_file" />-->
+
+						{{image}}
+																	<input type="file" ng-model="image" accept="image/*" app-filereader />
+
                                     <form ng-repeat="attach in project.attachments"
                                           class="form-horizontal row-border"
                                           ng-submit="">

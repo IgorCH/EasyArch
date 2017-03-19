@@ -60,6 +60,10 @@ router.post("/login", function(req, res) {
     }
 });
 
+router.post("/session", function(req, res) {
+    res.json({message: "ok", user: req.session.user});
+});
+
 router.get("/logout", function(req, res) {
     req.session.destroy(function(err){
         if(err){
