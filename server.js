@@ -5,6 +5,7 @@ var express = require("express");
 var app = express();
 
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 mongoose.connect(nconf.get("db:database"));
 
 var session = require('express-session');

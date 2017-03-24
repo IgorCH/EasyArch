@@ -1,0 +1,28 @@
+{
+    "style": ["Classic", "Modern"],
+    "gamma": ["Bright", "Pastel"],
+    "tone": ["Mono", "Contrast"],
+    "material": ["Vegetation", "Fabric", "Glass", "Leather", "Plastik", "Metal", "Decor", "3dPanels", "Wallpaper", "Tree", "Stone", "Ceramic"],
+    "mainColor": [],
+    "accentColor": [],
+    "rooms": [
+        {"type": "TRANSIT SPACES", "values": ["Corridor", "Hall", "Ladder", "Tambour"]},
+        {"type": "UTILITY ROOM", "values": ["Wardrobe", "Pantry", "Laundry", "Garage", "Wine Cellar"]},
+        {"type": "EAT A MEAL", "values": ["kitchen-dining room", "Kitchen", "Dining Room", "bar"]},
+        {"type": "ACCOMMODATION", "values": ["Studio", "Living", "Office", "Cinema", "Gaming", "Winter Garden", "Billiard Room", "library", "Balcony"]},
+        {"type": "sleeping quarters", "values": ["parents bedroom", "guest bedroom", "Baby Boy", "Baby girl", "unisex Children", "Teenage boy", "Teenage girls"]},
+        {"type": "sanitary facilities", "values": ["Bathroom", "Toilet", "Pool", "Sauna", "Massage", "Pool", "Spa"]},
+        {"type": "SALE", "values": ["Food", "Offices", "Shopping", "Health"]},
+        {"type": "bedroom and children", "values": ["Beds", "Bedside tables", "Bureau", "Vanities", "Wardrobes", "Kids room", "Cradle"]},
+        {"type": "architectural pieces", "values": ["Stairs", "Doors"]},
+        {"type": "sofa and chair", "values": ["sofas", "Corner sofas", "Chairs", "Couch", "Sunbeds", "Sofas", "Puffs"]},
+        {"type": "Lights", "values": ["Bra", "Floor lamps", "Desktop", "Ceiling", "Hangers", "Spotlights", "Spotlights"]},
+        {"type": "TABLES AND CHAIRS", "values": ["Writing-tables", "Journal tables", "Dinner table", "Chairs", "Stools", "Bench", "Stools"]},
+        {"type": "STORAGE FURNITURE", "values": ["cabinets", "Suspended cabinets", "bookcases", "shelves", "Bureau", "Sideboards", "Console", "walls", "Hallway", "TV tables", "Bars", "showcases"]},
+        {"type": "BATHROOM", "values": ["sinks", " bidet ", " Spa ", " Showers", "Toilets", " Mirrors for the bathroom ", " Bathroom Furniture ", " Towel ", " Cranes ", " shower tower ", " Shower trays", "decor Bathroom"]},
+        {"type": "KITCHEN", "values": ["Set", "Kitchen appliances", "Sinks and taps", "Kitchen Accessories"]},
+        {"type": "DEVICES", "values": ["Air", "Radiators", "Household appliances", "Audio-visual"]},
+        {"type": "DECORATIONS AND DECOR", "values": ["Mirrors and paintings", "Plants", "Accessories", "Forging"]},
+        {"type": "HOME TEXTILES", "values": ["Curtains", "pillows and blankets", "carpets and skins"]}
+    ]
+}

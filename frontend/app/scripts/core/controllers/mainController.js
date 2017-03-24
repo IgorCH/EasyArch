@@ -1,6 +1,6 @@
 angular.module('theme.core.main_controller', ['theme.core.services', 'theme.core.da_data_source'])
-  .controller('MainController', ['$scope', '$theme', '$timeout', 'progressLoader', '$location', '$state', 'DADataSource',
-    function ($scope, $theme, $timeout, progressLoader, $location, $state, DADataSource) {
+  .controller('MainController', ['$scope', '$theme', '$timeout', 'progressLoader', '$location', '$state', 'DADataSource', '$localStorage',
+    function ($scope, $theme, $timeout, progressLoader, $location, $state, DADataSource, $localStorage) {
       'use strict';
 
       // $scope.layoutIsSmallScreen = false;
@@ -150,7 +150,8 @@ angular.module('theme.core.main_controller', ['theme.core.services', 'theme.core
 
       $scope.logOut = function () {
         DADataSource.logout({}, function () {
-          $state.go('Login');
+          $localStorage.user = null;
+          $state.go('login');
         });
 
       };
@@ -185,5 +186,9 @@ angular.module('theme.core.main_controller', ['theme.core.services', 'theme.core
           $scope.layoutLoading = false;
         }
       });
+
+
+
+
     }])
 ;

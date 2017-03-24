@@ -31,14 +31,17 @@ angular
     'theme.core.notifications_controller',
     //'theme.core.messages_controller',
 
-    'theme.core.dashboard_home_controller',
+    'theme.core.landing_controller',
+    'theme.core.profile_controller',
     'theme.core.login_controller',
     'theme.core.signup_controller',
 
-    'theme.core.projects_controller',
-    'theme.core.project_controller',
+    'theme.core.file_upload_controller',
 
-    'theme.core.tasks_controller',
+    'theme.core.models_controller',
+    'theme.core.models_upload_controller',
+
+    'theme.core.projects_controller',
     'theme.core.task_controller',
 
     'theme.core.rest_helper',

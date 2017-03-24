@@ -1,36 +1,52 @@
 <div id="page-heading">
   <ol class="breadcrumb">
-    <li><a href="#/">Studio Designer</a></li>
-    <li>Report Writer</li>
-    <li class="active">Control Panel</li>
+    <li><a href="#/">Easy Arch</a></li>
+    <li>Projects</li>
+    <li class="active">List</li>
   </ol>
+	<!--<h1>Address List</h1>-->
+	<div class="options">
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<button class="btn btn-primary" ng-click="onCreateProject()">New Project</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="container-fluid">
   <panel panel-class="panel-info" heading="Projects">
-    <div class="table-responsive">
-      <table class="table">
+
+    <div class="table-responsive" ng-repeat="project in projects">
+			{{project.title}} <br/>
+			{{project.description}} <br/>
+			{{project.client.name}} <br/>
+			{{project.manager.name}} <br/>
+      <table class="table" ng-repeat="task in project.tasks">
         <thead>
           <tr>
-            <td>Id</td>
             <td>Name</td>
-            <td>Owner</td>
-            <td></td>
+            <td>Description</td>
+            <td>Designer</td>
+						<td></td>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="project in projects">
-            <td>{{project._id}}</td>
-            <td>{{project.title}}</td>
-            <td>{{project.ownerId}}</td>
+          <tr>
             <td>
-              <a ui-sref="project({id: project._id})">Edit</a>
-              <a class="btn" ng-click="onDeleteProject(project)">Delete</a>
+							{{task.title}}
+						</td>
+						<td>{{task.description}}</td>
+						<td>{{task.designer.name}}</td>
+            <td>
+              <a class="btn btn-sm btn-success" ui-sref="task({projectId: project._id, taskId: task._id})">Edit</a>
+              <a class="btn btn-sm btn-danger" ng-click="onDeleteProject(project)">Delete</a>
             </td>
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-primary" ng-click="onCreateProject()">New Project</button>
+			<a class="btn btn-sm btn-primary" ui-sref="task({ projectId: project._id })">New Task</a>
     </div>
+
   </panel>
 </div>

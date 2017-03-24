@@ -4,8 +4,8 @@ angular
     function ($scope, $theme, DADataSource, $state, $stateParams) {
       'use strict';
 
-      $scope.email = "client@mail.com";
-      $scope.pass = "client";
+      $scope.email = "admin@mail.com";
+      $scope.pass = "admin";
 
       $scope.profile = {};
 
@@ -23,7 +23,7 @@ angular
 
         DADataSource.login(params, function (res, isSuccess) {
           if (isSuccess) {
-            $state.go($stateParams.redirectTo || 'Dashboard');
+            $state.go($stateParams.redirectTo || 'profile');
           }
         });
       };

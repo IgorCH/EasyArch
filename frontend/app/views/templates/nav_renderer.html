@@ -12,11 +12,10 @@
 </a>
 <ul ng-if="item.children.length" data-slide-out-nav="item.open || (searchQuery.length>0 && item.selected)">
     <li ng-repeat="item in item.children | orderBy:'+priority'"
-	    ng-class="{ hasChild: (item.children!==undefined),
+	      ng-class="{ hasChild: item.children !== undefined,
                       active: item.selected,
-                        open: (item.children!==undefined) && item.open,
+                        open: item.children !== undefined && item.open,
               'search-focus': (searchQuery.length>0 && item.selected) }"
- 		ng-show="!(searchQuery.length>0 && !item.selected)"
-    	ng-include="'templates/nav_renderer.html'"
-    ></li>
+ 		    ng-show="!(searchQuery.length>0 && !item.selected)"
+    	  ng-include="'templates/nav_renderer.html'"></li>
 </ul>

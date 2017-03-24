@@ -67,7 +67,7 @@ angular
 
           callback && callback(response, false);
         });
-      },
+      }
 
     };
 

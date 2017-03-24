@@ -78,6 +78,22 @@ angular
                         callback && callback(response, false);
                     });
 
+                },
+
+                getTask: function (params, callback) {
+
+                    $http({
+                        method: 'GET',
+                        url: '/api/projects/' + params.projectId + '/' + params.taskId,
+                        data: params
+                    }).then(function (response) {
+                        restHelper.processError(response);
+                        callback && callback(response, true);
+                    }, function (response) {
+                        restHelper.processError(response);
+                        callback && callback(response, false);
+                    });
+
                 }
 
             };

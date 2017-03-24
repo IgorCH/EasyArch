@@ -1,0 +1,230 @@
+<div id="page-heading">
+	<ol class="breadcrumb">
+		<li><a href="#/">Easy Arch</a></li>
+		<li class="active">Task</li>
+	</ol>
+	<h1>{{task.title}}</h1>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<tabset panel-tabs="true" heading="Task Workflow">
+				<tab>
+					<tab-heading>
+						<!--i class="fa fa-desktop"></i-->
+					</tab-heading>
+					<div class="row">
+						<div class="col-md-12">
+							<tabset tab-theme="danger" tab-position="top">
+								<tab heading="Main">
+
+									Название проекта <br/>
+									Описание <br/>
+									Дата завершения<br/>
+									Площадь по полу<br/>
+
+									Содержание задачи<br/>
+
+									Размер<br/>
+									Поверхность+75$<br/>
+									Площадь+150$<br/>
+									Помещение+300$<br/>
+									Пространство+600$<br/>
+
+									Дополнительные компоненты<br/>
+									Изображения в HD 4K<br/>
+									Исходные сцены<br/>
+									Птичий полет<br/>
+
+									Корректировки<br/>
+									Моделирование<br/>
+
+									Архитектура<br/>
+									Чертежи<br/>
+									Планировка<br/>
+
+									Дизайн<br/>
+									Подбор напольных покрытий<br/>
+									Подбор отделки стен<br/>
+									Подбор наполнения<br/>
+								</tab>
+
+								<tab heading="Attachments">
+									<div ng-repeat="model in task.models">
+										Card with params, description and Image
+									</div>
+									<button class="btn btn-success" ng-click="onCreateAttach()">New Attach</button>
+								</tab>
+
+								<tab heading="Models">
+									<div ng-repeat="model in task.models">
+										Card with params, description and Image
+									</div>
+									<button class="btn btn-primary" ng-click="onAddModel()">Add Model</button>
+								</tab>
+
+								<!--<tab heading="Scenes">-->
+								<!--<button class="btn btn-primary" ng-click="onAddScene()">Add Scene</button>-->
+								<!--</tab>-->
+
+								<tab heading="Messages">
+									<div class="panel panel-inbox">
+										<div class="panel-body">
+											<form action="" role="form" id="inbox-compose-form" class="form-horizontal">
+												<div class="form-group mb10">
+													<div class="col-xs-12">
+														<div class="composer" text-angular ng-model="mailBody"
+																 ta-toolbar="[['p','h3'],['bold','italics', 'underline'], ['justifyLeft', 'justifyCenter', 'justifyRight'], ['indent', 'outdent'], ['insertImage', 'insertLink', 'insertVideo']]">
+															<h3>Default Editor</h3>
+															<p>Lorem ipsum dolor sit amet.</p>
+														</div>
+													</div>
+												</div>
+											</form>
+											<div class="inbox-mail-footer">
+												<div class="clearfix spmg-2">
+													<div class="pull-right">
+														<a href="#" class="btn btn-success spmg2"><i class="fa fa-paper-plane mr5"></i><span class="hidden-xs">Add Message</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div ng-repeat="message in task.messages">
+										{{message.sender.name}} ({{message.date}}) <br/>
+										{{message.text}} <br/>
+									</div>
+								</tab>
+
+								<tab heading="Timeline">
+									<div class="timeline-splitter">
+
+										<div class="row">
+											<div class="col-md-6">
+												<ul class="timeline left">
+													<li class="timeline-orange">
+														<div class="timeline-icon hidden-sm">
+															<i class="glyphicon glyphicon-pencil"></i>
+														</div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 11, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Lorem Ipsum Dolor Sit Amet</h3>
+																<p>Lorem.</p>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-danger">
+														<div class="timeline-icon hidden-sm"><i class="glyphicon glyphicon-book"></i></div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 21, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Consectetur Adipisicing Elit</h3>
+																<p>Lorem ipsum dolor sit amet!</p>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-green">
+														<div class="timeline-icon hidden-sm"><i class="glyphicon glyphicon-camera"></i></div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 21, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Lorem Ipsum Dolor Sit Amet</h3>
+																<p class="mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="col-md-6">
+												<ul class="timeline right">
+													<li class="timeline-info">
+														<div class="timeline-icon hidden-sm"><i class="glyphicon glyphicon-camera"></i></div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 11, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Lorem Ipsum Dolor Sit Amet</h3>
+
+																<p class="mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+																<img src="assets/demo/images/thmb_nature_rider.jpg" alt="" class="thumb">
+															</div>
+														</div>
+													</li>
+													<li class="timeline-primary">
+														<div class="timeline-icon hidden-sm"><i class="glyphicon glyphicon-pencil"></i></div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 21, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Consectetur Adipisicing Elit</h3>
+
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, officiis,
+																	molestiae, deserunt asperiores architecto ut vel repudiandae dolore inventore nesciunt
+																	necessitatibus doloribus ratione facere consectetur suscipit!</p>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-indigo">
+														<div class="timeline-icon hidden-sm"><i class="glyphicon glyphicon-comment"></i></div>
+														<div class="timeline-body">
+															<div class="timeline-header">
+																<span class="author">Posted by <a href="#">David Tennant</a></span>
+																<span class="date">Monday, November 21, 2013</span>
+															</div>
+															<div class="timeline-content">
+																<h3>Consectetur Adipisicing Elit</h3>
+
+																<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, officiis,
+																	molestiae, deserunt asperiores architecto ut vel repudiandae dolore inventore nesciunt
+																	necessitatibus doloribus ratione facere consectetur suscipit!</p>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</tab>
+
+								<tab heading="Results">
+									<div ng-repeat="result in task.results">
+										Card with Description and Image<br/>
+										Download
+									</div>
+									<button class="btn btn-primary" ng-click="onDownloadAllResults()">Add Files</button>
+									<button class="btn btn-primary" ng-click="onDownloadAllResults()">Download All</button>
+								</tab>
+							</tabset>
+						</div>
+					</div>
+				</tab>
+
+			</tabset>
+
+		</div>
+	</div>
+
+	<hr>
+
+
+</div>

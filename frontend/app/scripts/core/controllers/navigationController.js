@@ -10,7 +10,7 @@ angular
           label: 'Главная',
           priority: 1,
           iconClasses: 'glyphicon glyphicon-th-list',
-          url: '#/Dashboard'
+          url: '#/landing'
         }
       ],
       "Client": [
@@ -21,16 +21,16 @@ angular
           children: [
             {
               label: 'Проекты',
-              url: '#/Projects',
+              url: '#/projects',
               priority: 1
             },
             {
               label: 'Задачи',
-              url: '#/Tasks',
+              url: '#/tasks',
               priority: 2
             }
           ]
-        },
+        }
       ],
       "Designer": [
         {
@@ -38,14 +38,14 @@ angular
           priority: 1,
           iconClasses: 'glyphicon glyphicon-th-list',
           children: [
-            {
-              label: 'Сцены',
-              url: '#/Scenes',
-              priority: 1
-            },
+            //{
+            //  label: 'Сцены',
+            //  url: '#/scenes',
+            //  priority: 1
+            //},
             {
               label: 'Модели',
-              url: '#/Models',
+              url: '#/models',
               priority: 1
             }
           ]
@@ -59,7 +59,7 @@ angular
           children: [
             {
               label: 'Management',
-              url: '#/Management',
+              url: '#/management',
               priority: 1
             }
           ]
@@ -73,7 +73,7 @@ angular
           children: [
             {
               label: 'Пользователи',
-              url: '#/Users_Admin',
+              url: '#/users_admin',
               priority: 1
             }
           ]
@@ -243,7 +243,6 @@ angular
         parentRef = parentRef.parent;
       }
     };
-
     var highlightItems = function (children, query) {
       angular.forEach(children, function (child) {
         if (child.label.toLowerCase().indexOf(query) > -1) {
@@ -278,7 +277,8 @@ angular
       }
     });
 
-    $scope.$on('$routeChangeSuccess', function () {
+    $scope.$on('$stateChangeSuccess', function () {
+
       if ($scope.selectedFromNavMenu === false) {
         var item = $scope.findItemByUrl($scope.menu, $location.path());
         if (item) {

@@ -25,8 +25,9 @@ angular
         };
         ProjectDataSource.createProject(newProjectParams, function (res) {
           if (res.data.message == "ok") {
-            $state.go('Project', {id: res._id});
+            $state.go('task', {id: res._id});
           }
         });
       };
-    }]);
+    }])
+  ;

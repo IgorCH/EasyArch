@@ -1,8 +1,17 @@
 angular
-  .module('theme.core.dashboard_home_controller', [])
-  .controller('DashboardHomeController', ['$scope', '$theme',
-    function ($scope, $theme) {
+  .module('theme.core.landing_controller', [])
+  .controller('LandingController', ['$scope', '$theme', '$localStorage',
+    function ($scope, $theme, $localStorage) {
       'use strict';
+
+      $scope.user = $localStorage.user;
+
+      $theme.set('fullscreen',  !$scope.user);
+
+      $scope.$on('$destroy', function () {
+        $theme.set('fullscreen', false);
+      });
+
 
       //$scope.home = {};
 

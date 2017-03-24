@@ -22,11 +22,11 @@ angular
 
           $bootbox.alert(response.data.message);
 
-        } else if (response.status == 401 && $state.current.name != "Login") {
+        } else if (response.status == 401 && $state.current.name != "login") {
 
-          $state.go("Login", {redirectTo: $state.current.name });
+          $state.go("login", {redirectTo: $state.current.name });
 
-        } else if (response.status != 200 &&  $state.current.name != "Login") {
+        } else if (response.status != 200 &&  $state.current.name != "login") {
 
           $bootbox.alert(response.data.message);
 

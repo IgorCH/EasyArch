@@ -9,8 +9,8 @@ angular
 
       .state('landing', {
         url: '/landing',
-        templateUrl: 'views/Login.html',
-        controller: 'LoginController'
+        templateUrl: 'views/landing.html',
+        controller: 'LandingController'
       })
 
       .state('login', {
@@ -25,41 +25,42 @@ angular
         controller: 'LoginController'
       })
 
-      .state('projects', {
-        url: '/projects',
-        templateUrl: 'views/Projects.html',
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileController'
+      })
+
+      .state('file_upload', {
+        url: '/file_upload',
+        templateUrl: 'views/file_upload.html',
+        controller: 'FileUploadController'
+      })
+
+      .state('models', {
+        url: '/models',
+        templateUrl: 'views/models.html',
         controller: 'ProjectsController'
       })
 
-      .state('project', {
-        url: '/project?id',
-        templateUrl: 'views/Project.html',
-        controller: 'ProjectController'
-      })
-
-      .state('tasks', {
-        url: '/tasks',
-        templateUrl: 'views/Tasks.html',
-        controller: 'TasksController'
+      .state('projects', {
+        url: '/projects',
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsController'
       })
 
       .state('task', {
-        url: '/task?id',
-        templateUrl: 'views/Task.html',
+        url: '/task?projectId&taskId',
+        templateUrl: 'views/task.html',
         controller: 'TaskController'
       })
 
       .state('users', {
         url: '/users',
-        templateUrl: 'views/Task.html',
-        controller: 'TaskController'
+        templateUrl: 'views/users.html',
+        controller: 'UsersController'
       })
 
-      .state('profile', {
-        url: '/profile?id',
-        templateUrl: 'views/Task.html',
-        controller: 'TaskController'
-      })
     }
   ])
 
@@ -111,8 +112,8 @@ angular
 
   }])
   .run(['DADataSource', '$localStorage', function(DADataSource, $localStorage) {
-    //DADataSource.session({}, function(){
-    //  $localStorage.user = response.data.user;
-    //});
+    DADataSource.session({}, function(res){
+      $localStorage.user = res.data.user;
+    });
   }])
   ;

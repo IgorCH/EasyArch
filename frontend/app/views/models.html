@@ -1,16 +1,30 @@
 <div id="page-heading">
   <ol class="breadcrumb">
-    <li><a href="#/">Studio Designer</a></li>
-    <li>Report Writer</li>
-    <li class="active">Control Panel</li>
+    <li><a href="#/">Easy Arch</a></li>
+    <li>Resources</li>
+    <li class="active">Models</li>
   </ol>
 </div>
 
 <div ng-controller="ModelsController" class="container-fluid">
-  <panel panel-class="panel-info" heading="Models">
+  <panel>
+		<div class="row">
+			<div class="col-sm-2">Category</div>
+			<div class="col-sm-2">Style</div>
+			<div class="col-sm-2">Material</div>
+			<div class="col-sm-2">Brand</div>
+			<div class="col-sm-2">Search</div>
+			<div class="col-sm-2">Favorites Cancel</div>
+		</div>
+		<div class="row">
+			<div ng-repeat="model in models" class="col-sm-2">
 
-    <span>Chapter for workers</span>
-
-
+			</div>
+		</div>
+		<div class="row">
+			<div class="pull-right">
+				<button class="btn btn-primary" ng-click="onAdd()">Add</button>
+			</div>
+		</div>
   </panel>
 </div>
