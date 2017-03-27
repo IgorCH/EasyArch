@@ -87,7 +87,7 @@ router.get('/:projectId/:taskId', passport.isClient, function(req, res) {
     });
 });
 
-router.put('/message/:projectId/:taskId', passport.isClient, function(req, res) {
+router.post('/message/:projectId/:taskId', passport.isClient, function(req, res) {
 
     Project
       .findById(req.params.projectId)

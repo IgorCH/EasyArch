@@ -94,6 +94,20 @@ angular
                         callback && callback(response, false);
                     });
 
+                },
+
+                addMessage: function(params, callback) {
+                    $http({
+                        method: 'POST',
+                        url: '/api/projects/message/' + params.projectId + '/' + params.taskId,
+                        data: params
+                    }).then(function (response) {
+                        restHelper.processError(response);
+                        callback && callback(response, true);
+                    }, function (response) {
+                        restHelper.processError(response);
+                        callback && callback(response, false);
+                    });
                 }
 
             };

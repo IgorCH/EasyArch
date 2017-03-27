@@ -18,7 +18,6 @@
 						<div class="col-md-12">
 							<tabset tab-theme="danger" tab-position="top">
 								<tab heading="Main">
-
 									Название проекта <br/>
 									Описание <br/>
 									Дата завершения<br/>
@@ -54,7 +53,13 @@
 									<div ng-repeat="model in task.models">
 										Card with params, description and Image
 									</div>
-									<button class="btn btn-success" ng-click="onCreateAttach()">New Attach</button>
+									<button class="btn btn-success" ng-click="onAddAttach()">New Attach</button>
+									<hr/>
+									Upload File <br/>
+									Upload Preview <br/>
+									Description <br/>
+									<button class="btn btn-primary btn-sm" ng-click="onAddAttach()">Add</button>
+									<button class="btn btn-primary btn-sm" ng-click="onAddAttach()">Cancel</button>
 								</tab>
 
 								<tab heading="Models">
@@ -62,6 +67,43 @@
 										Card with params, description and Image
 									</div>
 									<button class="btn btn-primary" ng-click="onAddModel()">Add Model</button>
+									<hr/>
+									<style>
+										.card{padding:0;margin-bottom:20px; border-radius:0; border:none; box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}
+										.card>img{width:100%; display:block}
+										.card h3{font-size:16px}
+										.card h3,.card-description{margin:0; padding:8px; border-bottom:solid 1px #eee; text-align:justify}
+										.card p{padding-top:8px; font-size:12px}
+									</style>
+									<div class="row">
+										<div class="col-sm-3">
+											<div>Filters</div>
+											<div>Category</div>
+											<div><select name="" id=""></select></div>
+											<div>Style</div>
+											<div><select name="" id=""></select></div>
+											<div>Gamma</div>
+											<div><select name="" id=""></select></div>
+											<div>Tone</div>
+											<div><select name="" id=""></select></div>
+											<div>Main color</div>
+											<div><select name="" id=""></select></div>
+											<div>Material</div>
+											<div><select name="" id=""></select></div>
+										</div>
+										<div class="col-sm-9 cards-row" ng-repeat="item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]" style="width:250px">
+											<div  class="card">
+												<img src="https://1.bp.blogspot.com/-aFQ-W_KTFWQ/V6BdtpSUy6I/AAAAAAAAAH4/xD_U-BYItSsNvk1UGfROqLBzzU1h32oXQCLcB/s320/4-diwali-greeting-cards-by-ajay-acharya.jpg" alt="Bootstrap card: Beautiful Bootstrap card like Material Design Cards">
+												<div class="caption">
+													<h3>Title.</h3>
+													<p class="card-description">Description.</p>
+													<button class="btn btn-primary" role="button">Add</button>
+													<button class="btn btn-primary" role="button">Favorite</button>
+													<button class="btn btn-primary" role="button">Visible</button>
+												</div>
+											</div>
+										</div>
+									</div>
 								</tab>
 
 								<!--<tab heading="Scenes">-->
@@ -69,31 +111,39 @@
 								<!--</tab>-->
 
 								<tab heading="Messages">
-									<div class="panel panel-inbox">
-										<div class="panel-body">
-											<form action="" role="form" id="inbox-compose-form" class="form-horizontal">
-												<div class="form-group mb10">
-													<div class="col-xs-12">
-														<div class="composer" text-angular ng-model="mailBody"
-																 ta-toolbar="[['p','h3'],['bold','italics', 'underline'], ['justifyLeft', 'justifyCenter', 'justifyRight'], ['indent', 'outdent'], ['insertImage', 'insertLink', 'insertVideo']]">
-															<h3>Default Editor</h3>
-															<p>Lorem ipsum dolor sit amet.</p>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="panel panel-inbox">
+											<div class="panel-body">
+												<form action="" role="form" id="inbox-compose-form" class="form-horizontal">
+													<div class="form-group mb10">
+														<div class="col-xs-12">
+															<div class="composer" text-angular ng-model="newMessage.text"
+																	 ta-toolbar="[['p','h3'],['bold','italics','underline'],['justifyLeft', 'justifyCenter', 'justifyRight'], ['indent', 'outdent'], ['insertImage', 'insertLink', 'insertVideo']]">
+															</div>
 														</div>
 													</div>
-												</div>
-											</form>
-											<div class="inbox-mail-footer">
-												<div class="clearfix spmg-2">
-													<div class="pull-right">
-														<a href="#" class="btn btn-success spmg2"><i class="fa fa-paper-plane mr5"></i><span class="hidden-xs">Add Message</span></a>
+												</form>
+												<div class="inbox-mail-footer">
+													<div class="clearfix spmg-2">
+														<div class="pull-right">
+															<a class="btn btn-success spmg2"
+																	ng-click="onAddMessage()">
+																<i class="fa fa-paper-plane mr5"></i>
+																<span class="hidden-xs">Add Message</span>
+															</a>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div ng-repeat="message in task.messages">
-										{{message.sender.name}} ({{message.date}}) <br/>
-										{{message.text}} <br/>
+										</div>
+										<div class="col-sm-6">
+											<div ng-repeat="message in task.messages">
+												{{message.sender}} ({{message.date | date : 'short'}}) <br/>
+												{{message.text}} <br/>
+											</div>
+										</div>
 									</div>
 								</tab>
 

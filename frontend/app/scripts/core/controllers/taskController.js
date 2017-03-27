@@ -5,37 +5,61 @@ angular
       'use strict';
 
       $scope.task = {};
+      $scope.newAttach = {
+        fileName: '',
+        preview: '',
+        description: ''
+      };
+      $scope.newMessage = {
+        text: 'new message'
+      };
+      $scope.newResult = {
+        fileName: '',
+        description: ''
+      };
+
+      //Init
       ProjectDataSource.getTask({projectId: $stateParams.projectId, taskId: $stateParams.taskId}, function (res) {
         if (res.data.message == "ok") {
           $scope.task = res.data.task;
         }
       });
 
-      $scope.onCreateTask = function(){
+      //Main
 
-      };
-
-      $scope.onDeleteTask = function (task) {
-
-      };
-
+      //Attachments
       $scope.onUploadAttach = function (file) {
 
       };
 
-      $scope.onCreateAttach = function () {
+      $scope.onAddAttach = function () {
 
       };
 
+
+      //Models
       $scope.onAddModel = function () {
 
       };
 
-      $scope.onAddScene = function () {
 
+      //Messages
+      $scope.onAddMessage = function () {
+        ProjectDataSource.addMessage($scope.newMessage, function(res) {
+          if (res) {
+
+          }
+        });
       };
 
+      //Timeline
+
+
+
+
+      //Result
       $scope.onDownloadAllResults = function(){
 
       };
+
     }]);
